@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .site-title fieldset {
+      border: none;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .site-title {
+      margin: 30px 0 20px;
+    }
+
+    .site-title fieldset legend {
+      margin-left: 20px;
+      padding: 0 10px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .site-table {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .site-table thead {
+      background-color: #f2f2f2;
+    }
+
+    .site-table th,
+    .site-table td {
+      padding: 6px 15px;
+      min-height: 20px;
+      line-height: 20px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .site-text p {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+
+    .site-text em {
+      padding: 0 3px;
+      font-weight: 500;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="form.html">表单</a></dd>
+              <dd><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd class="byui-this"><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <div class="site-content">
+          <h1 class="site-h1">面板 - 页面元素</h1>
+          <blockquote class="site-text byui-elem-quote">
+            依赖加载组件：<a href="/doc/modules/element.html">element</a>
+          </blockquote>
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="card">卡片面板</a></legend>
+            </fieldset>
+          </div>
+          <div style="padding: 20px; background-color: #F2F2F2;">
+            <div class="byui-row byui-col-space15">
+              <div class="byui-col-md6">
+                <div class="byui-card">
+                  <div class="byui-card-header">卡片面板</div>
+                  <div class="byui-card-body">
+                    卡片式面板面板通常用于非白色背景色的主体内<br>
+                    从而映衬出边框投影
+                  </div>
+                </div>
+              </div>
+              <div class="byui-col-md6">
+                <div class="byui-card">
+                  <div class="byui-card-header">卡片面板</div>
+                  <div class="byui-card-body">
+                    结合 byui 的栅格系统<br>
+                    轻松实现响应式布局
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <pre class="byui-code byui-box byui-code-view"
+            lay-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-card"&gt;</li><li>  &lt;div class="byui-card-header"&gt;卡片面板&lt;/div&gt;</li><li>  &lt;div class="byui-card-body"&gt;</li><li>    卡片式面板面板通常用于非白色背景色的主体内&lt;br&gt;</li><li>    从而映衬出边框投影</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li>    </li></ol></pre>
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="default">折叠面板</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+
+            <div class="byui-collapse">
+              <div class="byui-colla-item">
+                <h2 class="byui-colla-title">杜甫<i class="byui-icon byui-colla-icon"></i></h2>
+                <div class="byui-colla-content byui-show">
+                  <p>
+                    杜甫的思想核心是儒家的仁政思想，他有“致君尧舜上，再使风俗淳”的宏伟抱负。杜甫虽然在世时名声并不显赫，但后来声名远播，对中国文学和日本文学都产生了深远的影响。杜甫共有约1500首诗歌被保留了下来，大多集于《杜工部集》。
+                  </p>
+                </div>
+              </div>
+              <div class="byui-colla-item">
+                <h2 class="byui-colla-title">李清照<i class="byui-icon byui-colla-icon"></i></h2>
+                <div class="byui-colla-content">
+                  <p>
+                    李清照出生于书香门第，早期生活优裕，其父李格非藏书甚富，她小时候就在良好的家庭环境中打下文学基础。出嫁后与夫赵明诚共同致力于书画金石的搜集整理。金兵入据中原时，流寓南方，境遇孤苦。所作词，前期多写其悠闲生活，后期多悲叹身世，情调感伤。形式上善用白描手法，自辟途径，语言清丽。
+                  </p>
+                </div>
+              </div>
+              <div class="byui-colla-item">
+                <h2 class="byui-colla-title">鲁迅<i class="byui-icon byui-colla-icon"></i></h2>
+                <div class="byui-colla-content">
+                  <p>
+                    鲁迅一生在文学创作、文学批评、思想研究、文学史研究、翻译、美术理论引进、基础科学介绍和古籍校勘与研究等多个领域具有重大贡献。他对于五四运动以后的中国社会思想文化发展具有重大影响，蜚声世界文坛，尤其在韩国、日本思想文化领域有极其重要的地位和影响，被誉为“二十世纪东亚文化地图上占最大领土的作家”。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top: 10px;">通过对内容元素设置class为 <em>byui-show</em> 来选择性初始展开某一个面板</p>
+
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-collapse"&gt;</li><li>  &lt;div class="byui-colla-item"&gt;</li><li>    &lt;h2 class="byui-colla-title"&gt;杜甫&lt;/h2&gt;</li><li>    &lt;div class="byui-colla-content byui-show"&gt;内容区域&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>  &lt;div class="byui-colla-item"&gt;</li><li>    &lt;h2 class="byui-colla-title"&gt;李清照&lt;/h2&gt;</li><li>    &lt;div class="byui-colla-content byui-show"&gt;内容区域&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>  &lt;div class="byui-colla-item"&gt;</li><li>    &lt;h2 class="byui-colla-title"&gt;鲁迅&lt;/h2&gt;</li><li>    &lt;div class="byui-colla-content byui-show"&gt;内容区域&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li> </li><li>&lt;script&gt;</li><li>//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作</li><li>byui.use('element', function(){</li><li>  var element = byui.element;</li><li>  </li><li>  //…</li><li>});</li><li>&lt;/script&gt;</li><li>      </li></ol></pre>
+          </div>
+
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="accordion">开启手风琴</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+
+            <div class="byui-collapse" lay-accordion="">
+              <div class="byui-colla-item">
+                <h2 class="byui-colla-title">杜甫<i class="byui-icon byui-colla-icon"></i></h2>
+                <div class="byui-colla-content byui-show">
+                  <p>
+                    杜甫的思想核心是儒家的仁政思想，他有“致君尧舜上，再使风俗淳”的宏伟抱负。杜甫虽然在世时名声并不显赫，但后来声名远播，对中国文学和日本文学都产生了深远的影响。杜甫共有约1500首诗歌被保留了下来，大多集于《杜工部集》。
+                  </p>
+                </div>
+              </div>
+              <div class="byui-colla-item">
+                <h2 class="byui-colla-title">李清照<i class="byui-icon byui-colla-icon"></i></h2>
+                <div class="byui-colla-content">
+                  <p>
+                    李清照出生于书香门第，早期生活优裕，其父李格非藏书甚富，她小时候就在良好的家庭环境中打下文学基础。出嫁后与夫赵明诚共同致力于书画金石的搜集整理。金兵入据中原时，流寓南方，境遇孤苦。所作词，前期多写其悠闲生活，后期多悲叹身世，情调感伤。形式上善用白描手法，自辟途径，语言清丽。
+                  </p>
+                </div>
+              </div>
+              <div class="byui-colla-item">
+                <h2 class="byui-colla-title">鲁迅<i class="byui-icon byui-colla-icon"></i></h2>
+                <div class="byui-colla-content">
+                  <p>
+                    鲁迅一生在文学创作、文学批评、思想研究、文学史研究、翻译、美术理论引进、基础科学介绍和古籍校勘与研究等多个领域具有重大贡献。他对于五四运动以后的中国社会思想文化发展具有重大影响，蜚声世界文坛，尤其在韩国、日本思想文化领域有极其重要的地位和影响，被誉为“二十世纪东亚文化地图上占最大领土的作家”。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p style="margin-top: 10px;">在折叠面板的父容器设置属性 <em>lay-accordion</em> 来开启手风琴，那么在进行折叠操作时，始终只会展现当前的面板。</p>
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="对应的HTML结构"><ol class="byui-code-ol"><li>&lt;div class="byui-collapse" <a>lay-accordion</a>&gt;</li><li>  &lt;div class="byui-colla-item"&gt;</li><li>    &lt;h2 class="byui-colla-title"&gt;杜甫&lt;/h2&gt;</li><li>    &lt;div class="byui-colla-content byui-show"&gt;内容区域&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>  &lt;div class="byui-colla-item"&gt;</li><li>    &lt;h2 class="byui-colla-title"&gt;李清照&lt;/h2&gt;</li><li>    &lt;div class="byui-colla-content byui-show"&gt;内容区域&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>  &lt;div class="byui-colla-item"&gt;</li><li>    &lt;h2 class="byui-colla-title"&gt;鲁迅&lt;/h2&gt;</li><li>    &lt;div class="byui-colla-content byui-show"&gt;内容区域&lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/div&gt;</li><li>      </li></ol></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    byui.use(['element', 'layer'], function () {
+      var element = byui.element,
+        layer = byui.layer;
+
+      element.on('tab(docDemoTabBrief)', function (data) {
+        layer.msg('切到到了' + data.index + '：' + this.innerHTML);
+      });
+    });
+  </script>
+</body>
+
+</html>

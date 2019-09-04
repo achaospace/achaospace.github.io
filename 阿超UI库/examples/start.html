@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+    .layui-elem-quote {
+    margin-bottom: 10px;
+    padding: 15px;
+    line-height: 22px;
+    border-left: 5px solid #009688;
+    border-radius: 0 2px 2px 0;
+    background-color: #f2f2f2;
+}
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd class="byui-this"><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href="javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="form.html">表单</a></dd>
+              <dd><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href="javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <h1 class="site-h1">开始使用 - 入门指南</h1>
+        <blockquote class="byui-elem-quote">
+           byui基于gulp构建的前端框架，是js模块化开发解决方案。在layui的基础上进行了重新封装，整个框架只引用了jquery第三方库，目前我们PC端、手机端项目前端都是基于jquery构建，项目中前端引用框架、插件过多，并且并不是全部框架功能都有使用，严重影响前端页面加载速度，鉴于以上原因，把常用的功能基于layui重新封装了一下。会重新封装PC、移动端两个版本，希望对以后项目有所帮助。
+          </blockquote>
+        <fieldset class="byui-elem-field byui-field-title site-title">
+          <legend><a name="compatibility">兼容性和面向场景</a></legend>
+        </fieldset>
+        <blockquote class="byui-elem-quote" style="text-align: left;">
+          byui 不兼容IE6/7。
+        </blockquote>
+        <fieldset class="byui-elem-field byui-field-title site-title">
+          <legend><a name="get">byui目录结构</a></legend>
+        </fieldset>
+        <pre
+          class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3">byui.code</a></h3><ol class="byui-code-ol"><li>  ├─css //css目录</li><li>  │  │─modules //模块css目录（一般如果模块相对较大，我们会单独提取，比如下面三个：）</li><li>  │  │  ├─laydate</li><li>  │  │  ├─layer</li><li>  │  │  └─layim</li><li>  │  └─byui.css //核心样式文件</li><li>  ├─font  //字体图标目录</li><li>  ├─images //图片资源目录（目前只有layim和编辑器用到的GIF表情）</li><li>  │─lay //模块核心目录</li><li>  │  └─modules //各模块组件</li><li>  │─byui.js //基础核心库</li><li>  └─byui.all.js //包含byui.js和所有模块的合并文件</li><li></li></ol></pre>
+        <fieldset class="byui-elem-field byui-field-title site-title">
+          <legend><a name="quickstart">快速上手</a></legend>
+        </fieldset>
+        <pre
+          class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3">模块化引用<br/></h3><ol class="byui-code-ol"><li>./byui/css/byui.css</li><li>./byui/byui.js //提示：如果是采用非模块化方式（最下面有讲解），此处可换成：./byui/byui.all.js</li></ol></pre>
+        <pre
+          class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li><li>&lt;script src="../byui/byui.js"&gt;&lt;/script&gt;</li><li>&lt;script&gt;</li><li>//一般直接写在一个js文件中</li><li>byui.use(['layer', 'form'], function(){</li><li>  var layer = byui.layer</li><li>  ,form = byui.form;</li><li>  </li><li>  layer.msg('Hello World');</li><li>});</li><li>&lt;/script&gt; </li></ol></pre>
+          <p>如果你想采用非模块化方式（即所有模块一次性加载），你也可以按照下面的方式使用：</p>
+          <pre class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>&lt;script src="../byui/byui.all.js"&gt;&lt;/script&gt;</li><li>&lt;script&gt;</li><li>//由于模块都一次性加载，因此不用执行 byui.use() 来加载对应模块，直接使用即可：</li><li>;!function(){</li><li>  var layer = byui.layer</li><li>  ,form = byui.form;</li><li>  </li><li>  layer.msg('Hello World');</li><li>}();</li><li>&lt;/script&gt; </li></ol></pre>
+          <fieldset class="byui-elem-field byui-field-title site-title">
+              <legend><a name="modules">模块化的用法（推荐）</a></legend>
+            </fieldset>
+            <div class="site-text">  
+                <p>我们推荐你遵循 byui 的模块规范建立一个入口文件，并通过 byui.use() 方式来加载该入口文件，如下所示：</p>
+                <pre class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>&lt;script&gt;</li><li>byui.config({</li><li>  base: '/res/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录</li><li>}).use('index'); //加载入口</li><li>&lt;/script&gt;    </li><li>    </li></ol></pre>
+              上述的 index 即为你 /res/js/modules/ 目录下的 index.js，它的内容应该如下：
+              <pre class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>/**</li><li>  项目JS主入口</li><li>  以依赖layui的layer和form模块为例</li><li>**/    </li><li>byui.define(['layer', 'form'], function(exports){</li><li>  var layer = byui.layer</li><li>  ,form = byui.form;</li><li>  </li><li>  layer.msg('Hello World');</li><li>  </li><li>  exports('index', {}); //注意，这里是模块输出的核心，模块名必须和use时的模块名一致</li><li>});    </li><li>      </li></ol></pre>
+              </div>
+              <pre class="byui-code byui-box byui-code-view"><h3 class="byui-code-h3"></h3><ol class="byui-code-ol"><li>/**</li><li>  项目JS主入口</li><li>  以依赖layui的layer和form模块为例</li><li>**/    </li><li>byui.define(['layer', 'form'], function(exports){</li><li>  var layer = byui.layer</li><li>  ,form = byui.form;</li><li>  </li><li>  layer.msg('Hello World');</li><li>  </li><li>  exports('index', {}); //注意，这里是模块输出的核心，模块名必须和use时的模块名一致</li><li>});    </li><li>      </li></ol></pre>
+            </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    //JavaScript代码区域
+    byui.use("element", function () {
+      var element = byui.element;
+    });
+  </script>
+</body>
+
+</html>

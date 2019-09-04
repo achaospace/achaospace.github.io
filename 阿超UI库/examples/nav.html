@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .site-title fieldset {
+      border: none;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .site-title {
+      margin: 30px 0 20px;
+    }
+
+    .site-title fieldset legend {
+      margin-left: 20px;
+      padding: 0 10px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .site-table {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .site-table thead {
+      background-color: #f2f2f2;
+    }
+
+    .site-table th,
+    .site-table td {
+      padding: 6px 15px;
+      min-height: 20px;
+      line-height: 20px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .site-text p {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+
+    .site-text em {
+      padding: 0 3px;
+      font-weight: 500;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="form.html">表单</a></dd>
+              <dd class="byui-this"><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <div class="site-content site-text">
+          <h1 class="site-h1">导航相关 - 页面元素</h1>
+          <blockquote class="site-text byui-elem-quote">
+            依赖加载模块：<a href="/doc/modules/element.html">element</a>
+          </blockquote>
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="nav">水平导航</a></legend>
+            </fieldset>
+          </div>
+          <ul class="byui-nav" lay-filter="">
+            <li class="byui-nav-item"><a href="">最新活动</a></li>
+            <li class="byui-nav-item byui-this"><a href="">产品</a></li>
+            <li class="byui-nav-item"><a href="">大数据</a></li>
+            <li class="byui-nav-item">
+              <a href="javascript:;">解决方案</a>
+              <dl class="byui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+              </dl>
+            </li>
+            <li class="byui-nav-item"><a href="">社区</a></li>
+          </ul>
+          <li class="byui-code byui-box byui-code-view" lay-title="HTML结构">
+            <ol class="byui-code-ol">
+              <li>&lt;ul class="byui-nav" lay-filter=""&gt;</li>
+              <li> &lt;li class="byui-nav-item"&gt;&lt;a href=""&gt;最新活动&lt;/a&gt;&lt;/li&gt;</li>
+              <li> &lt;li class="byui-nav-item byui-this"&gt;&lt;a href=""&gt;产品&lt;/a&gt;&lt;/li&gt;</li>
+              <li> &lt;li class="byui-nav-item"&gt;&lt;a href=""&gt;大数据&lt;/a&gt;&lt;/li&gt;</li>
+              <li> &lt;li class="byui-nav-item"&gt;</li>
+              <li> &lt;a href="javascript:;"&gt;解决方案&lt;/a&gt;</li>
+              <li> &lt;dl class="byui-nav-child"&gt; &lt;!-- 二级菜单 --&gt;</li>
+              <li> &lt;dd&gt;&lt;a href=""&gt;移动模块&lt;/a&gt;&lt;/dd&gt;</li>
+              <li> &lt;dd&gt;&lt;a href=""&gt;后台模版&lt;/a&gt;&lt;/dd&gt;</li>
+              <li> &lt;dd&gt;&lt;a href=""&gt;电商平台&lt;/a&gt;&lt;/dd&gt;</li>
+              <li> &lt;/dl&gt;</li>
+              <li> &lt;/li&gt;</li>
+              <li> &lt;li class="byui-nav-item"&gt;&lt;a href=""&gt;社区&lt;/a&gt;&lt;/li&gt;</li>
+              <li>&lt;/ul&gt;</li>
+              <li> </li>
+              <li>&lt;script&gt;</li>
+              <li>//注意：导航 依赖 element 模块，否则无法进行功能性操作</li>
+              <li>byui.use('element', function(){</li>
+              <li> var element = byui.element;</li>
+              <li> </li>
+              <li> //…</li>
+              <li>});</li>
+              <li>&lt;/script&gt;</li>
+              <li> </li>
+            </ol>
+          </li>
+
+          <p>设定<em>byui-this</em>来指向当前页面分类。</p>
+          <ul class="byui-nav">
+            <li class="byui-nav-item">
+              <a href="">控制台<span class="byui-badge">9</span></a>
+            </li>
+            <li class="byui-nav-item">
+              <a href="">个人中心<span class="byui-badge-dot"></span></a>
+            </li>
+            <li class="byui-nav-item">
+              <img src="http://t.cn/RCzsdCq" class="byui-nav-img">Achao
+              <dl class="byui-nav-child">
+                <dd><a href="javascript:;">修改信息</a></dd>
+                <dd><a href="javascript:;">安全管理</a></dd>
+                <dd><a href="javascript:;">退了</a></dd>
+              </dl>
+            </li>
+          </ul>
+          <pre class="byui-code byui-box byui-code-view"
+            lay-title="HTML结构"><ol class="byui-code-ol"><li>&lt;ul class="byui-nav"&gt;</li><li>  &lt;li class="byui-nav-item"&gt;</li><li>    &lt;a href=""&gt;控制台&lt;span class="byui-badge"&gt;9&lt;/span&gt;&lt;/a&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-nav-item"&gt;</li><li>    &lt;a href=""&gt;个人中心&lt;span class="byui-badge-dot"&gt;&lt;/span&gt;&lt;/a&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-nav-item"&gt;</li><li>    &lt;a href=""&gt;&lt;img src="//t.cn/RCzsdCq" class="byui-nav-img"&gt;我&lt;/a&gt;</li><li>    &lt;dl class="byui-nav-child"&gt;</li><li>      &lt;dd&gt;&lt;a href="javascript:;"&gt;修改信息&lt;/a&gt;&lt;/dd&gt;</li><li>      &lt;dd&gt;&lt;a href="javascript:;"&gt;安全管理&lt;/a&gt;&lt;/dd&gt;</li><li>      &lt;dd&gt;&lt;a href="javascript:;"&gt;退了&lt;/a&gt;&lt;/dd&gt;</li><li>    &lt;/dl&gt;</li><li>  &lt;/li&gt;</li><li>&lt;/ul&gt;</li><li>      </li></ol></pre>
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="nav-theme">导航主题</a></legend>
+          </fieldset>
+          <ul class="byui-nav" lay-filter="">
+              <li class="byui-nav-item"><a href="">藏青导航</a></li>
+              <li class="byui-nav-item byui-this"><a href="">产品</a></li>
+              <li class="byui-nav-item"><a href="">大数据</a></li>
+              <li class="byui-nav-item">
+                <a href="javascript:;">解决方案</a>
+                <dl class="byui-nav-child">
+                  <!-- 二级菜单 -->
+                  <dd><a href="">移动模块</a></dd>
+                  <dd><a href="">后台模版</a></dd>
+                  <dd><a href="">电商平台</a></dd>
+                </dl>
+              </li>
+              <li class="byui-nav-item"><a href="">社区</a></li>
+            </ul>
+          <br>
+          <ul class="byui-nav byui-bg-green lay-filter=""">
+            <li class="byui-nav-item"><a href="">墨绿导航</a></li>
+            <li class="byui-nav-item byui-this"><a href="">产品</a></li>
+            <li class="byui-nav-item"><a href="">大数据</a></li>
+            <li class="byui-nav-item">
+              <a href="javascript:;">解决方案<span class="byui-nav-more"></span></a>
+              <dl class="byui-nav-child">
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+              </dl>
+            </li>
+            <li class="byui-nav-item"><a href="">社区</a></li>
+          </ul>
+          <br>
+          <ul class="byui-nav byui-bg-blue">
+            <li class="byui-nav-item"><a href="">艳蓝导航</a></li>
+            <li class="byui-nav-item byui-this"><a href="">产品</a></li>
+            <li class="byui-nav-item"><a href="">大数据</a></li>
+            <li class="byui-nav-item">
+              <a href="javascript:;">解决方案<span class="byui-nav-more"></span></a>
+              <dl class="byui-nav-child">
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+              </dl>
+            </li>
+            <li class="byui-nav-item"><a href="">社区</a></li>
+          </ul>
+          <br>
+          <div class="site-text">
+            <p>通过对导航追加CSS背景类，让导航呈现不同的主题色</p>
+            <pre
+              class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>//如定义一个墨绿背景色的导航</li><li>&lt;ul class="byui-nav byui-bg-green" lay-filter=""&gt;</li><li>  …</li><li>&lt;/ul&gt;      </li><li>      </li></ol></pre>
+            <p>
+              水平导航支持的其它背景主题有：<em>byui-bg-cyan</em>（藏青）、<em>byui-bg-molv</em>（墨绿）、<em>byui-bg-blue</em>（艳蓝）
+              <br>垂直导航支持的其它背景主题有：<em>byui-bg-cyan</em>（藏青）
+            </p>
+          </div>
+
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="navtree">垂直/侧边导航</a></legend>
+          </fieldset>
+          <div class="site-text">
+              <ul class="byui-nav byui-nav-tree" lay-filter="test">
+                  <!-- 侧边导航: <ul class="byui-nav byui-nav-tree byui-nav-side"> -->
+                    <li class="byui-nav-item byui-nav-itemed">
+                      <a href="javascript:;">默认展开</a>
+                      <dl class="byui-nav-child">
+                        <dd><a href="javascript:;">选项1</a></dd>
+                        <dd><a href="javascript:;">选项2</a></dd>
+                        <dd><a href="">跳转</a></dd>
+                      </dl>
+                    </li>
+                    <li class="byui-nav-item">
+                      <a href="javascript:;">解决方案</a>
+                      <dl class="byui-nav-child">
+                        <dd><a href="">移动模块</a></dd>
+                        <dd><a href="">后台模版</a></dd>
+                        <dd><a href="">电商平台</a></dd>
+                      </dl>
+                    </li>
+                    <li class="byui-nav-item"><a href="">产品</a></li>
+                    <li class="byui-nav-item"><a href="">大数据</a></li>
+                  </ul>
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="垂直导航HTML结构"><h3 class="byui-code-h3">垂直导航HTML结构<a href="http://www.byui.com/doc/modules/code.html" target="_blank">byui.code</a></h3><ol class="byui-code-ol"><li>&lt;ul class="byui-nav byui-nav-tree" lay-filter="test"&gt;</li><li>&lt;!-- 侧边导航: &lt;ul class="byui-nav byui-nav-tree byui-nav-side"&gt; --&gt;</li><li>  &lt;li class="byui-nav-item byui-nav-itemed"&gt;</li><li>    &lt;a href="javascript:;"&gt;默认展开&lt;/a&gt;</li><li>    &lt;dl class="byui-nav-child"&gt;</li><li>      &lt;dd&gt;&lt;a href="javascript:;"&gt;选项1&lt;/a&gt;&lt;/dd&gt;</li><li>      &lt;dd&gt;&lt;a href="javascript:;"&gt;选项2&lt;/a&gt;&lt;/dd&gt;</li><li>      &lt;dd&gt;&lt;a href=""&gt;跳转&lt;/a&gt;&lt;/dd&gt;</li><li>    &lt;/dl&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-nav-item"&gt;</li><li>    &lt;a href="javascript:;"&gt;解决方案&lt;/a&gt;</li><li>    &lt;dl class="byui-nav-child"&gt;</li><li>      &lt;dd&gt;&lt;a href=""&gt;移动模块&lt;/a&gt;&lt;/dd&gt;</li><li>      &lt;dd&gt;&lt;a href=""&gt;后台模版&lt;/a&gt;&lt;/dd&gt;</li><li>      &lt;dd&gt;&lt;a href=""&gt;电商平台&lt;/a&gt;&lt;/dd&gt;</li><li>    &lt;/dl&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-nav-item"&gt;&lt;a href=""&gt;产品&lt;/a&gt;&lt;/li&gt;</li><li>  &lt;li class="byui-nav-item"&gt;&lt;a href=""&gt;大数据&lt;/a&gt;&lt;/li&gt;</li><li>&lt;/ul&gt;</li><li>      </li></ol></pre>
+            <p>水平、垂直、侧边三个导航的HTML结构是完全一样的，不同的是：</p>
+            <p class="site-tips">
+              垂直导航需要追加class：<em>byui-nav-tree</em>
+              <br>侧边导航需要追加class：<em>byui-nav-tree byui-nav-side</em>
+            </p>
+          </div>
+
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="attr">导航可选属性</a></legend>
+          </fieldset>
+          <div class="site-text">
+            <p>对导航元素结构设定可选属性，可让导航菜单项达到不同效果。目前支持的属性如下：</p>
+            <table class="byui-table">
+              <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>属性名</th>
+                  <th>可选值</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>lay-shrink</td>
+                  <td class="byui-text">
+                    <ul>
+                      <li><em>空值</em>（默认）<br>不收缩兄弟菜单子菜单</li>
+                      <li><em>all</em><br>收缩全部兄弟菜单子菜单</li>
+                    </ul>
+                  </td>
+                  <td>
+                    展开子菜单时，是否收缩兄弟节点已展开的子菜单
+                    <br>如：<em>&lt;ul class="byui-nav byui-nav-tree" lay-shrink="all"&gt; … &lt;/ul&gt;</em>
+                  </td>
+                </tr>
+                <tr>
+                  <td>lay-unselect</td>
+                  <td>无需填值</td>
+                  <td>
+                    点击指定导航菜单时，不会出现选中效果
+                    <br>如：<em>&lt;li class="byui-nav-item" lay-unselect&gt;刷新&lt;/li&gt;</em>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="breadcrumb">面包屑</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <p>
+              <span class="byui-breadcrumb" style="visibility: visible;">
+                <a href="">首页</a><span lay-separator="">/</span>
+                <a href="">国际新闻</a><span lay-separator="">/</span>
+                <a href="">亚太地区</a><span lay-separator="">/</span>
+                <a><cite>正文</cite></a>
+              </span>
+            </p>
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="HTML结构"><ol class="byui-code-ol"><li>&lt;span class="byui-breadcrumb"&gt;</li><li>  &lt;a href=""&gt;首页&lt;/a&gt;</li><li>  &lt;a href=""&gt;国际新闻&lt;/a&gt;</li><li>  &lt;a href=""&gt;亚太地区&lt;/a&gt;</li><li>  &lt;a&gt;&lt;cite&gt;正文&lt;/cite&gt;&lt;/a&gt;</li><li>&lt;/span&gt;</li><li>      </li></ol></pre>
+            <p>
+              你还可以通过设置属性 <em>lay-separator="-"</em> 来自定义分隔符。如：
+              <span class="byui-breadcrumb" lay-separator="-" style="padding-left: 20px; visibility: visible;">
+                <a href="">首页</a><span lay-separator="">-</span>
+                <a href="">国际新闻</a><span lay-separator="">-</span>
+                <a href="">亚太地区</a><span lay-separator="">-</span>
+                <a><cite>正文</cite></a>
+              </span>
+            </p>
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="HTML结构"><ol class="byui-code-ol"><li>&lt;span class="byui-breadcrumb" lay-separator="-"&gt;</li><li>  &lt;a href=""&gt;首页&lt;/a&gt;</li><li>  &lt;a href=""&gt;国际新闻&lt;/a&gt;</li><li>  &lt;a href=""&gt;亚太地区&lt;/a&gt;</li><li>  &lt;a&gt;&lt;cite&gt;正文&lt;/cite&gt;&lt;/a&gt;</li><li>&lt;/span&gt;</li><li>      </li></ol></pre>
+            <p class="site-tips">当然，你还可以作为小导航来用，如：</p>
+            <p>
+              <span class="byui-breadcrumb" lay-separator="|" style="visibility: visible;">
+                <a href="">娱乐</a><span lay-separator="">|</span>
+                <a href="">八卦</a><span lay-separator="">|</span>
+                <a href="">体育</a><span lay-separator="">|</span>
+                <a href="">搞笑</a><span lay-separator="">|</span>
+                <a href="">视频</a><span lay-separator="">|</span>
+                <a href="">游戏</a><span lay-separator="">|</span>
+                <a href="">综艺</a>
+              </span>
+            </p>
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="HTML结构"><ol class="byui-code-ol"><li>&lt;span class="byui-breadcrumb" lay-separator="|"&gt;</li><li>  &lt;a href=""&gt;娱乐&lt;/a&gt;</li><li>  &lt;a href=""&gt;八卦&lt;/a&gt;</li><li>  &lt;a href=""&gt;体育&lt;/a&gt;</li><li>  &lt;a href=""&gt;搞笑&lt;/a&gt;</li><li>  &lt;a href=""&gt;视频&lt;/a&gt;</li><li>  &lt;a href=""&gt;游戏&lt;/a&gt;</li><li>  &lt;a href=""&gt;综艺&lt;/a&gt;</li><li>&lt;/span&gt;</li><li>      </li></ol></pre>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    byui.use(['element', 'layer'], function () {
+      var element = byui.element,
+        layer = byui.layer;
+
+      element.on('tab(docDemoTabBrief)', function (data) {
+        layer.msg('切到到了' + data.index + '：' + this.innerHTML);
+      });
+    });
+  </script>
+</body>
+
+</html>

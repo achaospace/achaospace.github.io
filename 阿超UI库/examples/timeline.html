@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .site-title fieldset {
+      border: none;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .site-title {
+      margin: 30px 0 20px;
+    }
+
+    .site-title fieldset legend {
+      margin-left: 20px;
+      padding: 0 10px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .site-table {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .site-table thead {
+      background-color: #f2f2f2;
+    }
+
+    .site-table th,
+    .site-table td {
+      padding: 6px 15px;
+      min-height: 20px;
+      line-height: 20px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .site-text p {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+
+    .site-text em {
+      padding: 0 3px;
+      font-weight: 500;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="form.html">表单</a></dd>
+              <dd><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd class="byui-this"><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <div class="site-content">
+          <h1 class="site-h1">时间线</h1>
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="use">快速使用</a></legend>
+          </fieldset>
+          <ul class="byui-timeline">
+            <li class="byui-timeline-item">
+              <i class="byui-icon byui-timeline-axis"></i>
+              <div class="byui-timeline-content byui-text">
+                <h3 class="byui-timeline-title">8月18日</h3>
+                <p>
+                  不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+                  <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="byui-icon"></i>
+                </p>
+              </div>
+            </li>
+            <li class="byui-timeline-item">
+              <i class="byui-icon byui-timeline-axis"></i>
+              <div class="byui-timeline-content byui-text">
+                <h3 class="byui-timeline-title">8月16日</h3>
+                <p>杜甫的思想核心是儒家的仁政思想，他有<em>“致君尧舜上，再使风俗淳”</em>的宏伟抱负。个人最爱的名篇有：</p>
+                <ul>
+                  <li>《登高》</li>
+                  <li>《茅屋为秋风所破歌》</li>
+                </ul>
+              </div>
+            </li>
+            <li class="byui-timeline-item">
+              <i class="byui-icon byui-timeline-axis"></i>
+              <div class="byui-timeline-content byui-text">
+                <h3 class="byui-timeline-title">8月15日</h3>
+                <p>
+                  中国人民抗日战争胜利日
+                  <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们可能的确生在了最好的时代
+                  <br>铭记、感恩
+                  <br>所有为中华民族浴血奋战的英雄将士
+                  <br>永垂不朽
+                </p>
+              </div>
+            </li>
+            <li class="byui-timeline-item">
+              <i class="byui-icon byui-timeline-axis"></i>
+              <div class="byui-timeline-content byui-text">
+                <div class="byui-timeline-title">过去</div>
+              </div>
+            </li>
+          </ul>
+          <div class="site-text">
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="对应的代码"><ol class="byui-code-ol"><li>&lt;ul class="byui-timeline"&gt;</li><li>  &lt;li class="byui-timeline-item"&gt;</li><li>    &lt;i class="byui-icon byui-timeline-axis"&gt;&amp;#xe63f;&lt;/i&gt;</li><li>    &lt;div class="byui-timeline-content byui-text"&gt;</li><li>      &lt;h3 class="byui-timeline-title"&gt;8月18日&lt;/h3&gt;</li><li>      &lt;p&gt;</li><li>        byui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。</li><li>        &lt;br&gt;不枉近百个日日夜夜与之为伴。因小而大，因弱而强。</li><li>        &lt;br&gt;无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 &lt;i class="byui-icon"&gt;&lt;/i&gt;</li><li>      &lt;/p&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-timeline-item"&gt;</li><li>    &lt;i class="byui-icon byui-timeline-axis"&gt;&amp;#xe63f;&lt;/i&gt;</li><li>    &lt;div class="byui-timeline-content byui-text"&gt;</li><li>      &lt;h3 class="byui-timeline-title"&gt;8月16日&lt;/h3&gt;</li><li>      &lt;p&gt;杜甫的思想核心是儒家的仁政思想，他有“&lt;em&gt;致君尧舜上，再使风俗淳&lt;/em&gt;”的宏伟抱负。个人最爱的名篇有：&lt;/p&gt;</li><li>      &lt;ul&gt;</li><li>        &lt;li&gt;《登高》&lt;/li&gt;</li><li>        &lt;li&gt;《茅屋为秋风所破歌》&lt;/li&gt;</li><li>      &lt;/ul&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-timeline-item"&gt;</li><li>    &lt;i class="byui-icon byui-timeline-axis"&gt;&amp;#xe63f;&lt;/i&gt;</li><li>    &lt;div class="byui-timeline-content byui-text"&gt;</li><li>      &lt;h3 class="byui-timeline-title"&gt;8月15日&lt;/h3&gt;</li><li>      &lt;p&gt;</li><li>        中国人民抗日战争胜利72周年</li><li>        &lt;br&gt;常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代</li><li>        &lt;br&gt;铭记、感恩</li><li>        &lt;br&gt;所有为中华民族浴血奋战的英雄将士</li><li>        &lt;br&gt;永垂不朽</li><li>      &lt;/p&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/li&gt;</li><li>  &lt;li class="byui-timeline-item"&gt;</li><li>    &lt;i class="byui-icon byui-timeline-axis"&gt;&amp;#xe63f;&lt;/i&gt;</li><li>    &lt;div class="byui-timeline-content byui-text"&gt;</li><li>      &lt;div class="byui-timeline-title"&gt;过去&lt;/div&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/li&gt;</li><li>&lt;/ul&gt;</li><li>      </li></ol></pre>
+            <p>关于时间线，似乎也没有什么太多可介绍的东西。你需要留意的是以下几点</p>
+            <div class="byui-text">
+              <ul>
+                <li>图标可以任意定义（但并不推荐更改）</li>
+                <li>标题区域并不意味着一定要加粗</li>
+                <li>内容区域可自由填充。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    byui.use(['element', 'layer'], function () {
+      var element = byui.element,
+        layer = byui.layer;
+
+      element.on('tab(docDemoTabBrief)', function (data) {
+        layer.msg('切到到了' + data.index + '：' + this.innerHTML);
+      });
+    });
+  </script>
+</body>
+
+</html>

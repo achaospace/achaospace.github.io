@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .byui-anim-up {
+      -webkit-animation-name: byui-up;
+      animation-name: byui-up;
+    }
+
+    .site-doc-icon li {
+      display: inline-block;
+      vertical-align: middle;
+      width: 127px;
+      height: 105px;
+      line-height: 25px;
+      padding: 20px 0;
+      margin-right: -1px;
+      margin-bottom: -1px;
+      border: 1px solid #e2e2e2;
+      font-size: 14px;
+      text-align: center;
+      color: #666;
+      transition: all .3s;
+      -webkit-transition: all .3s;
+    }
+
+    /* .site-doc-icon li .byui-anim {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 auto 10px;
+    text-align: center;
+    background-color: #009688;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+}*/
+    .site-doc-anim li {
+      height: auto;
+    }
+
+    .site-doc-icon li {
+      width: 222px;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd><a href="form.html">表单</a></dd>
+              <dd><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd class="byui-this"><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <div class="site-content">
+          <h1 class="site-h1">CSS3动画类</h1>
+          <blockquote class="byui-elem-quote">
+            byui 的动画全部采用 CSS3，因此不支持ie8和部分不支持ie9（即ie8/9无动画）
+          </blockquote>
+
+
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="use">使用方式</a></legend>
+          </fieldset>
+          <div class="site-text">
+            <p>动画的使用非常简单，直接对元素赋值动画特定的 class 类名即可。如：</p>
+            <pre
+              class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>其中 byui-anim 是必须的，后面跟着的即是不同的动画类</li><li>&lt;div class="byui-anim byui-anim-up"&gt;&lt;/div&gt;</li><li> </li><li>循环动画，追加：byui-anim-loop</li><li>&lt;div class="byui-anim byui-anim-up byui-anim-loop"&gt;&lt;/div&gt;</li><li>      </li></ol></pre>
+          </div>
+
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="use">内置CSS3动画一览表</a></legend>
+          </fieldset>
+          <ul class="site-doc-icon site-doc-anim">
+            <li>
+              <div class="byui-anim byui-anim-up " data-anim="byui-anim-up">从最底部往上滑入</div>
+              <div class="code">byui-anim-up</div>
+            </li>
+            <li>
+              <div class="byui-anim byui-anim-upbit" data-anim="byui-anim-upbit">微微往上滑入</div>
+              <div class="code">byui-anim-upbit</div>
+            </li>
+            <li>
+              <div class="byui-anim byui-anim-scale" data-anim="byui-anim-scale">平滑放大</div>
+              <div class="code">byui-anim-scale</div>
+            </li>
+            <li>
+              <div class="byui-anim byui-anim-scaleSpring" data-anim="byui-anim-scaleSpring">弹簧式放大</div>
+              <div class="code">byui-anim-scaleSpring</div>
+            </li>
+            <li>
+              <div class="byui-anim byui-anim-fadein" data-anim="byui-anim-fadein">渐现</div>
+              <div class="code">byui-anim-fadein</div>
+            </li>
+            <li>
+              <div class="byui-anim" data-anim="byui-anim-fadeout">渐隐</div>
+              <div class="code">byui-anim-fadeout</div>
+            </li>
+            <li>
+              <div class="byui-anim byui-anim-rotate" data-anim="byui-anim-rotate">360度旋转</div>
+              <div class="code">byui-anim-rotate</div>
+            </li>
+            <li>
+              <div class="byui-anim byui-anim-rotate byui-anim-loop" data-anim="byui-anim-rotate byui-anim-loop">循环动画
+              </div>
+              <div class="code">追加：byui-anim-loop</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    //JavaScript代码区域
+    byui.use("element", function () {
+      var element = byui.element;
+    });
+  </script>
+</body>
+
+</html>

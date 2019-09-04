@@ -1,0 +1,231 @@
+ <!DOCTYPE html>
+ <html>
+
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <title>Byui</title>
+   <link rel="stylesheet" href="../src/css/byui.css">
+   <style>
+     .title-center {
+       margin-left: 50%;
+     }
+
+     .title-center {
+       margin-left: 50%;
+       font-size: 34px !important;
+     }
+
+     .site-h1 {
+       margin-bottom: 20px;
+       line-height: 60px;
+       padding-bottom: 10px;
+       color: #393d49;
+       border-bottom: 1px solid #eee;
+       font-size: 28px;
+       font-weight: 300;
+     }
+
+     .byui-elem-quote {
+       margin-bottom: 10px;
+       padding: 15px;
+       line-height: 22px;
+       border-left: 5px solid #009688;
+       border-radius: 0 2px 2px 0;
+       background-color: #f2f2f2;
+     }
+
+     .byui-field-title {
+       border-width: 1px 0 0;
+       border-color: #e6e6e6;
+     }
+
+     .site-content {
+       min-height: 900px;
+       padding: 20px 0 10px 20px;
+     }
+
+     .site-title fieldset {
+       border: none;
+       padding: 0;
+     }
+
+     .site-title {
+       margin: 30px 0 20px;
+     }
+
+     .site-title fieldset legend {
+       margin-left: 20px;
+       padding: 0 10px;
+       font-size: 22px;
+       font-weight: 300;
+     }
+
+     .site-text p {
+       margin-bottom: 10px;
+       line-height: 22px;
+     }
+
+     .site-text em {
+       padding: 0 3px;
+       font-weight: 500;
+       font-style: italic;
+       color: #666;
+     }
+   </style>
+ </head>
+
+ <body class="byui-layout-body">
+   <div class="byui-layout byui-layout-admin">
+     <div class="byui-header">
+       <div class="byui-logo title-center">Byui</div>
+       <div class="byui-nav byui-layout-right">
+         <li class="byui-nav-item">
+           <img src="http://t.cn/RCzsdCq" class="byui-nav-img">
+           Achao
+         </li>
+       </div>
+     </div>
+     <div class="byui-side byui-bg-black">
+        <div class="byui-side-scroll">
+          <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+          <dd class="byui-nav byui-nav-tree" lay-filter="test">
+            <li class="byui-nav-item byui-nav-itemed">
+              <a class="" href="javascript:;">基础说明</a>
+              <dl class="byui-nav-child">
+                <dd><a href="start.html">开始使用</a></dd>
+                <dd><a href="infrastructure.html">底层方法</a></dd>
+                <dd><a href="element.html">页面元素</a></dd>
+                <dd class="byui-this"><a href="modules.html">模块规范</a></dd>
+                <dd><a href="faq.html">常见问题</a></dd>
+              </dl>
+            </li>
+            <li class="byui-nav-item byui-nav-itemed">
+              <a class="" href="javascript:;">布局</a>
+              <dl class="byui-nav-child">
+                <dd><a href="layout.html">栅格</a></dd>
+                <dd><a href="color.html">颜色</a></dd>
+                <dd><a href="icon.html">图标</a></dd>
+              </dl>
+            </li>
+            <li class="byui-nav-item byui-nav-itemed">
+              <a href="javascript:;">基本元素</a>
+              <dl class="byui-nav-child">
+                <dd><a href="button.html">按钮</a></dd>
+                <dd><a href="form.html">表单</a></dd>
+                <dd><a href="nav.html">导航</a></dd>
+                <dd><a href="tab.html">选项卡</a></dd>
+                <dd><a href="progress.html">进度条</a></dd>
+                <dd><a href="panel.html">面板</a></dd>
+                <dd><a href="badge.html">徽章</a></dd>
+                <dd><a href="timeline.html">时间线</a></dd>
+                <dd><a href="auxiliar.html">静态表格</a></dd>
+                <dd><a href="anim.html">动画</a></dd>
+                <dd><a href="auxiliar.html">辅助元素</a></dd>
+              </dl>
+            </li>
+            <li class="byui-nav-item byui-nav-itemed">
+              <a href="javascript:;">内置模块</a>
+              <dl class="byui-nav-child">
+                <dd><a href="layer.html">弹出层</a></dd>
+                <dd><a href="laydate.html">日期与选择器</a></dd>
+               <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+                <dd><a href="table.html">数据表格</a></dd>
+                <dd><a href="javascript:;">表单</a></dd>
+                <dd><a href="laypage.html">分页</a></dd>
+                <dd><a href="upload.html">文件上传</a></dd>
+                <dd><a href="transfer.html">穿梭框</a></dd>
+                <dd><a href="tree.html">树形组件</a></dd>
+                <dd><a href="colorpicker.html">颜色选择器</a></dd>
+                <dd><a href="element.html">常用元素操作</a></dd>
+                <dd><a href="slider.html">滑块</a></dd>
+                <dd><a href="rate.html">评分</a></dd>
+                <dd><a href="carousel.html">轮播</a></dd>
+                <dd><a href="laytpl.html">模板引擎</a></dd>
+                <dd><a href="flow.html">流加载</a></dd>
+                <dd><a href="util.html">工具集</a></dd>
+                <dd><a href="code.html">代码修饰器</a></dd>
+              </dl>
+            </li>
+          </dd>
+        </div>
+      </div>
+
+     <div class="byui-body">
+       <div class="site-content">
+         <h1 class="site-h1">模块规范</h1>
+         <div class="site-title">
+           <fieldset>
+             <legend><a name="before">预先加载</a></legend>
+           </fieldset>
+         </div>
+         <div class="site-text">
+           <p>推荐你采用预先加载，因为这样可以避免到处写byui.use的麻烦。你应该在最外层如此定义： </p>
+           <pre class="byui-code byui-box byui-code-view"
+             lay-title="demo.js"><ol class="byui-code-ol"><li>/*</li><li>  Demo1.js</li><li>  使用Byui的form和upload模块</li><li>*/</li><li>byui.use(['form', 'upload'], function(){  //如果只加载一个模块，可以不填数组。如：<em>byui.use('form')</em></li><li>  var form = byui.form //获取form模块</li><li>  ,upload = byui.upload; //获取upload模块</li><li>  </li><li>  //监听提交按钮</li><li>  form.on('submit(test)', function(data){</li><li>    console.log(data);</li><li>  });</li><li>  </li><li>  //实例化一个上传控件</li><li>  upload({</li><li>    url: '上传接口url'</li><li>    ,success: function(data){</li><li>      console.log(data);</li><li>    }</li><li>  })</li><li>});</li><li>      </li></ol></pre>
+         </div>
+
+         <div class="site-title">
+           <fieldset>
+             <legend><a name="trigger">按需加载</a>（不推荐）</legend>
+           </fieldset>
+         </div>
+         <div class="site-text">
+           <p>你并不想预先加载所需要的模块，而是在触发一个动作的时候才去加载模块,你只需要：</p>
+           <pre class="byui-code byui-box byui-code-view"
+             lay-title="demo.js"><ol class="byui-code-ol"><li>/*</li><li>  Demo2.js</li><li>  按需加载一个Byui模块</li><li>*/</li><li> </li><li>//……</li><li>//你的各种JS代码什么的</li><li>//……</li><li> </li><li>//下面是在一个事件回调里去加载一个Byui模块</li><li>button.addEventListener('click', function(){</li><li>  byui.use('laytpl', function(laytpl){ //温馨提示：多次调用use并不会重复加载laytpl.js，Byui内部有做模块cache处理。</li><li>    var html = laytpl('').render({});</li><li>    console.log(html);</li><li>  });</li><li>});</li><li>      </li></ol></pre>
+           <p style="color: #FF5722">
+             注意：如果你的 JS 中需要大量用到模块，我们并不推荐你采用这种加载方式，因为这意味着你要写很多 byui.use()，代码可维护性不高。
+             <br>建议还是采用：预先加载。即一个JS文件中，写一个use即可。
+           </p>
+         </div>
+
+         <div class="site-title">
+           <fieldset>
+             <legend><a name="space">模块命名空间</a></legend>
+           </fieldset>
+         </div>
+         <div class="site-text">
+           <p>byui 的模块接口会绑定在 byui 对象下，内部由 byui.define() 方法来完成。每一个模块都会一个特有的名字，并且无法被占用。所以你无需担心模块的空间被污染，除非你主动 delete
+             byui.{模块名}。调用模块可通过 byui.use 方法来实现，然后再通过 byui 对象获得模块接口。如：</p>
+           <pre
+             class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>byui.use(['layer', 'laypage', 'laydate'], function(){</li><li>  var layer = byui.layer //获得layer模块</li><li>  ,laypage = byui.laypage //获得laypage模块</li><li>  ,laydate = byui.laydate; //获得laydate模块</li><li>  </li><li>  //使用模块</li><li>});      </li><li>      </li></ol></pre>
+           <p>我们推荐你将所有的业务代码都写在一个大的 use 回调中，而不是将模块接口暴露给全局，比如下面的方式我们是极不推荐的：</p>
+           <pre
+             class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>//强烈不推荐下面的做法</li><li>var laypage, laydate;</li><li>byui.use(['laypage', 'laydate'], function(){</li><li>  laypage = byui.laypage;</li><li>  laydate = byui.laydate;</li><li>});</li><li>      </li></ol></pre>
+           <p>你之所以想使用上面的错误方式，是想其它地方使用不在执行一次
+             byui.use？但这种理解本身是存在问题的。因为如果一旦你的业务代码是在模块加载完毕之前执行，你的全局对象将获取不到模块接口，因此这样用不仅不符合规范，还存在报错风险。建议在你的 js 文件中，在最外层写一个
+             byui.use 来加载所依赖的模块，并将业务代码写在回调中，见：<a href="#before">预先加载</a>。</p>
+           <p>事实上，如果你不想采用 byui.use，你可以引入 byui.all.js 来替代 byui.js，见：<a href="/doc/#nonmodules">非模块化用法</a></p>
+         </div>
+
+         <div class="site-title">
+           <fieldset>
+             <legend><a name="extend">扩展一个 byui 模块</a></legend>
+           </fieldset>
+         </div>
+         <div class="site-text">
+
+           <p>第一步：确认模块名，假设为：<em>mymod</em>，然后新建一个<em>mymod.js</em> 文件放入项目任意目录下（注意：不用放入byui目录）</p>
+           <p>第二步：编写test.js 如下：</p>
+           <pre
+             class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>/**</li><li>  扩展一个test模块</li><li>**/      </li><li> </li><li>byui.define(function(exports){ //提示：模块也可以依赖其它模块，如：byui.define('layer', callback);</li><li>  var obj = {</li><li>    hello: function(str){</li><li>      alert('Hello '+ (str||'mymod'));</li><li>    }</li><li>  };</li><li>  </li><li>  //输出test接口</li><li>  exports('mymod', obj);</li><li>});    </li><li>      </li></ol></pre>
+           <p>第三步：设定扩展模块所在的目录，然后就可以在别的JS文件中使用了</p>
+           <pre
+             class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>//config的设置是全局的</li><li>byui.config({</li><li>  base: '/res/js/' //假设这是你存放拓展模块的根目录</li><li>}).extend({ //设定模块别名</li><li>  mymod: 'mymod' //如果 mymod.js 是在根目录，也可以不用设定别名</li><li>  ,mod1: 'admin/mod1' //相对于上述 base 目录的子目录</li><li>});</li><li> </li><li>//你也可以忽略 base 设定的根目录，直接在 extend 指定路径（<span style="color: #FF5722;"></span>）</li><li>byui.extend({</li><li>  mod2: '{/}http://cdn.xxx.com/lib/mod2' // {/}的意思即代表采用自有路径，即不跟随 base 路径</li><li>})</li><li> </li><li>//使用拓展模块</li><li>byui.use(['mymod', 'mod1'], function(){</li><li>  var mymod = byui.mymod</li><li>  ,mod1 = byui.mod1</li><li>  ,mod2 = byui.mod2;</li><li>  </li><li>  mymod.hello('World!'); //弹出 Hello World!</li><li>});</li><li>      </li></ol></pre>
+         </div>
+       </div>
+     </div>
+
+   </div>
+   <script src="../src/byui.js"></script>
+   <script>
+     //JavaScript代码区域
+     byui.use('element', function () {
+       var element = byui.element;
+
+     });
+   </script>
+ </body>
+
+ </html>

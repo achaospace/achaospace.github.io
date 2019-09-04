@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .site-title fieldset {
+      border: none;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .site-title {
+      margin: 30px 0 20px;
+    }
+
+    .site-title fieldset legend {
+      margin-left: 20px;
+      padding: 0 10px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .site-table {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .site-table thead {
+      background-color: #f2f2f2;
+    }
+
+    .site-table th,
+    .site-table td {
+      padding: 6px 15px;
+      min-height: 20px;
+      line-height: 20px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .site-text p {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd class="byui-this"><a href="button.html">按钮</a></dd>
+              <dd><a href="form.html">表单</a></dd>
+              <dd><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+        <div class="site-content">
+          <h1 class="site-h1">按钮 - 页面元素</h1>
+          <blockquote class="site-text byui-elem-quote">
+            向任意HTML元素设定<em>class="byui-btn"</em>，建立一个基础按钮。通过追加格式为<em>byui-btn-{type}</em>的class来定义其它按钮风格。内置的按钮class可以进行任意组合，从而形成更多种按钮风格。
+          </blockquote>
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="use">用法</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <pre
+              class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>&lt;button type="button" class="byui-btn"&gt;一个标准的按钮&lt;/button&gt;</li><li>&lt;a href="https://www.baidu.com" class="byui-btn"&gt;一个可跳转的按钮&lt;/a&gt;</li><li>      </li></ol></pre>
+            <p></p>
+          </div>
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="theme">主题</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <p>
+              <button type="button" class="byui-btn byui-btn-primary">原始按钮</button>
+              <button type="button" class="byui-btn">默认按钮</button>
+              <button type="button" class="byui-btn byui-btn-normal">百搭按钮</button>
+              <button type="button" class="byui-btn byui-btn-warm">暖色按钮</button>
+              <button type="button" class="byui-btn byui-btn-danger">警告按钮</button>
+              <button type="button" class="byui-btn byui-btn-disabled">禁用按钮</button>
+            </p>
+            <table class="site-table">
+              <thead>
+                <tr>
+                  <th>名称</th>
+                  <th>组合</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;">原始</td>
+                  <td>class="byui-btn byui-btn-primary"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">默认</td>
+                  <td>class="byui-btn"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">百搭</td>
+                  <td>class="byui-btn byui-btn-normal"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">暖色</td>
+                  <td>class="byui-btn byui-btn-warm"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">警告</td>
+                  <td>class="byui-btn byui-btn-danger"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">禁用</td>
+                  <td>class="byui-btn byui-btn-disabled"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="size">尺寸</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <p>
+              <button type="button" class="byui-btn byui-btn-lg">大型按钮</button>
+              <button type="button" class="byui-btn">默认按钮</button>
+              <button type="button" class="byui-btn byui-btn-sm">小型按钮</button>
+              <button type="button" class="byui-btn byui-btn-xs">迷你按钮</button>
+            </p>
+            <table class="site-table">
+              <thead>
+                <tr>
+                  <th>尺寸</th>
+                  <th>组合</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;">大型</td>
+                  <td>class="byui-btn byui-btn-lg"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">默认</td>
+                  <td>class="byui-btn"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">小型</td>
+                  <td>class="byui-btn byui-btn-sm"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">迷你</td>
+                  <td>class="byui-btn byui-btn-xs"</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <button type="button" class="byui-btn byui-btn-lg byui-btn-normal">大型百搭</button>
+              <button type="button" class="byui-btn byui-btn-warm">正常暖色</button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-danger">小型警告</button>
+              <button type="button" class="byui-btn byui-btn-xs byui-btn-disabled">禁用</button>
+            </p>
+            <table class="site-table">
+              <thead>
+                <tr>
+                  <th>尺寸</th>
+                  <th>组合</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;">大型百搭</td>
+                  <td>class="byui-btn byui-btn-lg byui-btn-normal"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">正常暖色</td>
+                  <td>class="byui-btn byui-btn-warm"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">小型警告</td>
+                  <td>class="byui-btn byui-btn-sm byui-btn-danger"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">迷你禁用</td>
+                  <td>class="byui-btn byui-btn-xs byui-btn-disabled"</td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <button type="button" class="byui-btn byui-btn-fluid">流体按钮（最大化适应）</button>
+            </div>
+            <div style="margin-top: 10px;">
+              <button type="button" class="byui-btn byui-btn-primary byui-btn-fluid">流体按钮（最大化适应）</button>
+            </div>
+            <pre
+              class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>      </li><li>&lt;button type="button" class="byui-btn byui-btn-fluid"&gt;流体按钮（最大化适应）&lt;/button&gt;</li><li>      </li></ol></pre>
+          </div>
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="radius">圆角</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <p>
+              <button type="button" class="byui-btn byui-btn-radius byui-btn-primary">原始按钮</button>
+              <button type="button" class="byui-btn byui-btn-radius">默认按钮</button>
+              <button type="button" class="byui-btn byui-btn-radius byui-btn-normal">百搭按钮</button>
+              <button type="button" class="byui-btn byui-btn-radius byui-btn-warm">暖色按钮</button>
+              <button type="button" class="byui-btn byui-btn-radius byui-btn-danger">警告按钮</button>
+              <button type="button" class="byui-btn byui-btn-radius byui-btn-disabled">禁用按钮</button>
+            </p>
+            <table class="site-table">
+              <thead>
+                <tr>
+                  <th>主题</th>
+                  <th>组合</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;">原始</td>
+                  <td>class="byui-btn byui-btn-radius byui-btn-primary"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">默认</td>
+                  <td>class="byui-btn byui-btn-radius"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">百搭</td>
+                  <td>class="byui-btn byui-btn-radius byui-btn-normal"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">暖色</td>
+                  <td>class="byui-btn byui-btn-radius byui-btn-warm"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">警告</td>
+                  <td>class="byui-btn byui-btn-radius byui-btn-danger"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">禁用</td>
+                  <td>class="byui-btn byui-btn-radius byui-btn-disabled"</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <button type="button" class="byui-btn byui-btn-lg byui-btn-radius byui-btn-normal">大型百搭</button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-radius byui-btn-danger">小型警告</button>
+              <button type="button" class="byui-btn byui-btn-xs byui-btn-radius byui-btn-disabled">迷你禁用</button>
+            </p>
+            <table class="site-table">
+              <thead>
+                <tr>
+                  <th>尺寸</th>
+                  <th>组合</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align: center;">大型百搭</td>
+                  <td>class="byui-btn byui-btn-lg byui-btn-radius byui-btn-normal"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">小型警告</td>
+                  <td>class="byui-btn byui-btn-sm byui-btn-radius byui-btn-danger"</td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">迷你禁用</td>
+                  <td>class="byui-btn byui-btn-xs byui-btn-radius byui-btn-disabled"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="icon">图标</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <p>
+              <button type="button" class="byui-btn"><i class="byui-icon"></i> 添加</button>
+              <button type="button" class="byui-btn"><i class="byui-icon">ဂ</i></button>
+              <button type="button" class="byui-btn"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn"><i class="byui-icon"></i></button>
+            </p>
+            <p>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-primary"><i class="byui-icon">ဂ</i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-primary"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-primary"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-primary"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-primary"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-primary"><i class="byui-icon"></i></button>
+
+              <button type="button" class="byui-btn byui-btn-sm"><i class="byui-icon">ဂ</i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-normal"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-warm"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-danger"><i class="byui-icon"></i></button>
+              <button type="button" class="byui-btn byui-btn-sm byui-btn-disabled"><i class="byui-icon"></i></button>
+            </p>
+
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="结构"><ol class="byui-code-ol"><li>&lt;button type="button" class="byui-btn"&gt;</li><li>  &lt;i class="byui-icon"&gt;<i>&amp;</i>#xe608;&lt;/i&gt; 添加</li><li>&lt;/button&gt;</li><li> </li><li>&lt;button type="button" class="byui-btn byui-btn-sm byui-btn-primary"&gt;</li><li>  &lt;i class="byui-icon"&gt;<i>&amp;</i>#x1002;&lt;/i&gt;</li><li>&lt;/button&gt;</li><li>      </li></ol></pre>
+            <p class="byui-word-aux">温馨提示：各种图标字体请移步文档左侧【页面元素 - 图标】阅览</p>
+          </div>
+
+          <div class="site-title">
+            <fieldset>
+              <legend><a name="group">按钮组</a></legend>
+            </fieldset>
+          </div>
+          <div class="site-text">
+            <div class="byui-btn-group">
+              <button type="button" class="byui-btn">增加</button>
+              <button type="button" class="byui-btn">编辑</button>
+              <button type="button" class="byui-btn">删除</button>
+            </div>
+            <div class="byui-btn-group">
+              <button type="button" class="byui-btn byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+              <button type="button" class="byui-btn byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+              <button type="button" class="byui-btn byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+              <button type="button" class="byui-btn byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+            </div>
+            <div class="byui-btn-group">
+              <button type="button" class="byui-btn byui-btn-primary byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+              <button type="button" class="byui-btn byui-btn-primary byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+              <button type="button" class="byui-btn byui-btn-primary byui-btn-sm">
+                <i class="byui-icon"></i>
+              </button>
+            </div>
+            <p style="margin-top: 10px;">将按钮放入一个<em>class="byui-btn-group"</em>元素中，即可形成按钮组，按钮本身仍然可以随意搭配</p>
+            <pre class="byui-code byui-box byui-code-view"
+              lay-title="结构"><ol class="byui-code-ol"><li>&lt;div class="byui-btn-group"&gt;</li><li>  &lt;button type="button" class="byui-btn"&gt;增加&lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn"&gt;编辑&lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn"&gt;删除&lt;/button&gt;</li><li>&lt;/div&gt;</li><li>      </li><li>&lt;div class="byui-btn-group"&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe654;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe642;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe640;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe602;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>&lt;/div&gt;</li><li> </li><li>&lt;div class="byui-btn-group"&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-primary byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe654;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-primary byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe642;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>  &lt;button type="button" class="byui-btn byui-btn-primary byui-btn-sm"&gt;</li><li>    &lt;i class="byui-icon"&gt;&amp;#xe640;&lt;/i&gt;</li><li>  &lt;/button&gt;</li><li>&lt;/div&gt;</li><li>      </li></ol></pre>
+          </div>
+
+          <fieldset class="byui-elem-field byui-field-title site-title">
+            <legend><a name="container">按钮容器</a></legend>
+          </fieldset>
+          <div class="site-text">
+            <p>尽管按钮在同节点并排时会自动拉开间距，但在按钮太多的情况，效果并不是很美好。因为你需要用到按钮容器</p>
+          </div>
+          <div class="byui-btn-container">
+            <button type="button" class="byui-btn">按钮一</button>
+            <button type="button" class="byui-btn">按钮二</button>
+            <button type="button" class="byui-btn">按钮三</button>
+            <button type="button" class="byui-btn">按钮四</button>
+            <button type="button" class="byui-btn">按钮五</button>
+            <button type="button" class="byui-btn">按钮六</button>
+            <button type="button" class="byui-btn">按钮一</button>
+            <button type="button" class="byui-btn">按钮二</button>
+            <button type="button" class="byui-btn">按钮三</button>
+            <button type="button" class="byui-btn">按钮四</button>
+            <button type="button" class="byui-btn">按钮五</button>
+            <button type="button" class="byui-btn">按钮六</button>
+            <button type="button" class="byui-btn">按钮一</button>
+            <button type="button" class="byui-btn">按钮二</button>
+            <button type="button" class="byui-btn">按钮三</button>
+            <button type="button" class="byui-btn">按钮四</button>
+            <button type="button" class="byui-btn">按钮五</button>
+            <button type="button" class="byui-btn">按钮六</button>
+            <button type="button" class="byui-btn">按钮一</button>
+            <button type="button" class="byui-btn">按钮二</button>
+          </div>
+          <pre
+            class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>&lt;div class="byui-btn-container"&gt;</li><li>  &lt;button type="button" class="byui-btn"&gt;按钮一&lt;/button&gt; </li><li>  &lt;button type="button" class="byui-btn"&gt;按钮二&lt;/button&gt; </li><li>  &lt;button type="button" class="byui-btn"&gt;按钮三&lt;/button&gt; </li><li>&lt;/div&gt;</li><li>    </li></ol></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    //JavaScript代码区域
+    byui.use("element", function () {
+      var element = byui.element;
+    });
+  </script>
+</body>
+
+</html>

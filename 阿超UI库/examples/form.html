@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Byui</title>
+  <link rel="stylesheet" href="../src/css/byui.css" />
+  <style>
+    .title-center {
+      margin-left: 50%;
+      font-size: 34px !important;
+    }
+
+    .site-h1 {
+      margin-bottom: 20px;
+      line-height: 60px;
+      padding-bottom: 10px;
+      color: #393d49;
+      border-bottom: 1px solid #eee;
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .byui-field-title {
+      border-width: 1px 0 0;
+      border-color: #e6e6e6;
+    }
+
+    .byui-elem-quote {
+      margin-bottom: 10px;
+      padding: 15px;
+      line-height: 22px;
+      border-left: 5px solid #009688;
+      border-radius: 0 2px 2px 0;
+      background-color: #f2f2f2;
+    }
+
+    .site-doc-icon {
+      margin-bottom: 50px;
+      font-size: 0;
+    }
+
+    .site-doc-icon li .byui-anim {
+      width: 150px;
+      height: 150px;
+      line-height: 150px;
+      margin: 0 auto 10px;
+      text-align: center;
+      background-color: #009688;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+    }
+
+    .site-title fieldset {
+      border: none;
+      padding: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .site-title {
+      margin: 30px 0 20px;
+    }
+
+    .site-title fieldset legend {
+      margin-left: 20px;
+      padding: 0 10px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+
+    .site-table {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .site-table thead {
+      background-color: #f2f2f2;
+    }
+
+    .site-table th,
+    .site-table td {
+      padding: 6px 15px;
+      min-height: 20px;
+      line-height: 20px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .site-text p {
+      margin-bottom: 10px;
+      line-height: 22px;
+    }
+    .site-text {
+    position: relative;
+}
+.site-text em {
+    padding: 0 3px;
+    font-weight: 500;
+    font-style: italic;
+    color: #666;
+}
+
+  </style>
+</head>
+
+<body class="byui-layout-body">
+  <div class="byui-layout byui-layout-admin">
+    <div class="byui-header">
+      <div class="byui-logo title-center">Byui</div>
+      <div class="byui-nav byui-layout-right">
+        <li class="byui-nav-item">
+          <img src="http://t.cn/RCzsdCq" class="byui-nav-img" />
+          Achao
+        </li>
+      </div>
+    </div>
+
+    <div class="byui-side byui-bg-black">
+      <div class="byui-side-scroll">
+        <!-- 左侧导航区域（可配合byui已有的垂直导航） -->
+        <dd class="byui-nav byui-nav-tree" lay-filter="test">
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">基础说明</a>
+            <dl class="byui-nav-child">
+              <dd><a href="start.html">开始使用</a></dd>
+              <dd><a href="infrastructure.html">底层方法</a></dd>
+              <dd><a href="element.html">页面元素</a></dd>
+              <dd><a href="modules.html">模块规范</a></dd>
+              <dd><a href="faq.html">常见问题</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a class="" href="javascript:;">布局</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layout.html">栅格</a></dd>
+              <dd><a href="color.html">颜色</a></dd>
+              <dd><a href="icon.html">图标</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">基本元素</a>
+            <dl class="byui-nav-child">
+              <dd><a href="button.html">按钮</a></dd>
+              <dd  class="byui-this"><a href="form.html">表单</a></dd>
+              <dd><a href="nav.html">导航</a></dd>
+              <dd><a href="tab.html">选项卡</a></dd>
+              <dd><a href="progress.html">进度条</a></dd>
+              <dd><a href="panel.html">面板</a></dd>
+              <dd><a href="badge.html">徽章</a></dd>
+              <dd><a href="timeline.html">时间线</a></dd>
+              <dd><a href="auxiliar.html">静态表格</a></dd>
+              <dd><a href="anim.html">动画</a></dd>
+              <dd><a href="auxiliar.html">辅助元素</a></dd>
+            </dl>
+          </li>
+          <li class="byui-nav-item byui-nav-itemed">
+            <a href=" javascript:;">内置模块</a>
+            <dl class="byui-nav-child">
+              <dd><a href="layer.html">弹出层</a></dd>
+              <dd><a href="laydate.html">日期与选择器</a></dd>
+             <!-- <dd><a href="layim.html">即时通信</a></dd> -->
+              <dd><a href="table.html">数据表格</a></dd>
+              <dd><a href="javascript:;">表单</a></dd>
+              <dd><a href="laypage.html">分页</a></dd>
+              <dd><a href="upload.html">文件上传</a></dd>
+              <dd><a href="transfer.html">穿梭框</a></dd>
+              <dd><a href="tree.html">树形组件</a></dd>
+              <dd><a href="colorpicker.html">颜色选择器</a></dd>
+              <dd><a href="element.html">常用元素操作</a></dd>
+              <dd><a href="slider.html">滑块</a></dd>
+              <dd><a href="rate.html">评分</a></dd>
+              <dd><a href="carousel.html">轮播</a></dd>
+              <dd><a href="laytpl.html">模板引擎</a></dd>
+              <dd><a href="flow.html">流加载</a></dd>
+              <dd><a href="util.html">工具集</a></dd>
+              <dd><a href="code.html">代码修饰器</a></dd>
+            </dl>
+          </li>
+        </dd>
+      </div>
+    </div>
+    <div class="byui-body">
+      <!-- 内容主体区域 -->
+      <div style="padding: 15px;">
+          <div class="site-content">
+              <h1 class="site-h1">表单 - 页面元素</h1>
+              <blockquote class="site-text byui-elem-quote">
+                在一个容器中设定 <em>class="byui-form"</em> 来标识一个表单元素块，通过规范好的HTML结构及CSS类，来组装成各式各样的表单元素，并通过内置的 <em>form模块</em> 来完成各种交互。
+              </blockquote>
+              <blockquote class="site-text byui-elem-quote">
+                依赖加载模块：<a href="/doc/modules/form.html">form</a> <span>（请注意：如果不加载form模块，select、checkbox、radio等将无法显示，并且无法使用form相关功能）</span>
+              </blockquote>
+              <div class="site-title">
+                <fieldset><legend><a name="use">小睹为快</a></legend></fieldset>
+              </div>
+              <div class="site-text site-block">
+                <form class="byui-form" action="">
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">输入框</label>
+                    <div class="byui-input-block">
+                      <input type="text" name="title" required="" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="byui-input">
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">密码框</label>
+                    <div class="byui-input-inline">
+                      <input type="password" name="password" required="" lay-verify="required" lay-vertype="tips" placeholder="请输入密码" autocomplete="off" class="byui-input">
+                    </div>
+                    <div class="byui-form-mid byui-word-aux">辅助文字</div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">选择框</label>
+                    <div class="byui-input-block">
+                      <select name="city" lay-verify="required">
+                        <option value=""></option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                      </select><div class="byui-unselect byui-form-select"><div class="byui-select-title"><input type="text" placeholder="请选择" value="" readonly="" class="byui-input byui-unselect"><i class="byui-edge"></i></div><dl class="byui-anim byui-anim-upbit"><dd lay-value="" class="byui-select-tips">请选择</dd><dd lay-value="0" class="">北京</dd><dd lay-value="1" class="">上海</dd><dd lay-value="2" class="">广州</dd><dd lay-value="3" class="">深圳</dd><dd lay-value="4" class="">杭州</dd></dl></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">复选框</label>
+                    <div class="byui-input-block">
+                      <input type="checkbox" name="like[write]" title="写作"><div class="byui-unselect byui-form-checkbox"><span>写作</span><i class="byui-icon byui-icon-ok"></i></div>
+                      <input type="checkbox" name="like[read]" title="阅读" checked=""><div class="byui-unselect byui-form-checkbox byui-form-checked"><span>阅读</span><i class="byui-icon byui-icon-ok"></i></div>
+                      <input type="checkbox" name="like[dai]" title="发呆"><div class="byui-unselect byui-form-checkbox"><span>发呆</span><i class="byui-icon byui-icon-ok"></i></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">开关</label>
+                    <div class="byui-input-block">
+                      <input type="checkbox" name="switch" lay-skin="switch" lay-text="ON|OFF" lay-filter="switchTest" value="1"><div class="byui-unselect byui-form-switch" lay-skin="_switch"><em>OFF</em><i></i></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">单选框</label>
+                    <div class="byui-input-block">
+                      <input type="radio" name="sex" value="男" title="男"><div class="byui-unselect byui-form-radio"><i class="byui-anim byui-icon"></i><div>男</div></div>
+                      <input type="radio" name="sex" value="女" title="女" checked=""><div class="byui-unselect byui-form-radio byui-form-radioed"><i class="byui-anim byui-icon"></i><div>女</div></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item byui-form-text">
+                    <label class="byui-form-label">文本域</label>
+                    <div class="byui-input-block">
+                      <textarea name="desc" placeholder="请输入内容" class="byui-textarea"></textarea>
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <div class="byui-input-block">
+                      <button class="byui-btn" lay-submit="" lay-filter="formDemo">立即提交</button>
+                      <button type="reset" class="byui-btn byui-btn-primary">重置</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="site-title">
+                <fieldset><legend><a name="input">输入框</a></legend></fieldset>
+              </div>
+              <div class="byui-inline">
+                <input type="text" name="title" required="" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="byui-input">
+              </div>
+              <div class="site-text">
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="byui-input"&gt;    </li><li>      </li></ol></pre>
+                <p class="site-tips">
+                  <em>required</em>：注册浏览器所规定的必填字段 
+                  <br><em>lay-verify</em>：注册form模块需要验证的类型 
+                  <br><em>class="byui-input"</em>：byui.css提供的通用CSS类
+                  <br>
+                </p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="select">下拉选择框</a></legend></fieldset>
+              </div>
+              <div class="byui-form">
+                <div class="byui-inline">
+                  <select name="city" lay-verify="required">
+                    <option value="">请选择一个城市</option>
+                    <option value="010">北京</option>
+                    <option value="021">上海</option>
+                    <option value="0571">杭州</option>
+                  </select><div class="byui-unselect byui-form-select"><div class="byui-select-title"><input type="text" placeholder="请选择一个城市" value="" readonly="" class="byui-input byui-unselect"><i class="byui-edge"></i></div><dl class="byui-anim byui-anim-upbit"><dd lay-value="" class="byui-select-tips">请选择一个城市</dd><dd lay-value="010" class="">北京</dd><dd lay-value="021" class="">上海</dd><dd lay-value="0571" class="">杭州</dd></dl></div>
+                </div>
+                <div class="byui-inline">
+                  <select name="city" lay-verify="required">
+                    <option value="">请选择一个城市</option>
+                    <option value="010">北京</option>
+                    <option value="021" disabled="">上海（禁用效果）</option>
+                    <option value="0571" selected="">杭州</option>
+                  </select><div class="byui-unselect byui-form-select"><div class="byui-select-title"><input type="text" placeholder="请选择一个城市" value="杭州" readonly="" class="byui-input byui-unselect"><i class="byui-edge"></i></div><dl class="byui-anim byui-anim-upbit"><dd lay-value="" class="byui-select-tips">请选择一个城市</dd><dd lay-value="010" class="">北京</dd><dd lay-value="021" class=" byui-disabled">上海（禁用效果）</dd><dd lay-value="0571" class="byui-this">杭州</dd></dl></div>
+                </div>
+                <div class="byui-inline">
+                  <select name="quiz">
+                    <option value="">select分组</option>
+                    <optgroup label="城市记忆">
+                      <option value="你工作的第一个城市">你工作的第一个城市？</option>
+                    </optgroup>
+                    <optgroup label="学生时代">
+                      <option value="你的工号">你的工号？</option>
+                      <option value="你最喜欢的老师">你最喜欢的老师？</option>
+                    </optgroup>
+                  </select><div class="byui-unselect byui-form-select"><div class="byui-select-title"><input type="text" placeholder="select分组" value="" readonly="" class="byui-input byui-unselect"><i class="byui-edge"></i></div><dl class="byui-anim byui-anim-upbit byui-select-group"><dd lay-value="" class="byui-select-tips">select分组</dd><dt>城市记忆</dt><dd lay-value="你工作的第一个城市" class="">你工作的第一个城市？</dd><dt>学生时代</dt><dd lay-value="你的工号" class="">你的工号？</dd><dd lay-value="你最喜欢的老师" class="">你最喜欢的老师？</dd></dl></div>
+                </div>
+                <div class="byui-inline">
+                  <select name="city" lay-verify="required" lay-search="">
+                    <option value="">带搜索的选择框</option>
+                    <option value="1">layer</option>
+                    <option value="2">form</option>
+                    <option value="3">layim</option>
+                    <option value="4">element</option>
+                    <option value="5">laytpl</option>
+                    <option value="6">upload</option>
+                    <option value="7">laydate</option>
+                    <option value="8">laypage</option>
+                    <option value="9">flow</option>
+                    <option value="10">util</option>
+                    <option value="11">code</option>
+                    <option value="12">tree</option>
+                    <option value="13">layedit</option>
+                    <option value="14">nav</option>
+                    <option value="15">tab</option>
+                    <option value="16">table</option>
+                    <option value="17">select</option>
+                    <option value="18">checkbox</option>
+                    <option value="19">switch</option>
+                    <option value="20">radio</option>
+                  </select><div class="byui-form-select"><div class="byui-select-title"><input type="text" placeholder="带搜索的选择框" value="" class="byui-input"><i class="byui-edge"></i></div><dl class="byui-anim byui-anim-upbit"><dd lay-value="" class="byui-select-tips">带搜索的选择框</dd><dd lay-value="1" class="">layer</dd><dd lay-value="2" class="">form</dd><dd lay-value="3" class="">layim</dd><dd lay-value="4" class="">element</dd><dd lay-value="5" class="">laytpl</dd><dd lay-value="6" class="">upload</dd><dd lay-value="7" class="">laydate</dd><dd lay-value="8" class="">laypage</dd><dd lay-value="9" class="">flow</dd><dd lay-value="10" class="">util</dd><dd lay-value="11" class="">code</dd><dd lay-value="12" class="">tree</dd><dd lay-value="13" class="">layedit</dd><dd lay-value="14" class="">nav</dd><dd lay-value="15" class="">tab</dd><dd lay-value="16" class="">table</dd><dd lay-value="17" class="">select</dd><dd lay-value="18" class="">checkbox</dd><dd lay-value="19" class="">switch</dd><dd lay-value="20" class="">radio</dd></dl></div>
+                </div>
+              </div>
+              <div class="site-text">
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;select name="city" lay-verify=""&gt;</li><li>  &lt;option value=""&gt;请选择一个城市&lt;/option&gt;</li><li>  &lt;option value="010"&gt;北京&lt;/option&gt;</li><li>  &lt;option value="021"&gt;上海&lt;/option&gt;</li><li>  &lt;option value="0571"&gt;杭州&lt;/option&gt;</li><li>&lt;/select&gt;     </li><li>      </li></ol></pre>
+                <p>上述option的第一项主要是占个坑，让form模块预留“请选择”的提示空间，否则将会把第一项（存在value值）作为默认选中项。你可以在option的空值项中自定义文本，如：请选择分类。</p>
+                
+                <p>你可以通过设定 <em>selected</em> 来设定默认选中项：</p>
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;select name="city" lay-verify=""&gt;</li><li>  &lt;option value="010"&gt;北京&lt;/option&gt;</li><li>  &lt;option value="021" disabled&gt;上海（禁用效果）&lt;/option&gt;</li><li>  &lt;option value="0571" selected&gt;杭州&lt;/option&gt;</li><li>&lt;/select&gt;     </li><li>      </li></ol></pre>
+                
+                <p>你还可以通过 <em>optgroup</em> 标签给select分组：</p>
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;select name="quiz"&gt;</li><li>  &lt;option value=""&gt;请选择&lt;/option&gt;</li><li>  &lt;optgroup label="城市记忆"&gt;</li><li>    &lt;option value="你工作的第一个城市"&gt;你工作的第一个城市？&lt;/option&gt;</li><li>  &lt;/optgroup&gt;</li><li>  &lt;optgroup label="学生时代"&gt;</li><li>    &lt;option value="你的工号"&gt;你的工号？&lt;/option&gt;</li><li>    &lt;option value="你最喜欢的老师"&gt;你最喜欢的老师？&lt;/option&gt;</li><li>  &lt;/optgroup&gt;</li><li>&lt;/select&gt;</li><li>      </li></ol></pre>
+                <p>以及通过设定属性 <em>lay-search</em> 来开启搜索匹配功能</p>
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;select name="city" lay-verify="" lay-search&gt;</li><li>  &lt;option value="010"&gt;layer&lt;/option&gt;</li><li>  &lt;option value="021"&gt;form&lt;/option&gt;</li><li>  &lt;option value="0571" selected&gt;layim&lt;/option&gt;</li><li>  ……</li><li>&lt;/select&gt;     </li><li>      </li></ol></pre>
+                <blockquote class="byui-elem-quote">
+                  属性<em>selected</em>可设定默认项
+                  <br>属性<em>disabled</em>开启禁用，select和option标签都支持
+                </blockquote>
+              </div>
+              
+              <div class="site-title">
+                  <fieldset><legend><a name="input">复选框</a></legend></fieldset>
+                </div>
+              <div class="byui-form">
+                <input type="checkbox" name="write" title="写作" checked=""><div class="byui-unselect byui-form-checkbox byui-form-checked"><span>写作</span><i class="byui-icon byui-icon-ok"></i></div>
+                <input type="checkbox" name="dai" title="发呆"><div class="byui-unselect byui-form-checkbox"><span>发呆</span><i class="byui-icon byui-icon-ok"></i></div>
+                <input type="checkbox" name="jin" title="禁用" disabled=""><div class="byui-unselect byui-form-checkbox byui-checkbox-disbaled byui-disabled"><span>禁用</span><i class="byui-icon byui-icon-ok"></i></div>
+                <input type="checkbox" name="write" title="写作" lay-skin="primary" checked=""><div class="byui-unselect byui-form-checkbox byui-form-checked" lay-skin="primary"><span>写作</span><i class="byui-icon byui-icon-ok"></i></div>
+                <input type="checkbox" name="dai" title="发呆" lay-skin="primary"><div class="byui-unselect byui-form-checkbox" lay-skin="primary"><span>发呆</span><i class="byui-icon byui-icon-ok"></i></div>
+                <input type="checkbox" name="jin" title="禁用" lay-skin="primary" disabled=""><div class="byui-unselect byui-form-checkbox byui-checkbox-disbaled byui-disabled" lay-skin="primary"><span>禁用</span><i class="byui-icon byui-icon-ok"></i></div>
+              </div>
+              <div class="site-text">
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>默认风格：</li><li>&lt;input type="checkbox" name="" title="写作" checked&gt;</li><li>&lt;input type="checkbox" name="" title="发呆"&gt; </li><li>&lt;input type="checkbox" name="" title="禁用" disabled&gt; </li><li> </li><li>原始风格：</li><li>&lt;input type="checkbox" name="" title="写作" lay-skin="primary" checked&gt;</li><li>&lt;input type="checkbox" name="" title="发呆" lay-skin="primary"&gt; </li><li>&lt;input type="checkbox" name="" title="禁用" lay-skin="primary" disabled&gt; </li><li>      </li></ol></pre>
+                <p>
+                  属性<em>title</em>可自定义文本（温馨提示：如果只想显示复选框，可以不用设置title）
+                  <br>属性<em>checked</em>可设定默认选中
+                  <br>属性<em>lay-skin</em>可设置复选框的风格
+                  <br>设置<em>value="1"</em>可自定义值，否则选中时返回的就是默认的on
+                </p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="switch">开关</a></legend></fieldset>
+              </div>
+              <div class="byui-form">
+                <input type="checkbox" name="xxx" lay-skin="switch"><div class="byui-unselect byui-form-switch" lay-skin="_switch"><em></em><i></i></div>
+                <input type="checkbox" name="yyy" lay-skin="switch" lay-text="ON|OFF" checked=""><div class="byui-unselect byui-form-switch byui-form-onswitch" lay-skin="_switch"><em>ON</em><i></i></div>
+                <input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭"><div class="byui-unselect byui-form-switch" lay-skin="_switch"><em>关闭</em><i></i></div>
+                <input type="checkbox" name="aaa" lay-skin="switch" disabled=""><div class="byui-unselect byui-form-switch byui-checkbox-disbaled byui-disabled" lay-skin="_switch"><em></em><i></i></div>
+              </div>
+              <div class="site-text">
+                <p style="margin-top: 10px;">其实就是checkbox复选框的“变种”，通过设定 <em>lay-skin="switch"</em> 形成了开关风格</p>
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;input type="checkbox" name="xxx" lay-skin="switch"&gt;</li><li>&lt;input type="checkbox" name="yyy" lay-skin="switch" lay-text="ON|OFF" checked&gt;</li><li>&lt;input type="checkbox" name="zzz" lay-skin="switch" lay-text="开启|关闭"&gt;</li><li>&lt;input type="checkbox" name="aaa" lay-skin="switch" disabled&gt;</li><li>      </li></ol></pre>
+                <p>
+                  属性<em>checked</em>可设定默认开
+                  <br>属性<em>disabled</em>开启禁用
+                  <br>属性<em>lay-text</em>可自定义开关两种状态的文本
+                  <br>设置<em>value="1"</em>可自定义值，否则选中时返回的就是默认的on
+                </p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="radio">单选框</a></legend></fieldset>
+              </div>
+              <div class="byui-form">
+                <input type="radio" name="sex" title="男"><div class="byui-unselect byui-form-radio"><i class="byui-anim byui-icon"></i><div>男</div></div>
+                <input type="radio" name="sex" title="女" checked=""><div class="byui-unselect byui-form-radio byui-form-radioed"><i class="byui-anim byui-icon"></i><div>女</div></div>
+                <input type="radio" name="sex" title="中性" disabled=""><div class="byui-unselect byui-form-radio byui-radio-disbaled byui-disabled"><i class="byui-anim byui-icon"></i><div>中性</div></div>
+              </div>
+              <div class="site-text">
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;input type="radio" name="sex" value="nan" title="男"&gt;</li><li>&lt;input type="radio" name="sex" value="nv" title="女" checked&gt;</li><li>&lt;input type="radio" name="sex" value="" title="中性" disabled&gt;</li><li>      </li></ol></pre>
+                <p>
+                  属性<em>title</em>可自定义文本
+                  <br>属性<em>disabled</em>开启禁用
+                  <br>设置<em>value="xxx"</em>可自定义值，否则选中时返回的就是默认的on
+                </p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="textarea">文本域</a></legend></fieldset>
+              </div>
+              <textarea name="" required="" lay-verify="required" placeholder="请输入" class="byui-textarea"></textarea>
+              <div class="site-text">
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;textarea name="" required lay-verify="required" placeholder="请输入" class="byui-textarea"&gt;&lt;/textarea&gt;</li><li>      </li></ol></pre>
+                <p class="site-tips">
+                  <em>class="byui-textarea"</em>：byui.css提供的通用CSS类
+                  <br>
+                </p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="inline">组装行内表单</a></legend></fieldset>
+              </div>
+              
+              <div class="byui-form-item">
+                <div class="byui-inline">
+                  <label class="byui-form-label">范围</label>
+                  <div class="byui-input-inline" style="width: 100px;">
+                    <input type="text" name="price_min" placeholder="￥" autocomplete="off" class="byui-input">
+                  </div>
+                  <div class="byui-form-mid">-</div>
+                  <div class="byui-input-inline" style="width: 100px;">
+                    <input type="text" name="price_max" placeholder="￥" autocomplete="off" class="byui-input">
+                  </div>
+                </div>
+                <div class="byui-inline">
+                  <label class="byui-form-label">密码</label>
+                  <div class="byui-input-inline" style="width: 100px;">
+                    <input type="password" name="" autocomplete="off" class="byui-input">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="site-text">
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;div class="byui-form-item"&gt;</li><li> </li><li>  &lt;div class="byui-inline"&gt;</li><li>    &lt;label class="byui-form-label"&gt;范围&lt;/label&gt;</li><li>    &lt;div class="byui-input-inline" style="width: 100px;"&gt;</li><li>      &lt;input type="text" name="price_min" placeholder="￥" autocomplete="off" class="byui-input"&gt;</li><li>    &lt;/div&gt;</li><li>    &lt;div class="byui-form-mid"&gt;-&lt;/div&gt;</li><li>    &lt;div class="byui-input-inline" style="width: 100px;"&gt;</li><li>      &lt;input type="text" name="price_max" placeholder="￥" autocomplete="off" class="byui-input"&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>  </li><li>  &lt;div class="byui-inline"&gt;</li><li>    &lt;label class="byui-form-label"&gt;密码&lt;/label&gt;</li><li>    &lt;div class="byui-input-inline" style="width: 100px;"&gt;</li><li>      &lt;input type="password" name="" autocomplete="off" class="byui-input"&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>  </li><li>&lt;/div&gt;</li><li>      </li></ol></pre>
+                <p class="site-tips">
+                  <em>class="byui-inline"</em>：定义外层行内
+                  <br><em>class="byui-input-inline"</em>：定义内层行内
+                </p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="ignore">忽略美化渲染</a></legend></fieldset>
+              </div>
+              <div class="site-text">
+                <p>你可以对表单元素增加属性 <em>lay-ignore</em>  设置后，将不会对该标签进行美化渲染，即保留系统风格，比如：</p>
+                <div class="byui-form">
+                  <select name="city11" lay-ignore="">
+                    <option value="">请选择一个城市</option>
+                    <option value="010">北京</option>
+                    <option value="021">上海</option>
+                    <option value="0571">杭州</option>
+                  </select>   
+                </div>
+                <pre class="byui-code byui-box byui-code-view"><ol class="byui-code-ol"><li>&lt;select lay-ignore&gt;</li><li>  &lt;option&gt;…&lt;/option&gt;</li><li>&lt;/select&gt;</li><li>      </li></ol></pre>
+                <p>一般不推荐这样做。事实上form组件所提供的接口，对其渲染过的元素，足以应付几乎所有的业务需求。如果忽略渲染，可能会让UI风格不和谐</p>
+              </div>
+              
+              <div class="site-title">
+                <fieldset><legend><a name="pane">表单方框风格</a></legend></fieldset>
+              </div>
+              <div class="site-text">
+                <form class="byui-form byui-form-pane" action="">
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">输入框</label>
+                    <div class="byui-input-block">
+                      <input type="text" name="title" required="" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="byui-input">
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">密码框</label>
+                    <div class="byui-input-inline">
+                      <input type="password" name="password" required="" lay-verify="required" placeholder="请输入密码" autocomplete="off" class="byui-input">
+                    </div>
+                    <div class="byui-form-mid byui-word-aux">辅助文字</div>
+                  </div>
+                  <div class="byui-form-item">
+                    <label class="byui-form-label">选择框</label>
+                    <div class="byui-input-block">
+                      <select name="city" lay-verify="required">
+                        <option value=""></option>
+                        <option value="0">北京</option>
+                        <option value="1">上海</option>
+                        <option value="2">广州</option>
+                        <option value="3">深圳</option>
+                        <option value="4">杭州</option>
+                      </select><div class="byui-unselect byui-form-select"><div class="byui-select-title"><input type="text" placeholder="请选择" value="" readonly="" class="byui-input byui-unselect"><i class="byui-edge"></i></div><dl class="byui-anim byui-anim-upbit"><dd lay-value="" class="byui-select-tips">请选择</dd><dd lay-value="0" class="">北京</dd><dd lay-value="1" class="">上海</dd><dd lay-value="2" class="">广州</dd><dd lay-value="3" class="">深圳</dd><dd lay-value="4" class="">杭州</dd></dl></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item" pane="">
+                    <label class="byui-form-label">开关</label>
+                    <div class="byui-input-block">
+                      <input type="checkbox" name="switch" lay-skin="switch"><div class="byui-unselect byui-form-switch" lay-skin="_switch"><em></em><i></i></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item" pane="">
+                    <label class="byui-form-label">单选框</label>
+                    <div class="byui-input-block">
+                      <input type="radio" name="sex" value="男" title="男"><div class="byui-unselect byui-form-radio"><i class="byui-anim byui-icon"></i><div>男</div></div>
+                      <input type="radio" name="sex" value="女" title="女" checked=""><div class="byui-unselect byui-form-radio byui-form-radioed"><i class="byui-anim byui-icon"></i><div>女</div></div>
+                    </div>
+                  </div>
+                  <div class="byui-form-item byui-form-text">
+                    <label class="byui-form-label">文本域</label>
+                    <div class="byui-input-block">
+                      <textarea placeholder="请输入内容" class="byui-textarea"></textarea>
+                    </div>
+                  </div>
+                  <div class="byui-form-item">
+                    <button class="byui-btn" lay-submit="" lay-filter="formDemoPane">立即提交</button>
+                  </div>
+                </form>
+                <p>通过追加 <em>byui-form-pane</em> 的class，来设定表单的方框风格。内部结构不变。</p>
+                <pre class="byui-code byui-box byui-code-view" lay-title="结构"><ol class="byui-code-ol"><li>&lt;form class="byui-form byui-form-pane" action=""&gt;</li><li>  内部结构都一样，值得注意的是 复选框/开关/单选框 这些组合在该风格下需要额外添加 <em>pane属性</em>（否则会看起来比较别扭），如：</li><li>  &lt;div class="byui-form-item" <a>pane</a>&gt;</li><li>    &lt;label class="byui-form-label"&gt;单选框&lt;/label&gt;</li><li>    &lt;div class="byui-input-block"&gt;</li><li>      &lt;input type="radio" name="sex" value="男" title="男"&gt;</li><li>      &lt;input type="radio" name="sex" value="女" title="女" checked&gt;</li><li>    &lt;/div&gt;</li><li>  &lt;/div&gt;</li><li>&lt;/form&gt;</li><li>      </li></ol></pre>
+                <p></p>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <script src="../src/byui.js"></script>
+  <script>
+    //JavaScript代码区域
+    byui.use("form", function () {
+      var element = byui.form;
+    });
+  </script>
+</body>
+
+</html>

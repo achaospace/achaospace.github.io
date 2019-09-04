@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="dist/byui.js"></script>
+        <script>
+            debugger
+            byui.use(['mytool'], function(){debugger
+                // 调用模块
+                byui.mytool();
+                console.log("ok")
+            });
+    </script>
+    </script> -->
+    <div class="byui-inline"> <!-- 注意：这一层元素并不是必须的 -->
+        <input type="text" class="byui-input" id="test1">
+      </div>
+<script src="dist/byui.all.js"></script>
+<script>
+//由于模块都一次性加载，因此不用执行 byui.use() 来加载对应模块，直接使用即可：
+;!function(){
+  var layer = byui.layer
+  ,form = byui.form;
+  
+  layer.msg('Hello World');
+}();
+byui.define(function(exports){
+  //do something
+  console.log(12123123123)
+  exports('demo', function(){
+    alert('Hello World!');
+  });
+});
+// 動態加載css
+// byui.link("demo.css")
+</script> 
+<script>
+byui.define(function(exports){ //提示：模块也可以依赖其它模块，如：byui.define('layer', callback);
+  var obj = {
+    hello: function(str){
+      alert('Hello '+ (str||'mymod'));
+    }
+  };
+  
+  //输出test接口
+  exports('mymodtest', obj);
+});    
+byui.config({
+  base: './' //假设这是你存放拓展模块的根目录
+})
+// .extend({ //设定模块别名
+//   mymod: 'mymod123' //如果 mymod.js 是在根目录，也可以不用设定别名
+//   ,mod1: './' //相对于上述 base 目录的子目录
+// });
+
+//使用拓展模块
+byui.use(['mymodtest','laydate'], function(){debugger
+  var mymod = byui.mymodtest
+  var laydate = byui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+    ,range: true //或 range: '~' 来自定义分割字符
+,format: 'yyyy年MM月dd日' //可任意组合  
+});
+//   mymod.hello('byui!'); //弹出 Hello World!
+});
+
+</script>
+</body>
+</html>
+
