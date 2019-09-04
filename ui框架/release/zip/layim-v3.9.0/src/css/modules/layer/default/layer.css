@@ -1,0 +1,181 @@
+/**
+ 
+ @Name: layer
+ @Author: Achao
+ 
+ **/
+
+/* *html{background-image: url(about:blank); background-attachment: fixed;} */
+html #layuicss-layer{display: none; position: absolute; width: 1989px;}
+
+/* common */
+.baiyun-layer-shade, .baiyun-layer{position:fixed; _position:absolute; pointer-events: auto;}
+.baiyun-layer-shade{top:0; left:0; width:100%; height:100%; _height:expression(document.body.offsetHeight+"px");}
+.baiyun-layer{-webkit-overflow-scrolling: touch;}
+.baiyun-layer{top:150px; left: 0; margin:0; padding:0; background-color:#fff; -webkit-background-clip: content; border-radius: 2px; box-shadow: 1px 1px 50px rgba(0,0,0,.3);}
+.baiyun-layer-close{position:absolute;}
+.baiyun-layer-content{position:relative;}
+.baiyun-layer-border{border: 1px solid #B2B2B2; border: 1px solid rgba(0,0,0,.1); box-shadow: 1px 1px 5px rgba(0,0,0,.2);}
+.baiyun-layer-load{background:url(loading-1.gif) #eee center center no-repeat;}
+.baiyun-layer-ico{ background:url(icon.png) no-repeat;}
+.baiyun-layer-dialog .baiyun-layer-ico,
+.baiyun-layer-setwin a,
+.baiyun-layer-btn a{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
+
+.baiyun-layer-move{display: none; position: fixed; *position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; filter:alpha(opacity=0); background-color: #fff; z-index: 2147483647;}
+.baiyun-layer-resize{position: absolute; width: 15px; height: 15px; right: 0; bottom: 0; cursor: se-resize;}
+
+/* 动画 */
+.layer-anim{-webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration:.3s; animation-duration:.3s;}
+
+@-webkit-keyframes layer-bounceIn { /* 默认 */
+	0% {opacity: 0; -webkit-transform: scale(.5); transform: scale(.5)}
+	100% {opacity: 1; -webkit-transform: scale(1); transform: scale(1)}
+}
+@keyframes layer-bounceIn {
+	0% {opacity: 0; -webkit-transform: scale(.5); -ms-transform: scale(.5); transform: scale(.5)}
+	100% {opacity: 1; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1)}
+}
+.layer-anim-00{-webkit-animation-name: layer-bounceIn;animation-name: layer-bounceIn}
+
+@-webkit-keyframes layer-zoomInDown{0%{opacity:0;-webkit-transform:scale(.1) translateY(-2000px);transform:scale(.1) translateY(-2000px);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}60%{opacity:1;-webkit-transform:scale(.475) translateY(60px);transform:scale(.475) translateY(60px);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes layer-zoomInDown{0%{opacity:0;-webkit-transform:scale(.1) translateY(-2000px);-ms-transform:scale(.1) translateY(-2000px);transform:scale(.1) translateY(-2000px);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}60%{opacity:1;-webkit-transform:scale(.475) translateY(60px);-ms-transform:scale(.475) translateY(60px);transform:scale(.475) translateY(60px);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}.layer-anim-01{-webkit-animation-name:layer-zoomInDown;animation-name:layer-zoomInDown}
+
+@-webkit-keyframes layer-fadeInUpBig{0%{opacity:0;-webkit-transform:translateY(2000px);transform:translateY(2000px)}100%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes layer-fadeInUpBig{0%{opacity:0;-webkit-transform:translateY(2000px);-ms-transform:translateY(2000px);transform:translateY(2000px)}100%{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}.layer-anim-02{-webkit-animation-name:layer-fadeInUpBig;animation-name:layer-fadeInUpBig}
+
+@-webkit-keyframes layer-zoomInLeft{0%{opacity:0;-webkit-transform:scale(.1) translateX(-2000px);transform:scale(.1) translateX(-2000px);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}60%{opacity:1;-webkit-transform:scale(.475) translateX(48px);transform:scale(.475) translateX(48px);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes layer-zoomInLeft{0%{opacity:0;-webkit-transform:scale(.1) translateX(-2000px);-ms-transform:scale(.1) translateX(-2000px);transform:scale(.1) translateX(-2000px);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}60%{opacity:1;-webkit-transform:scale(.475) translateX(48px);-ms-transform:scale(.475) translateX(48px);transform:scale(.475) translateX(48px);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}.layer-anim-03{-webkit-animation-name:layer-zoomInLeft;animation-name:layer-zoomInLeft}
+
+@-webkit-keyframes layer-rollIn{0%{opacity:0;-webkit-transform:translateX(-100%) rotate(-120deg);transform:translateX(-100%) rotate(-120deg)}100%{opacity:1;-webkit-transform:translateX(0px) rotate(0deg);transform:translateX(0px) rotate(0deg)}}@keyframes layer-rollIn{0%{opacity:0;-webkit-transform:translateX(-100%) rotate(-120deg);-ms-transform:translateX(-100%) rotate(-120deg);transform:translateX(-100%) rotate(-120deg)}100%{opacity:1;-webkit-transform:translateX(0px) rotate(0deg);-ms-transform:translateX(0px) rotate(0deg);transform:translateX(0px) rotate(0deg)}}.layer-anim-04{-webkit-animation-name:layer-rollIn;animation-name:layer-rollIn}
+
+@keyframes layer-fadeIn{0%{opacity:0}100%{opacity:1}}.layer-anim-05{-webkit-animation-name:layer-fadeIn;animation-name:layer-fadeIn}
+
+@-webkit-keyframes layer-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%,90%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%,80%{-webkit-transform:translateX(10px);transform:translateX(10px)}}@keyframes layer-shake{0%,100%{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%,90%{-webkit-transform:translateX(-10px);-ms-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%,80%{-webkit-transform:translateX(10px);-ms-transform:translateX(10px);transform:translateX(10px)}}.layer-anim-06{-webkit-animation-name:layer-shake;animation-name:layer-shake}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+
+/* 标题栏 */
+.baiyun-layer-title{padding:0 80px 0 20px; height:42px; line-height:42px; border-bottom:1px solid #eee; font-size:14px; color:#333; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background-color: #F8F8F8; border-radius: 2px 2px 0 0;}
+.baiyun-layer-setwin{position:absolute; right:15px; *right:0; top:15px; font-size:0; line-height: initial;}
+.baiyun-layer-setwin a{position:relative; width: 16px; height:16px; margin-left:10px; font-size:12px; _overflow:hidden;}
+.baiyun-layer-setwin .baiyun-layer-min cite{position:absolute; width:14px; height:2px; left:0; top:50%; margin-top:-1px; background-color:#2E2D3C; cursor:pointer; _overflow:hidden;}
+.baiyun-layer-setwin .baiyun-layer-min:hover cite{background-color:#2D93CA; }
+.baiyun-layer-setwin .baiyun-layer-max{background-position:-32px -40px;}
+.baiyun-layer-setwin .baiyun-layer-max:hover{background-position:-16px -40px;}
+.baiyun-layer-setwin .baiyun-layer-maxmin{background-position:-65px -40px;}
+.baiyun-layer-setwin .baiyun-layer-maxmin:hover{background-position:-49px -40px;}
+.baiyun-layer-setwin .baiyun-layer-close1{background-position: 1px -40px; cursor: pointer;}
+.baiyun-layer-setwin .baiyun-layer-close1:hover{opacity:0.7;}
+.baiyun-layer-setwin .baiyun-layer-close2{position:absolute; right:-28px; top:-28px; width:30px; height:30px;  margin-left:0; background-position:-149px -31px; *right:-18px; _display:none;}
+.baiyun-layer-setwin .baiyun-layer-close2:hover{ background-position:-180px -31px;}
+
+/* 按钮栏 */
+.baiyun-layer-btn{text-align: right; padding: 0 15px 12px; pointer-events: auto; user-select: none; -webkit-user-select: none;}
+.baiyun-layer-btn a{height: 28px; line-height: 28px; margin: 5px 5px 0; padding: 0 15px; border: 1px solid #dedede; background-color:#fff; color: #333; border-radius: 2px; font-weight:400; cursor:pointer; text-decoration: none;}
+.baiyun-layer-btn a:hover{opacity: 0.9; text-decoration: none;}
+.baiyun-layer-btn a:active{opacity: 0.8;}
+.baiyun-layer-btn .baiyun-layer-btn0{border-color: #1E9FFF; background-color: #1E9FFF; color:#fff;}
+.baiyun-layer-btn-l{text-align: left;}
+.baiyun-layer-btn-c{text-align: center;}
+
+/* 定制化 */
+.baiyun-layer-dialog{min-width:260px;}
+.baiyun-layer-dialog .baiyun-layer-content{position: relative; padding:20px; line-height:24px; word-break: break-all; overflow:hidden; font-size:14px; overflow-x: hidden; overflow-y:auto;}
+.baiyun-layer-dialog .baiyun-layer-content .baiyun-layer-ico{position:absolute; top:16px; left:15px; _left:-40px; width:30px; height:30px;}
+.baiyun-layer-ico1{background-position:-30px 0 }
+.baiyun-layer-ico2{background-position:-60px 0;}
+.baiyun-layer-ico3{background-position:-90px 0;}
+.baiyun-layer-ico4{background-position:-120px 0;}
+.baiyun-layer-ico5{background-position:-150px 0;}
+.baiyun-layer-ico6{background-position:-180px 0;}
+.baiyun-layer-rim{border:6px solid #8D8D8D; border:6px solid rgba(0,0,0,.3); border-radius:5px; box-shadow: none;}
+.baiyun-layer-msg{min-width:180px; border:1px solid #D3D4D3; box-shadow: none;}
+.baiyun-layer-hui{min-width:100px;  background-color: #000; filter:alpha(opacity=60); background-color: rgba(0,0,0,0.6); color: #fff; border:none;}
+.baiyun-layer-hui .baiyun-layer-content{padding:12px 25px; text-align:center;}
+.baiyun-layer-dialog .baiyun-layer-padding{padding: 20px 20px 20px 55px; text-align: left;}
+.baiyun-layer-page .baiyun-layer-content{position:relative; overflow:auto;}
+.baiyun-layer-page .baiyun-layer-btn,.baiyun-layer-iframe .baiyun-layer-btn{padding-top:10px;}
+.baiyun-layer-nobg{background:none;}
+.baiyun-layer-iframe iframe{display: block; width: 100%;}
+
+.baiyun-layer-loading{border-radius:100%; background:none;  box-shadow:none;  border:none;}
+.baiyun-layer-loading .baiyun-layer-content{width:60px; height:24px; background:url(loading-0.gif) no-repeat;}
+.baiyun-layer-loading .baiyun-layer-loading1{width:37px; height:37px; background:url(loading-1.gif) no-repeat;}
+.baiyun-layer-loading .baiyun-layer-loading2, .baiyun-layer-ico16{width:32px; height:32px; background:url(loading-2.gif) no-repeat;}
+.baiyun-layer-tips{background: none; box-shadow:none; border:none;}
+.baiyun-layer-tips .baiyun-layer-content{position: relative; line-height: 22px; min-width: 12px; padding: 8px 15px; font-size: 12px; _float:left; border-radius: 2px; box-shadow: 1px 1px 3px rgba(0,0,0,.2); background-color: #000; color: #fff;}
+.baiyun-layer-tips .baiyun-layer-close{right:-2px; top:-1px;}
+.baiyun-layer-tips i.baiyun-layer-TipsG{ position:absolute;  width:0; height:0; border-width:8px; border-color:transparent; border-style:dashed; *overflow:hidden;}
+.baiyun-layer-tips i.baiyun-layer-TipsT, .baiyun-layer-tips i.baiyun-layer-TipsB{left:5px; border-right-style:solid; border-right-color: #000;}
+.baiyun-layer-tips i.baiyun-layer-TipsT{bottom:-8px;}
+.baiyun-layer-tips i.baiyun-layer-TipsB{top:-8px;}
+.baiyun-layer-tips i.baiyun-layer-TipsR, .baiyun-layer-tips i.baiyun-layer-TipsL{top: 5px; border-bottom-style:solid; border-bottom-color: #000;}
+.baiyun-layer-tips i.baiyun-layer-TipsR{left:-8px;}
+.baiyun-layer-tips i.baiyun-layer-TipsL{right:-8px;}
+
+/* skin */
+.baiyun-layer-lan[type="dialog"]{min-width:280px;}
+.baiyun-layer-lan .baiyun-layer-title{background:#4476A7; color:#fff; border: none;}
+.baiyun-layer-lan .baiyun-layer-btn{padding: 5px 10px 10px; text-align: right; border-top:1px solid #E9E7E7}
+.baiyun-layer-lan .baiyun-layer-btn a{background: #fff; border-color: #E9E7E7; color: #333;}
+.baiyun-layer-lan .baiyun-layer-btn .baiyun-layer-btn1{background:#C9C5C5;}
+.baiyun-layer-molv .baiyun-layer-title{background: #009f95; color:#fff; border: none;}
+.baiyun-layer-molv .baiyun-layer-btn a{background: #009f95; border-color: #009f95;}
+.baiyun-layer-molv .baiyun-layer-btn .baiyun-layer-btn1{background:#92B8B1;}
+
+
+/**
+ 
+ @Name: layer拓展样式
+ 
+ */
+
+.baiyun-layer-iconext{background:url(icon-ext.png) no-repeat;}
+
+/* prompt模式 */
+.baiyun-layer-prompt .baiyun-layer-input{display: block; width: 230px; height: 36px; margin: 0 auto; line-height: 30px; padding-left: 10px; border: 1px solid #e6e6e6; color: #333;}
+.baiyun-layer-prompt textarea.baiyun-layer-input{width: 300px; height: 100px; line-height: 20px; padding: 6px 10px;}
+.baiyun-layer-prompt .baiyun-layer-content{padding: 20px;}
+.baiyun-layer-prompt .baiyun-layer-btn{padding-top: 0;}
+
+/* tab模式 */
+.baiyun-layer-tab{box-shadow:1px 1px 50px rgba(0,0,0,.4);}
+.baiyun-layer-tab .baiyun-layer-title{padding-left:0; overflow: visible;}
+.baiyun-layer-tab .baiyun-layer-title span{position:relative; float:left; min-width:80px; max-width:260px; padding:0 20px; text-align:center; cursor:default; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; cursor: pointer;}
+.baiyun-layer-tab .baiyun-layer-title span.baiyun-this{height: 43px; border-left: 1px solid #eee; border-right: 1px solid #eee; background-color: #fff; z-index: 10;}
+.baiyun-layer-tab .baiyun-layer-title span:first-child{border-left:none;}
+.baiyun-layer-tabmain{line-height:24px; clear:both;}
+.baiyun-layer-tabmain .baiyun-layer-tabli{display:none;}
+.baiyun-layer-tabmain .baiyun-layer-tabli.baiyun-this{display: block;}
+
+/* photo模式 */
+.baiyun-layer-photos{-webkit-animation-duration: .8s; animation-duration: .8s;}
+.baiyun-layer-photos .baiyun-layer-content{overflow:hidden; text-align: center;}
+.baiyun-layer-photos .baiyun-layer-phimg img{position: relative; width:100%; display: inline-block; *display:inline; *zoom:1; vertical-align:top;}
+.baiyun-layer-imguide,.baiyun-layer-imgbar{display:none;}
+.baiyun-layer-imgprev, .baiyun-layer-imgnext{position:absolute; top:50%; width:27px; _width:44px; height:44px;  margin-top:-22px; outline:none;blr:expression(this.onFocus=this.blur());}
+.baiyun-layer-imgprev{left:10px; background-position:-5px -5px; _background-position:-70px -5px;}
+.baiyun-layer-imgprev:hover{background-position:-33px -5px; _background-position:-120px -5px;}
+.baiyun-layer-imgnext{right:10px; _right:8px; background-position:-5px -50px; _background-position:-70px -50px;}
+.baiyun-layer-imgnext:hover{background-position:-33px -50px; _background-position:-120px -50px;}
+.baiyun-layer-imgbar{position:absolute; left:0; bottom:0; width:100%; height:32px; line-height:32px; background-color:rgba(0,0,0,.8); background-color:#000\9; filter:Alpha(opacity=80); color:#fff; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-size:0;}
+.baiyun-layer-imgtit{/*position:absolute; left:20px;*/}
+.baiyun-layer-imgtit *{display:inline-block; *display:inline; *zoom:1; vertical-align:top; font-size:12px;}
+.baiyun-layer-imgtit a{max-width:65%;  text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color:#fff;}
+.baiyun-layer-imgtit a:hover{color:#fff; text-decoration:underline;}
+.baiyun-layer-imgtit em{padding-left:10px; font-style: normal;}
+
+/* 关闭动画 */
+@-webkit-keyframes layer-bounceOut {
+  100% {opacity: 0; -webkit-transform: scale(.7); transform: scale(.7)}
+  30% {-webkit-transform: scale(1.05); transform: scale(1.05)}
+  0% {-webkit-transform: scale(1); transform: scale(1);}
+}
+@keyframes layer-bounceOut {
+  100% {opacity: 0; -webkit-transform: scale(.7); -ms-transform: scale(.7); transform: scale(.7);}
+  30% {-webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05);}
+  0% {-webkit-transform: scale(1); -ms-transform: scale(1);transform: scale(1);}
+}
+.layer-anim-close{-webkit-animation-name: layer-bounceOut; animation-name: layer-bounceOut; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration:.2s; animation-duration:.2s;}
+
+@media screen and (max-width: 1100px) {
+  .baiyun-layer-iframe{overflow-y: auto; -webkit-overflow-scrolling: touch;}
+}
+
+

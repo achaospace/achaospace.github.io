@@ -1,0 +1,1356 @@
+/**
+ 
+ @Name: baiyun
+ @Author: Achao
+ 
+ */
+
+
+/** 初始化 **/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td,form,pre{margin: 0; padding: 0; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+a:active,a:hover{outline:0}
+img{display: inline-block; border: none; vertical-align: middle;}
+li{list-style:none;}
+table{border-collapse: collapse; border-spacing: 0;}
+h1,h2,h3{font-weight: 400;}
+h4, h5, h6{font-size: 100%; font-weight: 400;}
+button,input,select,textarea{font-size: 100%; }
+input,button,textarea,select,optgroup,option{font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; outline: 0;}
+pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;}
+
+/** 初始化全局标签 **/
+body{line-height: 24px; font: 14px Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif;}
+hr{height: 1px; margin: 10px 0; border: 0; clear: both;}
+a{color: #333; text-decoration:none; }
+a:hover{color: #777;}
+a cite{font-style: normal; *cursor:pointer;}
+
+/** 基础通用 **/
+.baiyun-border-box, .baiyun-border-box *{box-sizing: border-box;}
+/* 消除第三方ui可能造成的冲突 */.baiyun-box, .baiyun-box *{box-sizing: content-box;}
+.baiyun-clear{clear: both; *zoom: 1;}
+.baiyun-clear:after{content:'\20'; clear:both; *zoom:1; display:block; height:0;}
+.baiyun-inline{position: relative; display: inline-block; *display:inline; *zoom:1; vertical-align: middle;}
+/* 三角形 */.baiyun-edge{position: relative; display: inline-block; vertical-align: middle; width: 0; height: 0; border-width: 6px; border-style: dashed; border-color: transparent; overflow: hidden;}
+.baiyun-edge-top{top: -4px; border-bottom-color: #999; border-bottom-style: solid;}
+.baiyun-edge-right{border-left-color: #999; border-left-style: solid;}
+.baiyun-edge-bottom{top: 2px; border-top-color: #999; border-top-style: solid;}
+.baiyun-edge-left{border-right-color: #999; border-right-style: solid;}
+/* 单行溢出省略 */.baiyun-elip{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+/* 屏蔽选中 */.baiyun-unselect,.baiyun-icon, .baiyun-disabled{-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none;}
+/* 禁用 */.baiyun-disabled,.baiyun-disabled:hover{color: #d2d2d2 !important; cursor: not-allowed !important;}
+/* 纯圆角 */.baiyun-circle{border-radius: 100%;}
+.baiyun-show{display: block !important;}
+.baiyun-hide{display: none !important;}
+
+/** 图标字体 **/
+@font-face {
+  font-family: 'baiyun-icon';
+  src: url('../font/iconfont.eot?v=250');
+  src: url('../font/iconfont.eot?v=250#iefix') format('embedded-opentype'),
+       url('../font/iconfont.woff2?v=250') format('woff2'),
+       url('../font/iconfont.woff?v=250') format('woff'),
+       url('../font/iconfont.ttf?v=250') format('truetype'),
+       url('../font/iconfont.svg?v=250#baiyun-icon') format('svg');
+}
+                    
+.baiyun-icon{
+  font-family:"baiyun-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* font-class */
+.baiyun-icon-reply-fill:before{content:"\e611"}
+.baiyun-icon-set-fill:before{content:"\e614"}
+.baiyun-icon-menu-fill:before{content:"\e60f"}
+.baiyun-icon-search:before{content:"\e615"}
+.baiyun-icon-share:before{content:"\e641"}
+.baiyun-icon-set-sm:before{content:"\e620"}
+.baiyun-icon-engine:before{content:"\e628"}
+.baiyun-icon-close:before{content:"\1006"}
+.baiyun-icon-close-fill:before{content:"\1007"}
+.baiyun-icon-chart-screen:before{content:"\e629"}
+.baiyun-icon-star:before{content:"\e600"}
+.baiyun-icon-circle-dot:before{content:"\e617"}
+.baiyun-icon-chat:before{content:"\e606"}
+.baiyun-icon-release:before{content:"\e609"}
+.baiyun-icon-list:before{content:"\e60a"}
+.baiyun-icon-chart:before{content:"\e62c"}
+.baiyun-icon-ok-circle:before{content:"\1005"}
+.baiyun-icon-layim-theme:before{content:"\e61b"}
+.baiyun-icon-table:before{content:"\e62d"}
+.baiyun-icon-right:before{content:"\e602"}
+.baiyun-icon-left:before{content:"\e603"}
+.baiyun-icon-cart-simple:before{content:"\e698"}
+.baiyun-icon-face-cry:before{content:"\e69c"}
+.baiyun-icon-face-smile:before{content:"\e6af"}
+.baiyun-icon-survey:before{content:"\e6b2"}
+.baiyun-icon-tree:before{content:"\e62e"}
+.baiyun-icon-upload-circle:before{content:"\e62f"}
+.baiyun-icon-add-circle:before{content:"\e61f"}
+.baiyun-icon-download-circle:before{content:"\e601"}
+.baiyun-icon-templeate-1:before{content:"\e630"}
+.baiyun-icon-util:before{content:"\e631"}
+.baiyun-icon-face-surprised:before{content:"\e664"}
+.baiyun-icon-edit:before{content:"\e642"}
+.baiyun-icon-speaker:before{content:"\e645"}
+.baiyun-icon-down:before{content:"\e61a"}
+.baiyun-icon-file:before{content:"\e621"}
+.baiyun-icon-layouts:before{content:"\e632"}
+.baiyun-icon-rate-half:before{content:"\e6c9"}
+.baiyun-icon-add-circle-fine:before{content:"\e608"}
+.baiyun-icon-prev-circle:before{content:"\e633"}
+.baiyun-icon-read:before{content:"\e705"}
+.baiyun-icon-404:before{content:"\e61c"}
+.baiyun-icon-carousel:before{content:"\e634"}
+.baiyun-icon-help:before{content:"\e607"}
+.baiyun-icon-code-circle:before{content:"\e635"}
+.baiyun-icon-water:before{content:"\e636"}
+.baiyun-icon-username:before{content:"\e66f"}
+.baiyun-icon-find-fill:before{content:"\e670"}
+.baiyun-icon-about:before{content:"\e60b"}
+.baiyun-icon-location:before{content:"\e715"}
+.baiyun-icon-up:before{content:"\e619"}
+.baiyun-icon-pause:before{content:"\e651"}
+.baiyun-icon-date:before{content:"\e637"}
+.baiyun-icon-layim-uploadfile:before{content:"\e61d"}
+.baiyun-icon-delete:before{content:"\e640"}
+.baiyun-icon-play:before{content:"\e652"}
+.baiyun-icon-top:before{content:"\e604"}
+.baiyun-icon-friends:before{content:"\e612"}
+.baiyun-icon-refresh-3:before{content:"\e9aa"}
+.baiyun-icon-ok:before{content:"\e605"}
+.baiyun-icon-layer:before{content:"\e638"}
+.baiyun-icon-face-smile-fine:before{content:"\e60c"}
+.baiyun-icon-dollar:before{content:"\e659"}
+.baiyun-icon-group:before{content:"\e613"}
+.baiyun-icon-layim-download:before{content:"\e61e"}
+.baiyun-icon-picture-fine:before{content:"\e60d"}
+.baiyun-icon-link:before{content:"\e64c"}
+.baiyun-icon-diamond:before{content:"\e735"}
+.baiyun-icon-log:before{content:"\e60e"}
+.baiyun-icon-rate-solid:before{content:"\e67a"}
+.baiyun-icon-fonts-del:before{content:"\e64f"}
+.baiyun-icon-unlink:before{content:"\e64d"}
+.baiyun-icon-fonts-clear:before{content:"\e639"}
+.baiyun-icon-triangle-r:before{content:"\e623"}
+.baiyun-icon-circle:before{content:"\e63f"}
+.baiyun-icon-radio:before{content:"\e643"}
+.baiyun-icon-align-center:before{content:"\e647"}
+.baiyun-icon-align-right:before{content:"\e648"}
+.baiyun-icon-align-left:before{content:"\e649"}
+.baiyun-icon-loading-1:before{content:"\e63e"}
+.baiyun-icon-return:before{content:"\e65c"}
+.baiyun-icon-fonts-strong:before{content:"\e62b"}
+.baiyun-icon-upload:before{content:"\e67c"}
+.baiyun-icon-dialogue:before{content:"\e63a"}
+.baiyun-icon-video:before{content:"\e6ed"}
+.baiyun-icon-headset:before{content:"\e6fc"}
+.baiyun-icon-cellphone-fine:before{content:"\e63b"}
+.baiyun-icon-add-1:before{content:"\e654"}
+.baiyun-icon-face-smile-b:before{content:"\e650"}
+.baiyun-icon-fonts-html:before{content:"\e64b"}
+.baiyun-icon-form:before{content:"\e63c"}
+.baiyun-icon-cart:before{content:"\e657"}
+.baiyun-icon-camera-fill:before{content:"\e65d"}
+.baiyun-icon-tabs:before{content:"\e62a"}
+.baiyun-icon-fonts-code:before{content:"\e64e"}
+.baiyun-icon-fire:before{content:"\e756"}
+.baiyun-icon-set:before{content:"\e716"}
+.baiyun-icon-fonts-u:before{content:"\e646"}
+.baiyun-icon-triangle-d:before{content:"\e625"}
+.baiyun-icon-tips:before{content:"\e702"}
+.baiyun-icon-picture:before{content:"\e64a"}
+.baiyun-icon-more-vertical:before{content:"\e671"}
+.baiyun-icon-flag:before{content:"\e66c"}
+.baiyun-icon-loading:before{content:"\e63d"}
+.baiyun-icon-fonts-i:before{content:"\e644"}
+.baiyun-icon-refresh-1:before{content:"\e666"}
+.baiyun-icon-rmb:before{content:"\e65e"}
+.baiyun-icon-home:before{content:"\e68e"}
+.baiyun-icon-user:before{content:"\e770"}
+.baiyun-icon-notice:before{content:"\e667"}
+.baiyun-icon-login-weibo:before{content:"\e675"}
+.baiyun-icon-voice:before{content:"\e688"}
+.baiyun-icon-upload-drag:before{content:"\e681"}
+.baiyun-icon-login-qq:before{content:"\e676"}
+.baiyun-icon-snowflake:before{content:"\e6b1"}
+.baiyun-icon-file-b:before{content:"\e655"}
+.baiyun-icon-template:before{content:"\e663"}
+.baiyun-icon-auz:before{content:"\e672"}
+.baiyun-icon-console:before{content:"\e665"}
+.baiyun-icon-app:before{content:"\e653"}
+.baiyun-icon-prev:before{content:"\e65a"}
+.baiyun-icon-website:before{content:"\e7ae"}
+.baiyun-icon-next:before{content:"\e65b"}
+.baiyun-icon-component:before{content:"\e857"}
+.baiyun-icon-more:before{content:"\e65f"}
+.baiyun-icon-login-wechat:before{content:"\e677"}
+.baiyun-icon-shrink-right:before{content:"\e668"}
+.baiyun-icon-spread-left:before{content:"\e66b"}
+.baiyun-icon-camera:before{content:"\e660"}
+.baiyun-icon-note:before{content:"\e66e"}
+.baiyun-icon-refresh:before{content:"\e669"}
+.baiyun-icon-female:before{content:"\e661"}
+.baiyun-icon-male:before{content:"\e662"}
+.baiyun-icon-password:before{content:"\e673"}
+.baiyun-icon-senior:before{content:"\e674"}
+.baiyun-icon-theme:before{content:"\e66a"}
+.baiyun-icon-tread:before{content:"\e6c5"}
+.baiyun-icon-praise:before{content:"\e6c6"}
+.baiyun-icon-star-fill:before{content:"\e658"}
+.baiyun-icon-rate:before{content:"\e67b"}
+.baiyun-icon-template-1:before{content:"\e656"}
+.baiyun-icon-vercode:before{content:"\e679"}
+.baiyun-icon-cellphone:before{content:"\e678"}
+
+.baiyun-icon-screen-full:before{content:"\e622";}
+.baiyun-icon-screen-restore:before{content:"\e758";}
+.baiyun-icon-cols:before{content:"\e610";}
+.baiyun-icon-export:before{content:"\e67d";}
+.baiyun-icon-print:before{content:"\e66d";}
+.baiyun-icon-slider:before{content: "\e714";}
+.baiyun-icon-addition:before{content: "\e624";}
+.baiyun-icon-subtraction:before{content: "\e67e";}
+.baiyun-icon-service:before{content: "\e626";}
+.baiyun-icon-transfer:before{content: "\e691";}
+
+/* 基本布局 */
+.baiyun-main{position: relative; width: 1140px; margin: 0 auto;}
+.baiyun-header{position: relative; z-index: 1000; height: 60px;}
+.baiyun-header a:hover{transition: all .5s; -webkit-transition: all .5s;}
+.baiyun-side{position: fixed; left: 0; top: 0; bottom: 0; z-index: 999; width: 200px; overflow-x: hidden;}
+.baiyun-side-scroll{position: relative; width: 220px; height: 100%; overflow-x: hidden;}
+.baiyun-body{position: absolute; left: 200px; right: 0; top: 0; bottom: 0; z-index: 998; width: auto; overflow: hidden; overflow-y: auto; box-sizing: border-box;}
+
+/* 后台框架大布局 */.baiyun-layout-body{overflow: hidden;}
+.baiyun-layout-admin .baiyun-header{background-color: #23262E;}
+.baiyun-layout-admin .baiyun-side{top: 60px; width: 200px; overflow-x: hidden;}
+.baiyun-layout-admin .baiyun-body{position: fixed; top: 60px; bottom: 44px;}
+.baiyun-layout-admin .baiyun-main{width: auto; margin: 0 15px;}
+.baiyun-layout-admin .baiyun-footer{position: fixed; left: 200px; right: 0; bottom: 0; height: 44px; line-height: 44px; padding: 0 15px; background-color: #eee;}
+.baiyun-layout-admin .baiyun-logo{position: absolute; left: 0; top: 0; width: 200px; height: 100%; line-height: 60px; text-align: center; color: #009688; font-size: 16px;}
+.baiyun-layout-admin .baiyun-header .baiyun-nav{background: none;}
+.baiyun-layout-left{position: absolute !important; left: 200px; top: 0;}
+.baiyun-layout-right{position: absolute !important; right: 0; top: 0;}
+
+/* 栅格布局 */
+.baiyun-container{position: relative; margin: 0 auto; padding: 0 15px; box-sizing: border-box;}
+.baiyun-fluid{position: relative; margin: 0 auto; padding: 0 15px;}
+
+.baiyun-row:before, .baiyun-row:after{content: ''; display: block; clear: both;}
+.baiyun-col-xs1, .baiyun-col-xs2, .baiyun-col-xs3, .baiyun-col-xs4, .baiyun-col-xs5, .baiyun-col-xs6, .baiyun-col-xs7, .baiyun-col-xs8, .baiyun-col-xs9, .baiyun-col-xs10, .baiyun-col-xs11, .baiyun-col-xs12
+,.baiyun-col-sm1, .baiyun-col-sm2, .baiyun-col-sm3, .baiyun-col-sm4, .baiyun-col-sm5, .baiyun-col-sm6, .baiyun-col-sm7, .baiyun-col-sm8, .baiyun-col-sm9, .baiyun-col-sm10, .baiyun-col-sm11, .baiyun-col-sm12
+,.baiyun-col-md1, .baiyun-col-md2, .baiyun-col-md3, .baiyun-col-md4, .baiyun-col-md5, .baiyun-col-md6, .baiyun-col-md7, .baiyun-col-md8, .baiyun-col-md9, .baiyun-col-md10, .baiyun-col-md11, .baiyun-col-md12
+,.baiyun-col-lg1, .baiyun-col-lg2, .baiyun-col-lg3, .baiyun-col-lg4, .baiyun-col-lg5, .baiyun-col-lg6, .baiyun-col-lg7, .baiyun-col-lg8, .baiyun-col-lg9, .baiyun-col-lg10, .baiyun-col-lg11, .baiyun-col-lg12
+{position: relative; display: block; box-sizing: border-box;}
+
+.baiyun-col-xs1, .baiyun-col-xs2, .baiyun-col-xs3, .baiyun-col-xs4, .baiyun-col-xs5, .baiyun-col-xs6, .baiyun-col-xs7, .baiyun-col-xs8, .baiyun-col-xs9, .baiyun-col-xs10, .baiyun-col-xs11, .baiyun-col-xs12{float: left;}
+.baiyun-col-xs1{width: 8.33333333%;}
+.baiyun-col-xs2{width: 16.66666667%;}
+.baiyun-col-xs3{width: 25%;}
+.baiyun-col-xs4{width: 33.33333333%;}
+.baiyun-col-xs5{width: 41.66666667%;}
+.baiyun-col-xs6{width: 50%;}
+.baiyun-col-xs7{width: 58.33333333%;}
+.baiyun-col-xs8{width: 66.66666667%;}
+.baiyun-col-xs9{width: 75%;}
+.baiyun-col-xs10{width: 83.33333333%;}
+.baiyun-col-xs11{width: 91.66666667%;}
+.baiyun-col-xs12{width: 100%;}
+
+.baiyun-col-xs-offset1{margin-left: 8.33333333%;}
+.baiyun-col-xs-offset2{margin-left: 16.66666667%;}
+.baiyun-col-xs-offset3{margin-left: 25%;}
+.baiyun-col-xs-offset4{margin-left: 33.33333333%;}
+.baiyun-col-xs-offset5{margin-left: 41.66666667%;}
+.baiyun-col-xs-offset6{margin-left: 50%;}
+.baiyun-col-xs-offset7{margin-left: 58.33333333%;}
+.baiyun-col-xs-offset8{margin-left: 66.66666667%;}
+.baiyun-col-xs-offset9{margin-left: 75%;}
+.baiyun-col-xs-offset10{margin-left: 83.33333333%;}
+.baiyun-col-xs-offset11{margin-left: 91.66666667%;}
+.baiyun-col-xs-offset12{margin-left: 100%;}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 768px) {
+  .baiyun-hide-xs{display: none!important;}
+  .baiyun-show-xs-block{display: block!important;}
+  .baiyun-show-xs-inline{display: inline!important;}
+  .baiyun-show-xs-inline-block{display: inline-block!important;}
+}
+
+/* 小型屏幕(平板) */
+@media screen and (min-width: 768px) {
+  .baiyun-container{width: 750px;}
+  .baiyun-hide-sm{display: none!important;}
+  .baiyun-show-sm-block{display: block!important;}
+  .baiyun-show-sm-inline{display: inline!important;}
+  .baiyun-show-sm-inline-block{display: inline-block!important;}
+
+  .baiyun-col-sm1, .baiyun-col-sm2, .baiyun-col-sm3, .baiyun-col-sm4, .baiyun-col-sm5, .baiyun-col-sm6, .baiyun-col-sm7, .baiyun-col-sm8, .baiyun-col-sm9, .baiyun-col-sm10, .baiyun-col-sm11, .baiyun-col-sm12{float: left;}
+  .baiyun-col-sm1{width: 8.33333333%;}
+  .baiyun-col-sm2{width: 16.66666667%;}
+  .baiyun-col-sm3{width: 25%;}
+  .baiyun-col-sm4{width: 33.33333333%;}
+  .baiyun-col-sm5{width: 41.66666667%;}
+  .baiyun-col-sm6{width: 50%;}
+  .baiyun-col-sm7{width: 58.33333333%;}
+  .baiyun-col-sm8{width: 66.66666667%;}
+  .baiyun-col-sm9{width: 75%;}
+  .baiyun-col-sm10{width: 83.33333333%;}
+  .baiyun-col-sm11{width: 91.66666667%;}
+  .baiyun-col-sm12{width: 100%;}
+  /* 列偏移 */
+  .baiyun-col-sm-offset1{margin-left: 8.33333333%;}
+  .baiyun-col-sm-offset2{margin-left: 16.66666667%;}
+  .baiyun-col-sm-offset3{margin-left: 25%;}
+  .baiyun-col-sm-offset4{margin-left: 33.33333333%;}
+  .baiyun-col-sm-offset5{margin-left: 41.66666667%;}
+  .baiyun-col-sm-offset6{margin-left: 50%;}
+  .baiyun-col-sm-offset7{margin-left: 58.33333333%;}
+  .baiyun-col-sm-offset8{margin-left: 66.66666667%;}
+  .baiyun-col-sm-offset9{margin-left: 75%;}
+  .baiyun-col-sm-offset10{margin-left: 83.33333333%;}
+  .baiyun-col-sm-offset11{margin-left: 91.66666667%;}
+  .baiyun-col-sm-offset12{margin-left: 100%;}
+}
+/* 中型屏幕(桌面) */
+@media screen and (min-width: 992px) {
+  .baiyun-container{width: 970px;}
+  .baiyun-hide-md{display: none!important;}
+  .baiyun-show-md-block{display: block!important;}
+  .baiyun-show-md-inline{display: inline!important;}
+  .baiyun-show-md-inline-block{display: inline-block!important;}
+  
+  .baiyun-col-md1, .baiyun-col-md2, .baiyun-col-md3, .baiyun-col-md4, .baiyun-col-md5, .baiyun-col-md6, .baiyun-col-md7, .baiyun-col-md8, .baiyun-col-md9, .baiyun-col-md10, .baiyun-col-md11, .baiyun-col-md12{float: left;}
+  .baiyun-col-md1{width: 8.33333333%;}
+  .baiyun-col-md2{width: 16.66666667%;}
+  .baiyun-col-md3{width: 25%;}
+  .baiyun-col-md4{width: 33.33333333%;}
+  .baiyun-col-md5{width: 41.66666667%;}
+  .baiyun-col-md6{width: 50%;}
+  .baiyun-col-md7{width: 58.33333333%;}
+  .baiyun-col-md8{width: 66.66666667%;}
+  .baiyun-col-md9{width: 75%;}
+  .baiyun-col-md10{width: 83.33333333%;}
+  .baiyun-col-md11{width: 91.66666667%;}
+  .baiyun-col-md12{width: 100%;}
+  /* 列偏移 */
+  .baiyun-col-md-offset1{margin-left: 8.33333333%;}
+  .baiyun-col-md-offset2{margin-left: 16.66666667%;}
+  .baiyun-col-md-offset3{margin-left: 25%;}
+  .baiyun-col-md-offset4{margin-left: 33.33333333%;}
+  .baiyun-col-md-offset5{margin-left: 41.66666667%;}
+  .baiyun-col-md-offset6{margin-left: 50%;}
+  .baiyun-col-md-offset7{margin-left: 58.33333333%;}
+  .baiyun-col-md-offset8{margin-left: 66.66666667%;}
+  .baiyun-col-md-offset9{margin-left: 75%;}
+  .baiyun-col-md-offset10{margin-left: 83.33333333%;}
+  .baiyun-col-md-offset11{margin-left: 91.66666667%;}
+  .baiyun-col-md-offset12{margin-left: 100%;}
+}
+/* 大型屏幕(桌面) */
+@media screen and (min-width: 1200px) {
+  .baiyun-container{width: 1170px;}
+  .baiyun-hide-lg{display: none!important;}
+  .baiyun-show-lg-block{display: block!important;}
+  .baiyun-show-lg-inline{display: inline!important;}
+  .baiyun-show-lg-inline-block{display: inline-block!important;}
+  
+  .baiyun-col-lg1, .baiyun-col-lg2, .baiyun-col-lg3, .baiyun-col-lg4, .baiyun-col-lg5, .baiyun-col-lg6, .baiyun-col-lg7, .baiyun-col-lg8, .baiyun-col-lg9, .baiyun-col-lg10, .baiyun-col-lg11, .baiyun-col-lg12{float: left;}
+  .baiyun-col-lg1{width: 8.33333333%;}
+  .baiyun-col-lg2{width: 16.66666667%;}
+  .baiyun-col-lg3{width: 25%;}
+  .baiyun-col-lg4{width: 33.33333333%;}
+  .baiyun-col-lg5{width: 41.66666667%;}
+  .baiyun-col-lg6{width: 50%;}
+  .baiyun-col-lg7{width: 58.33333333%;}
+  .baiyun-col-lg8{width: 66.66666667%;}
+  .baiyun-col-lg9{width: 75%;}
+  .baiyun-col-lg10{width: 83.33333333%;}
+  .baiyun-col-lg11{width: 91.66666667%;}
+  .baiyun-col-lg12{width: 100%;}
+  /* 列偏移 */
+  .baiyun-col-lg-offset1{margin-left: 8.33333333%;}
+  .baiyun-col-lg-offset2{margin-left: 16.66666667%;}
+  .baiyun-col-lg-offset3{margin-left: 25%;}
+  .baiyun-col-lg-offset4{margin-left: 33.33333333%;}
+  .baiyun-col-lg-offset5{margin-left: 41.66666667%;}
+  .baiyun-col-lg-offset6{margin-left: 50%;}
+  .baiyun-col-lg-offset7{margin-left: 58.33333333%;}
+  .baiyun-col-lg-offset8{margin-left: 66.66666667%;}
+  .baiyun-col-lg-offset9{margin-left: 75%;}
+  .baiyun-col-lg-offset10{margin-left: 83.33333333%;}
+  .baiyun-col-lg-offset11{margin-left: 91.66666667%;}
+  .baiyun-col-lg-offset12{margin-left: 100%;}
+}
+
+/* 列间隔 */.baiyun-col-space1{margin: -0.5px;}
+.baiyun-col-space1>*{padding: 0.5px;}
+.baiyun-col-space3{margin: -1.5px;}
+.baiyun-col-space3>*{padding: 1.5px;}
+.baiyun-col-space5{margin: -2.5px;}
+.baiyun-col-space5>*{padding: 2.5px;}
+.baiyun-col-space8{margin: -3.5px;}
+.baiyun-col-space8>*{padding: 3.5px;}
+.baiyun-col-space10{margin: -5px;}
+.baiyun-col-space10>*{padding: 5px;}
+.baiyun-col-space12{margin: -6px;}
+.baiyun-col-space12>*{padding: 6px;}
+.baiyun-col-space15{margin: -7.5px;}
+.baiyun-col-space15>*{padding: 7.5px;}
+.baiyun-col-space18{margin: -9px;}
+.baiyun-col-space18>*{padding: 9px;}
+.baiyun-col-space20{margin: -10px;}
+.baiyun-col-space20>*{padding: 10px;}
+.baiyun-col-space22{margin: -11px;}
+.baiyun-col-space22>*{padding: 11px;}
+.baiyun-col-space25{margin: -12.5px;}
+.baiyun-col-space25>*{padding: 12.5px;}
+.baiyun-col-space30{margin: -15px;}
+.baiyun-col-space30>*{padding: 15px;}
+
+
+/** 页面元素 **/
+.baiyun-btn, .baiyun-input, .baiyun-textarea, .baiyun-upload-button, .baiyun-select{outline: none; -webkit-appearance: none; transition: all .3s; -webkit-transition: all .3s; box-sizing: border-box;}
+
+/* 引用 */.baiyun-elem-quote{margin-bottom: 10px; padding: 15px; line-height: 22px; border-left: 5px solid #009688; border-radius: 0 2px 2px 0; background-color: #f2f2f2;}
+.baiyun-quote-nm{border-style: solid; border-width: 1px; border-left-width: 5px; background: none;}
+/* 字段集合 */.baiyun-elem-field{margin-bottom: 10px; padding: 0; border-width: 1px; border-style: solid;}
+.baiyun-elem-field legend{margin-left: 20px; padding: 0 10px; font-size: 20px; font-weight: 300;}
+.baiyun-field-title{margin: 10px 0 20px; border-width: 0; border-top-width: 1px;}
+.baiyun-field-box{padding: 10px 15px;}
+.baiyun-field-title .baiyun-field-box{padding: 10px 0;}
+
+/* 进度条 */
+.baiyun-progress{position: relative; height: 6px; border-radius: 20px; background-color: #e2e2e2;}
+.baiyun-progress-bar{position: absolute; left: 0; top: 0; width: 0; max-width: 100%; height: 6px; border-radius: 20px; text-align: right; background-color: #5FB878; transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-progress-big,
+.baiyun-progress-big .baiyun-progress-bar{height: 18px; line-height: 18px;}
+.baiyun-progress-text{position: relative; top: -20px; line-height: 18px; font-size: 12px; color: #666}
+.baiyun-progress-big .baiyun-progress-text{position: static; padding: 0 10px; color: #fff;}
+
+
+/*
+
+  面板
+ 
+*/
+
+
+/* 折叠面板 */
+.baiyun-collapse{border-width: 1px; border-style: solid; border-radius: 2px;}
+.baiyun-colla-item,
+.baiyun-colla-content{border-top-width: 1px; border-top-style: solid;}
+.baiyun-colla-item:first-child{border-top: none;}
+.baiyun-colla-title{position: relative; height: 42px; line-height: 42px; padding: 0 15px 0 35px; color: #333; background-color: #f2f2f2; cursor: pointer; font-size: 14px; overflow: hidden;}
+.baiyun-colla-content{display: none; padding: 10px 15px; line-height: 22px; color: #666;}
+.baiyun-colla-icon{position: absolute; left: 15px; top: 0; font-size: 14px;}
+
+/* 卡片面板 */
+.baiyun-card{margin-bottom: 15px; border-radius: 2px; background-color: #fff; box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);}
+.baiyun-card:last-child{margin-bottom: 0;}
+.baiyun-card-header{position: relative; height: 42px; line-height: 42px; padding: 0 15px; border-bottom: 1px solid #f6f6f6; color: #333; border-radius: 2px 2px 0 0; font-size: 14px;}
+.baiyun-card-body{position: relative; padding: 10px 15px; line-height: 24px;}
+.baiyun-card-body[pad15]{padding: 15px;}
+.baiyun-card-body[pad20]{padding: 20px;}
+.baiyun-card-body .baiyun-table{margin: 5px 0;}
+.baiyun-card .baiyun-tab{margin: 0;}
+
+/* 常规面板 */
+.baiyun-panel{}
+
+/* 窗口面板 */
+.baiyun-panel-window{position: relative; padding: 15px; border-radius: 0; border-top: 5px solid #E6E6E6; background-color: #fff;}
+
+/* 其它辅助 */
+.baiyun-auxiliar-moving{position: fixed; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; background: none; z-index: 9999999999;}
+
+
+/* 
+
+  默认主题 
+  
+*/
+
+
+/* 背景颜色 */
+.baiyun-bg-red{background-color: #FF5722 !important; color: #fff!important;} /*赤*/
+.baiyun-bg-orange{background-color: #FFB800!important; color: #fff!important;} /*橙*/
+.baiyun-bg-green{background-color: #009688!important; color: #fff!important;} /*绿*/
+.baiyun-bg-cyan{background-color: #2F4056!important; color: #fff!important;} /*青*/
+.baiyun-bg-blue{background-color: #1E9FFF!important; color: #fff!important;} /*蓝*/
+.baiyun-bg-black{background-color: #393D49!important; color: #fff!important;} /*黑*/
+.baiyun-bg-gray{background-color: #eee!important; color: #666!important;} /*灰*/
+
+/* 边框 */
+.baiyun-quote-nm, 
+.baiyun-elem-field,
+.baiyun-collapse, 
+.baiyun-colla-item, 
+.baiyun-colla-content,
+.baiyun-badge-rim,
+.baiyun-tab-title,
+.baiyun-tab-title .baiyun-this:after,
+.baiyun-tab-bar,
+.baiyun-tab-card,
+
+.baiyun-input, .baiyun-textarea, .baiyun-select,
+.baiyun-form-pane .baiyun-form-label, 
+.baiyun-form-pane .baiyun-form-item[pane],
+.baiyun-layedit, .baiyun-layedit-tool{border-color: #e6e6e6}
+
+/* 背景边框 */
+hr, .baiyun-timeline-item:before{background-color: #e6e6e6;}
+
+/* 文本区域 */
+.baiyun-text{line-height: 22px; font-size: 14px; color: #666;}
+.baiyun-text h1,
+.baiyun-text h2,
+.baiyun-text h3{font-weight: 500; color: #333;}
+.baiyun-text h1{font-size: 30px;}
+.baiyun-text h2{font-size: 24px;}
+.baiyun-text h3{font-size: 18px;}
+.baiyun-text a:not(.baiyun-btn){color: #01AAED;}
+.baiyun-text a:not(.baiyun-btn):hover{text-decoration: underline;}
+.baiyun-text ul{padding: 5px 0 5px 15px;}
+.baiyun-text ul li{margin-top: 5px; list-style-type: disc;}
+.baiyun-text em,
+.baiyun-word-aux{color: #999 !important; padding: 0 5px !important;}
+
+/*
+ 
+  按钮 
+
+*/
+
+.baiyun-btn{display: inline-block; vertical-align: middle; height: 38px; line-height: 38px; padding: 0 18px; background-color: #009688; color: #fff; white-space: nowrap; text-align: center; font-size: 14px; border: none; border-radius: 2px; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none;}
+.baiyun-btn:hover{opacity: 0.8; filter:alpha(opacity=80); color: #fff;}
+.baiyun-btn:active{opacity: 1; filter:alpha(opacity=100);}
+.baiyun-btn+.baiyun-btn{margin-left: 10px;}
+
+/* 按钮容器 */
+.baiyun-btn-container{font-size: 0;}
+.baiyun-btn-container .baiyun-btn{margin-right: 10px; margin-bottom: 10px;}
+.baiyun-btn-container .baiyun-btn+.baiyun-btn{margin-left: 0;}
+.baiyun-table .baiyun-btn-container .baiyun-btn{margin-bottom: 9px;}
+
+
+/* 圆角 */.baiyun-btn-radius{border-radius: 100px;}
+.baiyun-btn .baiyun-icon{margin-right: 3px; font-size: 18px; vertical-align: bottom; vertical-align: middle\0;}
+
+/* 原始 */.baiyun-btn-primary{border: 1px solid #C9C9C9; background-color: #fff; color: #555;}
+.baiyun-btn-primary:hover{border-color: #009688; color: #333}
+/* 百搭 */.baiyun-btn-normal{background-color: #1E9FFF;}
+/* 暖色 */.baiyun-btn-warm{background-color: #FFB800;}
+/* 警告 */.baiyun-btn-danger{background-color: #FF5722;}
+/* 选中 */.baiyun-btn-checked{background-color: #5FB878;}
+/* 禁用 */.baiyun-btn-disabled,.baiyun-btn-disabled:hover,.baiyun-btn-disabled:active{border: 1px solid #e6e6e6; background-color: #FBFBFB; color: #C9C9C9; cursor: not-allowed; opacity: 1;}
+
+/* 大型 */.baiyun-btn-lg{height: 44px; line-height: 44px; padding: 0 25px; font-size: 16px;}
+/* 小型 */.baiyun-btn-sm{height: 30px; line-height: 30px; padding: 0 10px; font-size: 12px;}
+.baiyun-btn-sm i{font-size: 16px !important;}
+/* 超小 */.baiyun-btn-xs{height: 22px; line-height: 22px; padding: 0 5px; font-size: 12px;}
+.baiyun-btn-xs i{font-size: 14px !important;}
+/* 按钮组 */.baiyun-btn-group{display: inline-block; vertical-align: middle; font-size: 0;}
+.baiyun-btn-group .baiyun-btn{margin-left: 0!important; margin-right: 0!important; border-left: 1px solid rgba(255,255,255,.5); border-radius: 0;}
+.baiyun-btn-group .baiyun-btn-primary{border-left: none;}
+.baiyun-btn-group .baiyun-btn-primary:hover{border-color: #C9C9C9; color: #009688;}
+.baiyun-btn-group .baiyun-btn:first-child{border-left: none; border-radius: 2px 0 0 2px;}
+.baiyun-btn-group .baiyun-btn-primary:first-child{border-left: 1px solid #c9c9c9;}
+.baiyun-btn-group .baiyun-btn:last-child{border-radius: 0 2px 2px 0;}
+.baiyun-btn-group .baiyun-btn+.baiyun-btn{margin-left: 0;}
+.baiyun-btn-group+.baiyun-btn-group{margin-left: 10px;}
+/* 流体 */.baiyun-btn-fluid{width: 100%;}
+
+/** 表单 **/
+.baiyun-input, .baiyun-textarea, .baiyun-select{height: 38px; line-height: 1.3; line-height: 38px\9; border-width: 1px; border-style: solid; background-color: #fff; border-radius: 2px;}
+.baiyun-input::-webkit-input-placeholder,
+.baiyun-textarea::-webkit-input-placeholder,
+.baiyun-select::-webkit-input-placeholder{line-height: 1.3;}
+.baiyun-input, .baiyun-textarea{display: block; width: 100%; padding-left: 10px;}
+.baiyun-input:hover, .baiyun-textarea:hover{border-color: #D2D2D2 !important;}
+.baiyun-input:focus, .baiyun-textarea:focus{border-color: #C9C9C9 !important;}
+.baiyun-textarea{position: relative; min-height: 100px; height: auto; line-height: 20px; padding: 6px 10px; resize: vertical;}
+.baiyun-select{padding: 0 10px;}
+.baiyun-form select, 
+.baiyun-form input[type=checkbox],
+.baiyun-form input[type=radio]{display: none;}
+.baiyun-form *[lay-ignore]{display: initial;}
+
+.baiyun-form-item{margin-bottom: 15px; clear: both; *zoom: 1;}
+.baiyun-form-item:after{content:'\20'; clear: both; *zoom: 1; display: block; height:0;}
+.baiyun-form-label{position: relative; float: left; display: block; padding: 9px 15px;  width: 80px; font-weight: 400; line-height: 20px; text-align: right;}
+.baiyun-form-label-col{display: block; float: none; padding: 9px 0; line-height: 20px; text-align: left;}
+.baiyun-form-item .baiyun-inline{margin-bottom: 5px; margin-right: 10px;}
+.baiyun-input-block, .baiyun-input-inline{position: relative;}
+.baiyun-input-block{margin-left: 110px; min-height: 36px;}
+.baiyun-input-inline{display: inline-block; vertical-align: middle;}
+.baiyun-form-item .baiyun-input-inline{float: left; width: 190px; margin-right: 10px;}
+.baiyun-form-text .baiyun-input-inline{width: auto;}
+
+/* 分割块 */.baiyun-form-mid{position: relative; float: left; display: block; padding: 9px 0 !important; line-height: 20px; margin-right: 10px;}
+/* 警告域 */.baiyun-form-danger:focus
+,.baiyun-form-danger+.baiyun-form-select .baiyun-input{border-color: #FF5722 !important;}
+
+
+/* 下拉选择 */.baiyun-form-select{position: relative;}
+.baiyun-form-select .baiyun-input{padding-right: 30px; cursor: pointer;}
+.baiyun-form-select .baiyun-edge{position: absolute; right: 10px; top: 50%; margin-top: -3px; cursor: pointer; border-width: 6px; border-top-color: #c2c2c2; border-top-style: solid; transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-form-select dl{display: none; position: absolute; left: 0; top: 42px; padding: 5px 0; z-index: 899; min-width: 100%; border: 1px solid #d2d2d2; max-height: 300px; overflow-y: auto; background-color: #fff; border-radius: 2px; box-shadow: 0 2px 4px rgba(0,0,0,.12); box-sizing: border-box;}
+.baiyun-form-select dl dt,
+.baiyun-form-select dl dd{padding: 0 10px; line-height: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.baiyun-form-select dl dt{font-size: 12px; color: #999;}
+.baiyun-form-select dl dd{cursor: pointer;}
+.baiyun-form-select dl dd:hover{background-color: #f2f2f2; -webkit-transition: .5s all; transition: .5s all;}
+.baiyun-form-select .baiyun-select-group dd{padding-left: 20px;}
+.baiyun-form-select dl dd.baiyun-select-tips{padding-left: 10px !important; color: #999;}
+.baiyun-form-select dl dd.baiyun-this{background-color: #5FB878; color: #fff;}
+.baiyun-form-select dl dd.baiyun-disabled{background-color: #fff;}
+.baiyun-form-selected dl{display: block;}
+.baiyun-form-selected .baiyun-edge{margin-top: -9px; -webkit-transform:rotate(180deg); transform: rotate(180deg);}
+.baiyun-form-selected .baiyun-edge{margin-top: -3px\0; }
+:root .baiyun-form-selected .baiyun-edge{margin-top: -9px\0/IE9;}
+.baiyun-form-selectup dl{top: auto; bottom: 42px;}
+.baiyun-select-none{margin: 5px 0; text-align: center; color: #999;}
+
+.baiyun-select-disabled .baiyun-disabled{border-color: #eee !important;}
+.baiyun-select-disabled .baiyun-edge{border-top-color: #d2d2d2}
+
+/* 复选框 */.baiyun-form-checkbox{position: relative; display: inline-block; vertical-align: middle; height: 30px; line-height: 30px; margin-right: 10px; padding-right: 30px; background-color: #fff; cursor: pointer; font-size: 0;  -webkit-transition: .1s linear; transition: .1s linear; box-sizing: border-box;}
+.baiyun-form-checkbox:hover{}
+.baiyun-form-checkbox *{display: inline-block; vertical-align: middle;}
+.baiyun-form-checkbox span{padding: 0 10px; height: 100%; font-size: 14px; border-radius: 2px 0 0 2px; background-color: #d2d2d2; color: #fff; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.baiyun-form-checkbox:hover span{background-color: #c2c2c2;}
+.baiyun-form-checkbox i{position: absolute; right: 0; top: 0; width: 30px; height: 28px; border: 1px solid #d2d2d2; border-left: none; border-radius: 0 2px 2px 0; color: #fff; font-size: 20px; text-align: center;}
+.baiyun-form-checkbox:hover i{border-color: #c2c2c2; color: #c2c2c2;}
+.baiyun-form-checked, .baiyun-form-checked:hover{border-color: #5FB878;}
+.baiyun-form-checked span, .baiyun-form-checked:hover span{background-color: #5FB878;}
+.baiyun-form-checked i, .baiyun-form-checked:hover i{color: #5FB878;}
+.baiyun-form-item .baiyun-form-checkbox{margin-top: 4px;}
+
+/* 复选框-原始风格 */.baiyun-form-checkbox[lay-skin="primary"]{height: auto!important; line-height: normal!important; min-width: 18px; min-height: 18px; border: none!important; margin-right: 0; padding-left: 28px; padding-right: 0; background: none;}
+.baiyun-form-checkbox[lay-skin="primary"] span{padding-left: 0; padding-right: 15px; line-height: 18px; background: none; color: #666;}
+.baiyun-form-checkbox[lay-skin="primary"] i{right: auto; left: 0; width: 16px; height: 16px; line-height: 16px; border: 1px solid #d2d2d2; font-size: 12px; border-radius: 2px; background-color: #fff; -webkit-transition: .1s linear; transition: .1s linear;}
+.baiyun-form-checkbox[lay-skin="primary"]:hover i{border-color: #5FB878; color: #fff;}
+.baiyun-form-checked[lay-skin="primary"] i{border-color: #5FB878 !important; background-color: #5FB878; color: #fff;}
+.baiyun-checkbox-disbaled[lay-skin="primary"] span{background: none!important; color: #c2c2c2;}
+.baiyun-checkbox-disbaled[lay-skin="primary"]:hover i{border-color: #d2d2d2;}
+.baiyun-form-item .baiyun-form-checkbox[lay-skin="primary"]{margin-top: 10px;}
+
+/* 复选框-开关风格 */.baiyun-form-switch{position: relative; display: inline-block; vertical-align: middle; height: 22px; line-height: 22px; min-width: 35px; padding: 0 5px; margin-top: 8px; border: 1px solid #d2d2d2; border-radius: 20px; cursor: pointer; background-color: #fff; -webkit-transition: .1s linear; transition: .1s linear;}
+.baiyun-form-switch i{position: absolute; left: 5px; top: 3px; width: 16px; height: 16px; border-radius: 20px; background-color: #d2d2d2; -webkit-transition: .1s linear; transition: .1s linear;}
+.baiyun-form-switch em{position: relative; top: 0; width: 25px; margin-left: 21px; padding: 0!important; text-align: center!important; color: #999!important; font-style: normal!important; font-size: 12px;}
+.baiyun-form-onswitch{border-color: #5FB878; background-color: #5FB878;}
+.baiyun-form-onswitch i{left: 100%; margin-left: -21px; background-color: #fff;}
+.baiyun-form-onswitch em{margin-left: 5px; margin-right: 21px; color: #fff!important;}
+
+.baiyun-checkbox-disbaled{border-color: #e2e2e2 !important;}
+.baiyun-checkbox-disbaled span{background-color: #e2e2e2 !important;}
+.baiyun-checkbox-disbaled i{border-color: #e2e2e2 !important;}
+.baiyun-checkbox-disbaled:hover i{color: #fff !important;}
+
+/* 单选框 */
+*[lay-radio]{display: none;}
+.baiyun-form-radio{display: inline-block; vertical-align: middle; line-height: 28px; margin: 6px 10px 0 0; padding-right: 10px; cursor: pointer; font-size: 0;}
+.baiyun-form-radio *{display: inline-block; vertical-align: middle; font-size: 14px;}
+.baiyun-form-radio>i{margin-right: 8px; font-size: 22px; color: #c2c2c2;}
+.baiyun-form-radioed>i,.baiyun-form-radio>i:hover{color: #5FB878;}
+.baiyun-radio-disbaled>i{color: #e2e2e2 !important;}
+
+/* 表单方框风格 */.baiyun-form-pane .baiyun-form-label{width: 110px; padding: 8px 15px; height: 38px; line-height: 20px; border-width: 1px; border-style: solid; border-radius: 2px 0 0 2px; text-align: center; background-color: #FBFBFB; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; box-sizing: border-box;}
+.baiyun-form-pane .baiyun-input-inline{margin-left: -1px;}
+.baiyun-form-pane .baiyun-input-block{margin-left: 110px; left: -1px;}
+.baiyun-form-pane .baiyun-input{border-radius: 0 2px 2px 0;}
+.baiyun-form-pane .baiyun-form-text .baiyun-form-label{float: none; width: 100%; border-radius: 2px; box-sizing: border-box; text-align: left;}
+.baiyun-form-pane .baiyun-form-text .baiyun-input-inline{display: block; margin: 0; top: -1px; clear: both;}
+.baiyun-form-pane .baiyun-form-text .baiyun-input-block{margin: 0; left: 0; top: -1px;}
+.baiyun-form-pane .baiyun-form-text .baiyun-textarea{min-height: 100px; border-radius: 0 0 2px 2px;}
+.baiyun-form-pane .baiyun-form-checkbox{margin: 4px 0 4px 10px;}
+.baiyun-form-pane .baiyun-form-switch, 
+.baiyun-form-pane .baiyun-form-radio{margin-top: 6px; margin-left: 10px; }
+.baiyun-form-pane .baiyun-form-item[pane]{position: relative; border-width: 1px; border-style: solid;}
+.baiyun-form-pane .baiyun-form-item[pane] .baiyun-form-label{position: absolute; left: 0; top: 0; height: 100%; border-width: 0px; border-right-width: 1px;}
+.baiyun-form-pane .baiyun-form-item[pane] .baiyun-input-inline{margin-left: 110px;}
+
+/** 表单响应式 **/
+@media screen and (max-width: 450px) {
+  .baiyun-form-item .baiyun-form-label{text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+  .baiyun-form-item .baiyun-inline{display: block; margin-right: 0; margin-bottom: 20px; clear: both;}
+  .baiyun-form-item .baiyun-inline:after{content:'\20'; clear:both; display:block; height:0;}
+  .baiyun-form-item .baiyun-input-inline{display: block; float: none; left: -3px; width: auto; margin: 0 0 10px 112px; }
+  .baiyun-form-item .baiyun-input-inline+.baiyun-form-mid{margin-left: 110px; top: -5px; padding: 0;}
+  .baiyun-form-item .baiyun-form-checkbox{margin-right: 5px; margin-bottom: 5px;}
+}
+
+/** 富文本编辑器 **/
+.baiyun-layedit{border-width: 1px; border-style: solid; border-radius: 2px;}
+.baiyun-layedit-tool{padding: 3px 5px; border-bottom-width: 1px; border-bottom-style: solid; font-size: 0;}
+.layedit-tool-fixed{position: fixed; top: 0; border-top: 1px solid #e2e2e2;}
+.baiyun-layedit-tool .layedit-tool-mid,
+.baiyun-layedit-tool .baiyun-icon{display: inline-block; vertical-align: middle; text-align: center; font-size: 14px;}
+.baiyun-layedit-tool .baiyun-icon{position: relative; width: 32px; height: 30px; line-height: 30px; margin: 3px 5px; border-radius: 2px; color: #777; cursor: pointer; border-radius: 2px;}
+.baiyun-layedit-tool .baiyun-icon:hover{color: #393D49;}
+.baiyun-layedit-tool .baiyun-icon:active{color: #000;}
+.baiyun-layedit-tool .layedit-tool-active{background-color: #e2e2e2; color: #000;}
+.baiyun-layedit-tool .baiyun-disabled,
+.baiyun-layedit-tool .baiyun-disabled:hover{color: #d2d2d2; cursor: not-allowed;}
+.baiyun-layedit-tool .layedit-tool-mid{width: 1px; height: 18px; margin: 0 10px; background-color: #d2d2d2;}
+
+.layedit-tool-html{width: 50px !important; font-size: 30px !important;}
+.layedit-tool-b,
+.layedit-tool-code,
+.layedit-tool-help{font-size: 16px !important;}
+.layedit-tool-d,
+.layedit-tool-unlink,
+.layedit-tool-face,
+.layedit-tool-image{font-size: 18px !important;}
+.layedit-tool-image input{position: absolute; font-size: 0; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.01; filter: Alpha(opacity=1); cursor: pointer;}
+
+.baiyun-layedit-iframe iframe{display: block; width: 100%;}
+#LAY_layedit_code{overflow: hidden;}
+
+/** 分页 **/
+.baiyun-laypage{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; margin: 10px 0; font-size: 0;}
+.baiyun-laypage>a:first-child,
+.baiyun-laypage>a:first-child em{border-radius: 2px 0 0 2px;}
+.baiyun-laypage>a:last-child,
+.baiyun-laypage>a:last-child em{border-radius: 0 2px 2px 0;}
+.baiyun-laypage>*:first-child{margin-left: 0!important;}
+.baiyun-laypage>*:last-child{margin-right: 0!important;}
+.baiyun-laypage a,
+.baiyun-laypage span,
+.baiyun-laypage input, 
+.baiyun-laypage button,
+.baiyun-laypage select{border: 1px solid #e2e2e2;}
+.baiyun-laypage a,
+.baiyun-laypage span{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; padding: 0 15px; height: 28px; line-height: 28px; margin: 0 -1px 5px 0; background-color: #fff; color: #333; font-size: 12px;}
+.baiyun-laypage a:hover{color: #009688;}
+.baiyun-laypage em{font-style: normal;}
+.baiyun-laypage .baiyun-laypage-spr{color:#999; font-weight: 700;}
+.baiyun-laypage a{ text-decoration: none;}
+.baiyun-laypage .baiyun-laypage-curr{position: relative;}
+.baiyun-laypage .baiyun-laypage-curr em{position: relative; color: #fff;}
+.baiyun-laypage .baiyun-laypage-curr .baiyun-laypage-em{position: absolute; left: -1px; top: -1px; padding: 1px; width: 100%; height: 100%; background-color: #009688; }
+.baiyun-laypage-em{border-radius: 2px;}
+.baiyun-laypage-prev em,
+.baiyun-laypage-next em{font-family: Sim sun; font-size: 16px;}
+
+.baiyun-laypage .baiyun-laypage-count,
+.baiyun-laypage .baiyun-laypage-limits,
+.baiyun-laypage .baiyun-laypage-refresh,
+.baiyun-laypage .baiyun-laypage-skip{margin-left: 10px; margin-right: 10px; padding: 0; border: none;}
+.baiyun-laypage .baiyun-laypage-limits,
+.baiyun-laypage .baiyun-laypage-refresh{vertical-align: top;}
+.baiyun-laypage .baiyun-laypage-refresh i{font-size: 18px; cursor: pointer;}
+.baiyun-laypage select{height: 22px; padding: 3px; border-radius: 2px; cursor: pointer;}
+.baiyun-laypage .baiyun-laypage-skip{height: 30px; line-height: 30px; color: #999;}
+.baiyun-laypage input, .baiyun-laypage button{height: 30px; line-height: 30px; border-radius: 2px; vertical-align: top;  background-color: #fff; box-sizing: border-box;}
+.baiyun-laypage input{display: inline-block; width: 40px; margin: 0 10px; padding: 0 3px; text-align: center;}
+.baiyun-laypage input:focus,
+.baiyun-laypage select:focus{border-color: #009688!important;}
+.baiyun-laypage button{margin-left: 10px; padding: 0 10px; cursor: pointer;}
+
+/** 流加载 **/
+.baiyun-flow-more{margin: 10px 0; text-align: center; color: #999; font-size: 14px;}
+.baiyun-flow-more a{ height: 32px; line-height: 32px;  }
+.baiyun-flow-more a *{display: inline-block; vertical-align: top;}
+.baiyun-flow-more a cite{padding: 0 20px; border-radius: 3px; background-color: #eee; color: #333; font-style: normal;}
+.baiyun-flow-more a cite:hover{opacity: 0.8;}
+.baiyun-flow-more a i{font-size: 30px; color: #737383;}
+
+/** 表格 **/
+.baiyun-table{width: 100%; margin: 10px 0; background-color: #fff; color: #666;}
+.baiyun-table tr{transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-table th{text-align: left; font-weight: 400;}
+
+.baiyun-table thead tr,
+.baiyun-table-header,
+.baiyun-table-tool,
+.baiyun-table-total,
+.baiyun-table-total tr,
+.baiyun-table-patch,
+.baiyun-table-mend,
+.baiyun-table[lay-even] tr:nth-child(even),
+.baiyun-table tbody tr:hover,
+.baiyun-table-hover,
+.baiyun-table-click{background-color: #f2f2f2;}
+
+.baiyun-table th,
+.baiyun-table td,
+.baiyun-table[lay-skin="line"],
+.baiyun-table[lay-skin="row"],
+.baiyun-table-view,
+.baiyun-table-tool,
+.baiyun-table-header,
+.baiyun-table-col-set,
+.baiyun-table-total,
+.baiyun-table-page,
+.baiyun-table-fixed-r,
+.baiyun-table-tips-main,
+.baiyun-table-grid-down{border-width: 1px; border-style: solid; border-color: #e6e6e6;}
+
+.baiyun-table th, .baiyun-table td{position: relative; padding: 9px 15px; min-height: 20px; line-height: 20px;  font-size: 14px;}
+
+.baiyun-table[lay-skin="line"] th, .baiyun-table[lay-skin="line"] td{border-width: 0; border-bottom-width: 1px;}
+.baiyun-table[lay-skin="row"] th, .baiyun-table[lay-skin="row"] td{border-width: 0;border-right-width: 1px;}
+.baiyun-table[lay-skin="nob"] th, .baiyun-table[lay-skin="nob"] td{border: none;}
+
+.baiyun-table img{max-width:100px;}
+
+/* 大表格 */.baiyun-table[lay-size="lg"] th,
+.baiyun-table[lay-size="lg"] td{padding-top: 15px; padding-right: 30px; padding-bottom: 15px; padding-left: 30px;}
+.baiyun-table-view .baiyun-table[lay-size="lg"] .baiyun-table-cell{height: 40px; line-height: 40px;}  
+/* 小表格 */.baiyun-table[lay-size="sm"] th,
+.baiyun-table[lay-size="sm"] td{padding-top: 5px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px; font-size: 12px;}
+.baiyun-table-view .baiyun-table[lay-size="sm"] .baiyun-table-cell{height: 20px; line-height: 20px;} 
+
+/* 数据表格 */
+.baiyun-table[lay-data]{display: none;}
+.baiyun-table-box{position: relative; overflow: hidden;}
+.baiyun-table-view{margin: 10px 0;}
+.baiyun-table-view .baiyun-table{position: relative; width: auto; margin: 0;}
+.baiyun-table-view .baiyun-table[lay-skin="line"]{border-width: 0; border-right-width: 1px;}
+.baiyun-table-view .baiyun-table[lay-skin="row"]{border-width: 0; border-bottom-width: 1px;}
+.baiyun-table-view .baiyun-table th,
+.baiyun-table-view .baiyun-table td{padding: 5px 0; border-top: none; border-left: none;}
+.baiyun-table-view .baiyun-table th.baiyun-unselect .baiyun-table-cell span{cursor: pointer;}
+.baiyun-table-view .baiyun-table td{cursor: default;}
+.baiyun-table-view .baiyun-table td[data-edit="text"]{cursor: text;}
+.baiyun-table-view .baiyun-form-checkbox[lay-skin="primary"] i{width: 18px; height: 18px;}
+.baiyun-table-view .baiyun-form-radio{line-height: 0; padding: 0;}
+.baiyun-table-view .baiyun-form-radio>i{margin: 0; font-size: 20px;}
+.baiyun-table-init{position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; z-index: 110;}
+.baiyun-table-init .baiyun-icon{position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px; font-size: 30px; color: #c2c2c2;}
+.baiyun-table-header{border-width: 0; border-bottom-width: 1px; overflow: hidden;}
+.baiyun-table-header .baiyun-table{margin-bottom: -1px;}
+
+.baiyun-table-tool .baiyun-inline[lay-event]{position: relative; width: 26px; height: 26px; padding: 5px; line-height: 16px; margin-right: 10px; text-align: center; color: #333; border: 1px solid #ccc; cursor: pointer; -webkit-transition: .5s all; transition: .5s all;}
+.baiyun-table-tool .baiyun-inline[lay-event]:hover{border: 1px solid #999;}
+.baiyun-table-tool-temp{padding-right: 120px;}
+.baiyun-table-tool-self{position: absolute; right: 17px; top: 10px;}
+.baiyun-table-tool .baiyun-table-tool-self .baiyun-inline[lay-event]{margin: 0 0 0 10px;}
+.baiyun-table-tool-panel{position: absolute; top: 29px; left: -1px; padding: 5px 0; min-width: 150px; min-height: 40px; border: 1px solid #d2d2d2; text-align: left; overflow-y: auto; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,.12);}
+.baiyun-table-tool-panel li{padding: 0 10px; line-height: 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -webkit-transition: .5s all; transition: .5s all;}
+.baiyun-table-tool-panel li .baiyun-form-checkbox[lay-skin="primary"]{width: 100%;}
+.baiyun-table-tool-panel li:hover{background-color: #f2f2f2;}
+.baiyun-table-tool-panel li .baiyun-form-checkbox[lay-skin="primary"]{padding-left: 28px;}
+.baiyun-table-tool-panel li .baiyun-form-checkbox[lay-skin="primary"] i{position: absolute; left: 0; top: 0;}
+.baiyun-table-tool-panel li .baiyun-form-checkbox[lay-skin="primary"] span{padding: 0;}
+.baiyun-table-tool .baiyun-table-tool-self .baiyun-table-tool-panel{left: auto; right: -1px;}
+
+.baiyun-table-col-set{position: absolute; right: 0; top: 0; width: 20px; height: 100%; border-width: 0; border-left-width: 1px; background-color: #fff;}
+
+.baiyun-table-sort{width: 10px; height: 20px; margin-left: 5px; cursor: pointer!important;}
+.baiyun-table-sort .baiyun-edge{position: absolute; left: 5px; border-width: 5px;}
+.baiyun-table-sort .baiyun-table-sort-asc{top: 3px; border-top: none; border-bottom-style: solid; border-bottom-color: #b2b2b2;}
+.baiyun-table-sort .baiyun-table-sort-asc:hover{border-bottom-color: #666;}
+.baiyun-table-sort .baiyun-table-sort-desc{bottom: 5px; border-bottom: none; border-top-style: solid; border-top-color: #b2b2b2;}
+.baiyun-table-sort .baiyun-table-sort-desc:hover{border-top-color: #666;}
+.baiyun-table-sort[lay-sort="asc"] .baiyun-table-sort-asc{border-bottom-color: #000;}
+.baiyun-table-sort[lay-sort="desc"] .baiyun-table-sort-desc{border-top-color: #000;}
+
+.baiyun-table-cell{height: 28px; line-height: 28px; padding: 0 15px; position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; box-sizing: border-box;}
+.baiyun-table-cell .baiyun-form-checkbox[lay-skin="primary"]{top: -1px; padding: 0;}
+.baiyun-table-cell .baiyun-table-link{color: #01AAED;}
+
+.laytable-cell-checkbox,
+.laytable-cell-radio,
+.laytable-cell-space,
+.laytable-cell-numbers{padding: 0; text-align: center;}
+
+.baiyun-table-body{position: relative; overflow: auto; margin-right: -1px; margin-bottom: -1px;}
+.baiyun-table-body .baiyun-none{line-height: 26px; padding: 15px; text-align: center; color: #999;}
+.baiyun-table-fixed{position: absolute; left: 0; top: 0; z-index: 101;}
+.baiyun-table-fixed .baiyun-table-body{overflow: hidden;}
+.baiyun-table-fixed-l{box-shadow: 0 -1px 8px rgba(0,0,0,.08);}
+.baiyun-table-fixed-r{left: auto; right: -1px; border-width: 0; border-left-width: 1px; box-shadow: -1px 0 8px rgba(0,0,0,.08);}
+.baiyun-table-fixed-r .baiyun-table-header{position: relative; overflow: visible;}
+.baiyun-table-mend{position: absolute; right: -49px; top: 0; height: 100%; width: 50px;}
+
+.baiyun-table-tool{position: relative; z-index: 890; width: 100%; min-height: 50px; line-height: 30px; padding: 10px 15px; border-width: 0; border-bottom-width: 1px;}
+.baiyun-table-tool .baiyun-btn-container{margin-bottom: -10px;}
+
+.baiyun-table-total{margin-bottom: -1px; border-width: 0; border-top-width: 1px; overflow: hidden;}
+
+
+.baiyun-table-page{position: relative; width: 100%; padding: 7px 7px 0; border-width: 0; border-top-width: 1px; height: 41px; margin-bottom: -1px; font-size: 12px; white-space: nowrap; overflow: hidden;}
+.baiyun-table-page>div{height: 26px;}
+.baiyun-table-page .baiyun-laypage{margin: 0;}
+.baiyun-table-page .baiyun-laypage a,
+.baiyun-table-page .baiyun-laypage span{height: 26px; line-height: 26px; margin-bottom: 10px; border: none; background: none;}
+.baiyun-table-page .baiyun-laypage a,
+.baiyun-table-page .baiyun-laypage span.baiyun-laypage-curr{padding: 0 12px;}
+.baiyun-table-page .baiyun-laypage span{margin-left: 0; padding: 0;}
+.baiyun-table-page .baiyun-laypage .baiyun-laypage-prev{margin-left: -7px!important;}
+.baiyun-table-page .baiyun-laypage .baiyun-laypage-curr .baiyun-laypage-em{left: 0; top: 0; padding: 0;}
+.baiyun-table-page .baiyun-laypage input,
+.baiyun-table-page .baiyun-laypage button{height: 26px; line-height: 26px; }
+.baiyun-table-page .baiyun-laypage input{width: 40px;}
+.baiyun-table-page .baiyun-laypage button{padding: 0 10px;}
+.baiyun-table-page select{height: 18px;}
+.baiyun-table-view select[lay-ignore]{display: inline-block;}
+
+.baiyun-table-patch .baiyun-table-cell{padding: 0; width: 30px;}
+
+.baiyun-table-edit{position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 0 14px 1px; border-radius: 0; box-shadow: 1px 1px 20px rgba(0,0,0,.15)}
+.baiyun-table-edit:focus{border-color: #5FB878!important;}
+select.baiyun-table-edit{padding: 0 0 0 10px; border-color: #C9C9C9;}
+.baiyun-table-view .baiyun-form-switch,
+.baiyun-table-view .baiyun-form-checkbox,
+.baiyun-table-view .baiyun-form-radio{top: 0; margin: 0; box-sizing: content-box;}
+.baiyun-table-view .baiyun-form-checkbox{top: -1px; height: 26px; line-height: 26px;}
+.baiyun-table-view .baiyun-form-checkbox i{height: 26px;}
+
+/* 展开溢出的单元格 */
+.baiyun-table-grid .baiyun-table-cell{overflow: visible;}
+.baiyun-table-grid-down{position: absolute; top: 0; right: 0; width: 26px; height: 100%; padding: 5px 0; border-width: 0; border-left-width: 1px; text-align: center; background-color: #fff; color: #999; cursor: pointer;}
+.baiyun-table-grid-down .baiyun-icon{position: absolute; top: 50%; left: 50%; margin: -8px 0 0 -8px;}
+.baiyun-table-grid-down:hover{background-color: #fbfbfb;}
+
+body .baiyun-table-tips .baiyun-layer-content{background: none; padding: 0; box-shadow: 0 1px 6px rgba(0,0,0,.12);}
+.baiyun-table-tips-main{margin: -44px 0 0 -1px; max-height: 150px; padding: 8px 15px; font-size: 14px; overflow-y: scroll; background-color: #fff; color: #666;}
+.baiyun-table-tips-c{position: absolute; right: -3px; top: -13px; width: 20px; height: 20px; padding: 3px; cursor: pointer; background-color: #666; border-radius: 50%; color: #fff;}
+.baiyun-table-tips-c:hover{background-color: #777;}
+.baiyun-table-tips-c:before{position: relative; right: -2px;}
+
+/** 文件上传 **/
+.baiyun-upload-file{display: none!important; opacity: .01; filter: Alpha(opacity=1);}
+.baiyun-upload-list{margin: 10px 0;}
+.baiyun-upload-choose{padding: 0 10px; color: #999;}
+.baiyun-upload-drag{position: relative; display: inline-block; padding: 30px; border: 1px dashed #e2e2e2; background-color: #fff; text-align: center; cursor: pointer; color: #999;}
+.baiyun-upload-drag .baiyun-icon{font-size: 50px; color: #009688;}
+.baiyun-upload-drag[lay-over]{border-color: #009688}
+.baiyun-upload-form{display: inline-block;}
+.baiyun-upload-iframe{position: absolute; width: 0; height: 0; border: 0; visibility: hidden}
+.baiyun-upload-wrap{position: relative; display: inline-block; vertical-align: middle;}
+.baiyun-upload-wrap .baiyun-upload-file{display: block!important; position: absolute; left: 0; top: 0; z-index: 10; font-size: 100px; width: 100%; height: 100%; opacity: .01; filter: Alpha(opacity=1); cursor: pointer;}
+
+/** 穿梭框 **/
+.baiyun-transfer-box,
+.baiyun-transfer-header,
+.baiyun-transfer-search{border-width: 0; border-style: solid; border-color: #e6e6e6}
+.baiyun-transfer-box{position: relative; display: inline-block; vertical-align: middle; border-width: 1px; width: 200px; height: 360px; border-radius: 2px; background-color:#fff;}
+.baiyun-transfer-box .baiyun-form-checkbox{width: 100%; margin: 0 !important;}
+.baiyun-transfer-header{height: 38px; line-height: 38px; padding: 0 10px; border-bottom-width: 1px;}
+.baiyun-transfer-search{position:relative; padding: 10px; border-bottom-width: 1px;}
+.baiyun-transfer-search .baiyun-input{height: 32px; padding-left: 30px; font-size: 12px;}
+.baiyun-transfer-search .baiyun-icon-search{position: absolute; left: 20px; top: 50%; margin-top: -8px; color: #666;}
+.baiyun-transfer-active{margin: 0 15px; display: inline-block; vertical-align: middle;}
+.baiyun-transfer-active .baiyun-btn{display: block; margin: 0; padding: 0 15px; background-color: #5FB878; border-color: #5FB878; color: #fff;}
+.baiyun-transfer-active .baiyun-btn-disabled{background-color: #FBFBFB; border-color: #e6e6e6; color: #C9C9C9;}
+.baiyun-transfer-active .baiyun-btn:first-child{margin-bottom: 15px;}
+.baiyun-transfer-active .baiyun-btn .baiyun-icon{margin: 0; font-size: 14px !important;}
+.baiyun-transfer-data{padding: 5px 0; overflow: auto;}
+.baiyun-transfer-data li{height: 32px; line-height: 32px; padding: 0 10px;}
+.baiyun-transfer-data li:hover{background-color: #f2f2f2; transition: .5s all;}
+.baiyun-transfer-data .baiyun-none{padding: 15px 10px; text-align: center; color: #999;}
+
+
+/** 导航菜单 **/
+.baiyun-nav{position: relative; padding: 0 20px; background-color: #393D49; color: #fff; border-radius: 2px; font-size: 0; box-sizing: border-box;}
+.baiyun-nav *{font-size: 14px;}
+.baiyun-nav .baiyun-nav-item{position: relative; display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; line-height: 60px;}
+.baiyun-nav .baiyun-nav-item a{display: block; padding: 0 20px; color: #fff; color: rgba(255,255,255,.7); transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-nav-bar,
+.baiyun-nav .baiyun-this:after,
+.baiyun-nav-tree .baiyun-nav-itemed:after{position: absolute; left: 0; top: 0; width: 0; height: 5px; background-color: #5FB878; transition: all .2s; -webkit-transition: all .2s;}
+.baiyun-nav-bar{z-index: 1000;}
+.baiyun-nav .baiyun-this a
+,.baiyun-nav .baiyun-nav-item a:hover{color: #fff;}
+.baiyun-nav .baiyun-this:after{content: ''; top: auto; bottom: 0; width: 100%;}
+.baiyun-nav-img{width: 30px; height: 30px; margin-right: 10px; border-radius: 50%;}
+
+.baiyun-nav .baiyun-nav-more{content:''; width: 0; height: 0; border-style: dashed; border-color: transparent; overflow: hidden; cursor: pointer; transition: all .2s; -webkit-transition: all .2s;}
+.baiyun-nav .baiyun-nav-more{position: absolute; top: 50%; right: 3px; margin-top: -3px; border-width: 6px; border-top-style: solid; border-top-color: #fff; border-top-color: rgba(255,255,255,.7);}
+.baiyun-nav .baiyun-nav-mored,
+.baiyun-nav-itemed > a .baiyun-nav-more{margin-top: -9px; border-style: dashed; border-color: transparent; border-bottom-style: solid; border-bottom-color: #fff;}
+
+
+.baiyun-nav-child{display: none; position: absolute; left: 0; top: 65px; min-width: 100%; line-height: 36px; padding: 5px 0;  box-shadow: 0 2px 4px rgba(0,0,0,.12); border: 1px solid #d2d2d2; background-color: #fff; z-index: 100; border-radius: 2px; white-space: nowrap;}
+.baiyun-nav .baiyun-nav-child a{color: #333;}
+.baiyun-nav .baiyun-nav-child a:hover{background-color: #f2f2f2; color: #000;}
+.baiyun-nav-child dd{position: relative;}
+.baiyun-nav-child dd.baiyun-this{background-color: #5FB878; color: #fff;}
+.baiyun-nav .baiyun-nav-child dd.baiyun-this a{background-color: #5FB878; color: #fff;}
+.baiyun-nav-child dd.baiyun-this:after{display: none;}
+
+/* 垂直导航菜单 */.baiyun-nav-tree{width: 200px; padding: 0;}
+.baiyun-nav-tree .baiyun-nav-item{display: block; width: 100%; line-height: 45px;}
+.baiyun-nav-tree .baiyun-nav-item a{position: relative; height: 45px; line-height: 45px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.baiyun-nav-tree .baiyun-nav-item a:hover{background-color: #4E5465;}
+.baiyun-nav-tree .baiyun-nav-bar{width: 5px; height: 0;}
+.baiyun-nav-tree .baiyun-this,
+.baiyun-nav-tree .baiyun-this>a,
+.baiyun-nav-tree .baiyun-this>a:hover,
+.baiyun-nav-tree .baiyun-nav-child dd.baiyun-this,
+.baiyun-nav-tree .baiyun-nav-child dd.baiyun-this a{background-color: #009688; color: #fff;}
+.baiyun-nav-tree .baiyun-this:after{display: none;}
+.baiyun-nav-tree .baiyun-nav-title a,
+.baiyun-nav-tree .baiyun-nav-title a:hover,
+.baiyun-nav-itemed>a{color: #fff !important;}
+.baiyun-nav-tree .baiyun-nav-bar{background-color: #009688;}
+
+.baiyun-nav-tree .baiyun-nav-child{position: relative; z-index: 0; top: 0; border: none; box-shadow: none;}
+.baiyun-nav-tree .baiyun-nav-child a{height: 40px; line-height: 40px;}
+.baiyun-nav-tree .baiyun-nav-child a{color: #fff; color: rgba(255,255,255,.7);}
+.baiyun-nav-tree .baiyun-nav-child a:hover,
+.baiyun-nav-tree .baiyun-nav-child{background: none; color: #fff;}
+.baiyun-nav-tree .baiyun-nav-more{right: 10px;}
+
+.baiyun-nav-itemed>.baiyun-nav-child{display: block; padding: 0; background-color: rgba(0,0,0,.3) !important;} 
+.baiyun-nav-itemed>.baiyun-nav-child>.baiyun-this>.baiyun-nav-child{display: block;}
+
+/* 侧边 */.baiyun-nav-side{position: fixed; top: 0; bottom: 0; left: 0; overflow-x: hidden; z-index: 999;}
+
+/* 导航主题色 */.baiyun-bg-blue .baiyun-nav-bar,
+.baiyun-bg-blue .baiyun-this:after,
+.baiyun-bg-blue .baiyun-nav-itemed:after{background-color: #93D1FF;}
+.baiyun-bg-blue .baiyun-nav-child dd.baiyun-this{background-color: #1E9FFF;}
+.baiyun-nav-tree.baiyun-bg-blue .baiyun-nav-title a,
+.baiyun-nav-tree.baiyun-bg-blue .baiyun-nav-title a:hover, 
+.baiyun-bg-blue .baiyun-nav-itemed>a{background-color: #007DDB !important;}
+
+
+/** 面包屑 **/
+.baiyun-breadcrumb{visibility: hidden; font-size: 0;}
+.baiyun-breadcrumb>*{font-size: 14px;}
+.baiyun-breadcrumb a{color: #999 !important;}
+.baiyun-breadcrumb a:hover{color: #5FB878 !important;}
+.baiyun-breadcrumb a cite{color: #666; font-style: normal;}
+.baiyun-breadcrumb span[lay-separator]{margin: 0 10px; color: #999;}
+
+/** Tab选项卡 **/
+.baiyun-tab{margin: 10px 0; text-align: left !important;}
+.baiyun-tab[overflow]>.baiyun-tab-title{overflow: hidden;}
+.baiyun-tab-title{position: relative; left: 0; height: 40px; white-space: nowrap; font-size: 0; border-bottom-width: 1px; border-bottom-style: solid; transition: all .2s; -webkit-transition: all .2s;}
+.baiyun-tab-title li{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; font-size: 14px; transition: all .2s; -webkit-transition: all .2s;}
+.baiyun-tab-title li{position: relative; line-height: 40px; min-width: 65px; padding: 0 15px; text-align: center; cursor: pointer;}
+.baiyun-tab-title li a{display: block;}
+.baiyun-tab-title .baiyun-this{color: #000;}
+
+.baiyun-tab-title .baiyun-this:after{position: absolute; left:0; top: 0; content: ''; width:100%; height: 41px; border-width: 1px; border-style: solid; border-bottom-color: #fff; border-radius: 2px 2px 0 0; box-sizing: border-box; pointer-events: none;}
+.baiyun-tab-bar{position: absolute; right: 0; top: 0; z-index: 10; width: 30px; height: 39px; line-height: 39px; border-width: 1px; border-style: solid; border-radius: 2px; text-align: center; background-color: #fff; cursor: pointer;}
+.baiyun-tab-bar .baiyun-icon{position: relative; display: inline-block; top: 3px; transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-tab-item{display: none;}
+.baiyun-tab-more{padding-right: 30px; height: auto !important; white-space: normal !important;}
+.baiyun-tab-more li.baiyun-this:after{border-bottom-color: #e2e2e2; border-radius: 2px;}
+.baiyun-tab-more .baiyun-tab-bar .baiyun-icon{top: -2px; top: 3px\0; -webkit-transform: rotate(180deg); transform: rotate(180deg);}
+:root .baiyun-tab-more .baiyun-tab-bar .baiyun-icon{top: -2px\0/IE9;}
+
+.baiyun-tab-content{padding: 10px;}
+
+/* Tab关闭 */.baiyun-tab-title li .baiyun-tab-close{position: relative; display: inline-block; width: 18px; height: 18px; line-height: 20px; margin-left: 8px; top: 1px; text-align: center; font-size: 14px; color: #c2c2c2; transition: all .2s; -webkit-transition: all .2s;}
+.baiyun-tab-title li .baiyun-tab-close:hover{border-radius: 2px; background-color: #FF5722; color: #fff;}
+
+/* Tab简洁风格 */.baiyun-tab-brief > .baiyun-tab-title .baiyun-this{color: #009688;}
+.baiyun-tab-brief > .baiyun-tab-title .baiyun-this:after
+,.baiyun-tab-brief > .baiyun-tab-more li.baiyun-this:after{border: none; border-radius: 0; border-bottom: 2px solid #5FB878;}
+.baiyun-tab-brief[overflow] > .baiyun-tab-title .baiyun-this:after{top: -1px;}
+
+/* Tab卡片风格 */.baiyun-tab-card{border-width: 1px; border-style: solid; border-radius: 2px; box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);}
+.baiyun-tab-card > .baiyun-tab-title{ background-color: #f2f2f2;}
+.baiyun-tab-card > .baiyun-tab-title li{margin-right: -1px; margin-left: -1px;}
+.baiyun-tab-card > .baiyun-tab-title .baiyun-this{background-color: #fff;     }
+.baiyun-tab-card > .baiyun-tab-title .baiyun-this:after{border-top: none; border-width: 1px; border-bottom-color: #fff;}
+.baiyun-tab-card > .baiyun-tab-title .baiyun-tab-bar{height: 40px; line-height: 40px; border-radius: 0; border-top: none; border-right: none;}
+.baiyun-tab-card > .baiyun-tab-more .baiyun-this{background: none; color: #5FB878;}
+.baiyun-tab-card > .baiyun-tab-more .baiyun-this:after{border: none;}
+
+/* 时间线 */
+.baiyun-timeline{padding-left: 5px;}
+.baiyun-timeline-item{position: relative; padding-bottom: 20px;}
+.baiyun-timeline-axis{position: absolute; left: -5px; top: 0; z-index: 10; width: 20px; height: 20px; line-height: 20px; background-color: #fff; color: #5FB878; border-radius: 50%; text-align: center; cursor: pointer;}
+.baiyun-timeline-axis:hover{color: #FF5722;}
+.baiyun-timeline-item:before{content: ''; position: absolute; left: 5px; top: 0; z-index: 0; width: 1px; height: 100%;}
+.baiyun-timeline-item:last-child:before{display: none;}
+.baiyun-timeline-item:first-child:before{display: block;}
+.baiyun-timeline-content{padding-left: 25px;;}
+.baiyun-timeline-title{position: relative; margin-bottom: 10px;}
+
+/* 小徽章 */
+.baiyun-badge,
+.baiyun-badge-dot,
+.baiyun-badge-rim{position:relative; display: inline-block; padding: 0 6px; font-size: 12px; text-align: center; background-color: #FF5722; color: #fff; border-radius: 2px;}
+.baiyun-badge{height: 18px; line-height: 18px;}
+.baiyun-badge-dot{width: 8px; height: 8px; padding: 0; border-radius: 50%;}
+.baiyun-badge-rim{height: 18px; line-height: 18px; border-width: 1px; border-style: solid; background-color: #fff; color: #666;}
+
+.baiyun-btn .baiyun-badge,
+.baiyun-btn .baiyun-badge-dot{margin-left: 5px;}
+.baiyun-nav .baiyun-badge,
+.baiyun-nav .baiyun-badge-dot{position: absolute; top: 50%; margin: -8px 6px 0;}
+.baiyun-tab-title .baiyun-badge,
+.baiyun-tab-title .baiyun-badge-dot{left: 5px; top: -2px;}
+
+/* carousel 轮播 */
+.baiyun-carousel{position: relative; left: 0; top: 0; background-color: #f8f8f8;}
+.baiyun-carousel>*[carousel-item]{position: relative; width: 100%; height: 100%; overflow: hidden;}
+.baiyun-carousel>*[carousel-item]:before{position: absolute; content: '\e63d'; left: 50%; top: 50%; width: 100px; line-height: 20px; margin: -10px 0 0 -50px; text-align: center; color: #c2c2c2; font-family:"baiyun-icon" !important; font-size: 30px; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+.baiyun-carousel>*[carousel-item] > *{display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #f8f8f8; transition-duration: .3s; -webkit-transition-duration: .3s;}
+.baiyun-carousel-updown > *{-webkit-transition: .3s ease-in-out up; transition: .3s ease-in-out up;}
+.baiyun-carousel-arrow{display: none\0; opacity: 0; position: absolute; left: 10px; top: 50%; margin-top: -18px; width: 36px; height: 36px; line-height: 36px; text-align: center; font-size: 20px; border: none 0; border-radius: 50%; background-color: rgba(0,0,0,.2); color: #fff; -webkit-transition-duration: .3s; transition-duration: .3s; cursor: pointer;}
+.baiyun-carousel-arrow[lay-type="add"]{left: auto!important; right: 10px;}
+.baiyun-carousel[lay-arrow="always"] .baiyun-carousel-arrow{opacity: 1; left: 20px;}
+.baiyun-carousel[lay-arrow="always"] .baiyun-carousel-arrow[lay-type="add"]{right: 20px;}
+.baiyun-carousel[lay-arrow="none"] .baiyun-carousel-arrow{display: none;}
+.baiyun-carousel-arrow:hover,
+.baiyun-carousel-ind ul:hover{background-color: rgba(0,0,0,.35);}
+.baiyun-carousel:hover .baiyun-carousel-arrow{display: block\0; opacity: 1; left: 20px;}
+.baiyun-carousel:hover .baiyun-carousel-arrow[lay-type="add"]{right: 20px;}
+.baiyun-carousel-ind{position: relative; top: -35px; width: 100%; line-height: 0!important; text-align: center; font-size: 0;}
+.baiyun-carousel[lay-indicator="outside"]{margin-bottom: 30px;}
+.baiyun-carousel[lay-indicator="outside"] .baiyun-carousel-ind{top: 10px;}
+.baiyun-carousel[lay-indicator="outside"] .baiyun-carousel-ind ul{background-color: rgba(0,0,0,.5);}
+.baiyun-carousel[lay-indicator="none"] .baiyun-carousel-ind{display: none;}
+.baiyun-carousel-ind ul{display: inline-block; padding: 5px; background-color: rgba(0,0,0,.2); border-radius: 10px; -webkit-transition-duration: .3s; transition-duration: .3s;}
+.baiyun-carousel-ind li{display: inline-block; width: 10px; height: 10px; margin: 0 3px; font-size: 14px; background-color: #e2e2e2; background-color: rgba(255,255,255,.5); border-radius: 50%; cursor: pointer; -webkit-transition-duration: .3s; transition-duration: .3s;}
+.baiyun-carousel-ind li:hover{background-color: rgba(255,255,255,.7);}
+.baiyun-carousel-ind li.baiyun-this{background-color: #fff;}
+.baiyun-carousel>*[carousel-item]>.baiyun-this,
+.baiyun-carousel>*[carousel-item]>.baiyun-carousel-prev,
+.baiyun-carousel>*[carousel-item]>.baiyun-carousel-next{display: block}
+.baiyun-carousel>*[carousel-item]>.baiyun-this{left: 0;}
+.baiyun-carousel>*[carousel-item]>.baiyun-carousel-prev{left: -100%;}
+.baiyun-carousel>*[carousel-item]>.baiyun-carousel-next{left: 100%;}
+.baiyun-carousel>*[carousel-item]>.baiyun-carousel-prev.baiyun-carousel-right,
+.baiyun-carousel>*[carousel-item]>.baiyun-carousel-next.baiyun-carousel-left{left: 0;}
+.baiyun-carousel>*[carousel-item]>.baiyun-this.baiyun-carousel-left{left: -100%;}
+.baiyun-carousel>*[carousel-item]>.baiyun-this.baiyun-carousel-right{left: 100%;}
+
+/* 上下切换 */.baiyun-carousel[lay-anim="updown"] .baiyun-carousel-arrow{left: 50%!important; top: 20px; margin: 0 0 0 -18px;}
+.baiyun-carousel[lay-anim="updown"] .baiyun-carousel-arrow[lay-type="add"]{top: auto!important; bottom: 20px;}
+.baiyun-carousel[lay-anim="updown"] .baiyun-carousel-ind{position: absolute; top: 50%; right: 20px; width: auto; height: auto;}
+.baiyun-carousel[lay-anim="updown"] .baiyun-carousel-ind ul{padding: 3px 5px;}
+.baiyun-carousel[lay-anim="updown"] .baiyun-carousel-ind li{display: block; margin: 6px 0;}
+
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>*{left: 0!important;}
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-this{top: 0;}
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-carousel-prev{top: -100%;}
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-carousel-next{top: 100%;}
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-carousel-prev.baiyun-carousel-right,
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-carousel-next.baiyun-carousel-left{top: 0;}
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-this.baiyun-carousel-left{top: -100%;}
+.baiyun-carousel[lay-anim="updown"]>*[carousel-item]>.baiyun-this.baiyun-carousel-right{top: 100%;}
+
+/* 渐显切换 */.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>*{left: 0!important;}
+.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>.baiyun-carousel-prev,
+.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>.baiyun-carousel-next{opacity: 0;}
+.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>.baiyun-carousel-prev.baiyun-carousel-right,
+.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>.baiyun-carousel-next.baiyun-carousel-left{opacity: 1;}
+.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>.baiyun-this.baiyun-carousel-left,
+.baiyun-carousel[lay-anim="fade"]>*[carousel-item]>.baiyun-this.baiyun-carousel-right{opacity: 0}
+
+/** fixbar **/
+.baiyun-fixbar{position: fixed; right: 15px; bottom: 15px; z-index: 999999;}
+.baiyun-fixbar li{width: 50px; height: 50px; line-height: 50px; margin-bottom: 1px; text-align:center; cursor: pointer; font-size:30px; background-color: #9F9F9F; color:#fff; border-radius: 2px; opacity: 0.95;}
+.baiyun-fixbar li:hover{opacity: 0.85;}
+.baiyun-fixbar li:active{opacity: 1;}
+.baiyun-fixbar .baiyun-fixbar-top{display: none; font-size: 40px;}
+
+/** 表情面板 **/
+body .baiyun-util-face{border: none; background: none;}
+body .baiyun-util-face  .baiyun-layer-content{padding:0; background-color:#fff; color:#666; box-shadow:none}
+.baiyun-util-face .baiyun-layer-TipsG{display:none;}
+.baiyun-util-face ul{position:relative; width:372px; padding:10px; border:1px solid #D9D9D9; background-color:#fff; box-shadow: 0 0 20px rgba(0,0,0,.2);}
+.baiyun-util-face ul li{cursor: pointer; float: left; border: 1px solid #e8e8e8; height: 22px; width: 26px; overflow: hidden; margin: -1px 0 0 -1px; padding: 4px 2px; text-align: center;}
+.baiyun-util-face ul li:hover{position: relative; z-index: 2; border: 1px solid #eb7350; background: #fff9ec;}
+
+/** 代码修饰器 **/
+.baiyun-code{position: relative; margin: 10px 0; padding: 15px; line-height: 20px; border: 1px solid #ddd; border-left-width: 6px; background-color: #F2F2F2; color: #333; font-family: Courier New; font-size: 12px;}
+
+/** 评分组件 By star1029 **/
+.baiyun-rate,
+.baiyun-rate *{display: inline-block; vertical-align: middle;}
+.baiyun-rate{padding: 10px 5px 10px 0; font-size: 0;}
+.baiyun-rate li i.baiyun-icon{ font-size: 20px; color: #FFB800;}
+.baiyun-rate li i.baiyun-icon{margin-right: 5px; transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-rate li i:hover{cursor: pointer; transform: scale(1.12); -webkit-transform: scale(1.12);}
+.baiyun-rate[readonly] li i:hover{cursor: default; transform: scale(1);}
+
+/** 颜色选择器 By star1029 **/
+.baiyun-colorpicker{width: 26px; height: 26px; border: 1px solid #e6e6e6; padding: 5px; border-radius: 2px; line-height: 24px; display: inline-block; cursor: pointer; transition: all .3s; -webkit-transition: all .3s;}
+.baiyun-colorpicker:hover{border-color: #d2d2d2;}
+.baiyun-colorpicker.baiyun-colorpicker-lg{width: 34px; height: 34px; line-height: 32px;}
+.baiyun-colorpicker.baiyun-colorpicker-sm{width: 24px; height: 24px; line-height: 22px;}
+.baiyun-colorpicker.baiyun-colorpicker-xs{width: 22px; height: 22px; line-height: 20px;}
+
+.baiyun-colorpicker-trigger-bgcolor{display: block; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==);  border-radius: 2px;}
+.baiyun-colorpicker-trigger-span{display: block; height: 100%; box-sizing: border-box; border: 1px solid rgba(0,0,0,.15); border-radius: 2px; text-align: center;}
+.baiyun-colorpicker-trigger-i{display: inline-block; color: #FFF; font-size: 12px;}
+.baiyun-colorpicker-trigger-i.baiyun-icon-close{color: #999;}
+
+.baiyun-colorpicker-main{position: absolute; z-index: 66666666; width: 280px; padding: 7px; background: #FFF; border: 1px solid #d2d2d2; border-radius: 2px; box-shadow: 0 2px 4px rgba(0,0,0,.12);}
+.baiyun-colorpicker-main-wrapper{height: 180px; position: relative;}
+.baiyun-colorpicker-basis{width: 260px; height: 100%; position: relative;}
+.baiyun-colorpicker-basis-white{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(90deg, #FFF, hsla(0,0%,100%,0));}
+.baiyun-colorpicker-basis-black{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(0deg, #000, transparent);}
+.baiyun-colorpicker-basis-cursor{width: 10px; height: 10px; border: 1px solid #FFF; border-radius: 50%; position: absolute; top: -3px; right: -3px; cursor: pointer;}
+.baiyun-colorpicker-side{position: absolute; top: 0; right: 0; width: 12px; height: 100%; background: linear-gradient(#F00, #FF0, #0F0, #0FF, #00F, #F0F, #F00);}
+.baiyun-colorpicker-side-slider{width: 100%; height: 5px; box-shadow: 0 0 1px #888888; box-sizing: border-box; background: #FFF; border-radius: 1px; border: 1px solid #f0f0f0; cursor: pointer; position: absolute; left: 0;}
+.baiyun-colorpicker-main-alpha{display: none; height: 12px; margin-top: 7px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==)}
+.baiyun-colorpicker-alpha-bgcolor{height: 100%; position: relative;}
+.baiyun-colorpicker-alpha-slider{width: 5px; height: 100%; box-shadow: 0 0 1px #888888; box-sizing: border-box; background: #FFF; border-radius: 1px; border: 1px solid #f0f0f0; cursor: pointer; position: absolute; top: 0;}
+.baiyun-colorpicker-main-pre{padding-top: 7px; font-size: 0;}
+.baiyun-colorpicker-pre{width: 20px; height: 20px;  border-radius: 2px; display: inline-block; margin-left: 6px; margin-bottom: 7px; cursor: pointer;}
+.baiyun-colorpicker-pre:nth-child(11n+1){margin-left: 0;}
+.baiyun-colorpicker-pre-isalpha{background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==)}
+.baiyun-colorpicker-pre.baiyun-this{box-shadow: 0 0 3px 2px rgba(0,0,0,.15);}
+.baiyun-colorpicker-pre > div{height: 100%; border-radius: 2px;}
+.baiyun-colorpicker-main-input{text-align: right; padding-top: 7px;}
+.baiyun-colorpicker-main-input .baiyun-btn-container .baiyun-btn{margin: 0 0 0 10px;}
+.baiyun-colorpicker-main-input div.baiyun-inline{float: left; margin-right: 10px; font-size: 14px;}
+.baiyun-colorpicker-main-input input.baiyun-input{width: 150px; height: 30px; color: #666;}
+
+/** 滑块 By star1029 **/
+.baiyun-slider{height: 4px; background: #e2e2e2; border-radius: 3px; position: relative; cursor: pointer;}
+.baiyun-slider-bar{border-radius: 3px; position: absolute; height: 100%;}
+.baiyun-slider-step{position: absolute; top: 0; width: 4px; height: 4px; border-radius: 50%; background: #FFF; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
+.baiyun-slider-wrap{width: 36px; height: 36px; position: absolute; top: -16px; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 10; text-align: center;}
+.baiyun-slider-wrap-btn{width: 12px; height: 12px; border-radius: 50%; background: #FFF; display: inline-block; vertical-align: middle; cursor: pointer; transition: 0.3s;}
+.baiyun-slider-wrap:after{content: ""; height: 100%; display: inline-block; vertical-align: middle;}
+.baiyun-slider-wrap-btn:hover, 
+.baiyun-slider-wrap-btn.baiyun-slider-hover{transform: scale(1.2);}
+.baiyun-slider-wrap-btn.baiyun-disabled:hover{transform: scale(1) !important;}
+.baiyun-slider-tips{position: absolute; top: -42px; z-index: 66666666; white-space:nowrap; display: none; -webkit-transform: translateX(-50%); transform: translateX(-50%); color: #FFF; background: #000; border-radius: 3px; height: 25px; line-height: 25px; padding: 0 10px;}
+.baiyun-slider-tips:after{content: ''; position: absolute; bottom: -12px; left: 50%; margin-left: -6px; width: 0; height: 0; border-width: 6px; border-style: solid; border-color: #000 transparent transparent transparent;}
+.baiyun-slider-input{width: 70px; height: 32px; border: 1px solid #e6e6e6; border-radius: 3px; font-size: 16px; line-height: 32px; position: absolute; right: 0; top: -15px;}
+.baiyun-slider-input-btn{display: none; position: absolute; top: 0; right: 0; width: 20px; height: 100%; border-left: 1px solid #d2d2d2;}
+.baiyun-slider-input-btn i{cursor: pointer; position: absolute; right: 0; bottom: 0; width: 20px; height: 50%; font-size: 12px; line-height: 16px; text-align: center; color: #999;}
+.baiyun-slider-input-btn i:first-child{top: 0; border-bottom: 1px solid #d2d2d2;}
+.baiyun-slider-input-txt{height: 100%; font-size: 14px;}
+.baiyun-slider-input-txt input{height: 100%; border: none;}
+.baiyun-slider-input-btn i:hover{color: #009688;}
+/*垂直滑块*/
+.baiyun-slider-vertical{width: 4px; margin-left: 34px;}
+.baiyun-slider-vertical .baiyun-slider-bar{width: 4px;}
+.baiyun-slider-vertical .baiyun-slider-step{top: auto; left: 0px; -webkit-transform: translateY(50%); transform: translateY(50%);}
+.baiyun-slider-vertical .baiyun-slider-wrap{top: auto; left: -16px; -webkit-transform: translateY(50%); transform: translateY(50%);}
+.baiyun-slider-vertical .baiyun-slider-tips{top: auto; left: 2px;}
+@media \0screen{
+  .baiyun-slider-wrap-btn{margin-left: -20px;}
+  .baiyun-slider-vertical .baiyun-slider-wrap-btn{margin-left: 0; margin-bottom: -20px;}
+  .baiyun-slider-vertical .baiyun-slider-tips{margin-left: -8px;}
+  .baiyun-slider > span{margin-left: 8px;}
+}
+
+/** 树组件 By star1029 **/
+.baiyun-tree{line-height: 22px;}
+.baiyun-tree .baiyun-form-checkbox{margin: 0 !important;}
+.baiyun-tree-set{width: 100%; position: relative;}
+.baiyun-tree-pack{display: none; padding-left: 20px; position: relative;}
+.baiyun-tree-line .baiyun-tree-pack{padding-left: 27px;}
+.baiyun-tree-line .baiyun-tree-set .baiyun-tree-set:after{content: ''; position: absolute; top: 14px; left: -9px; width: 17px; height: 0; border-top: 1px dotted #c0c4cc;}
+.baiyun-tree-entry{position: relative; padding: 3px 0; height: 20px; white-space: nowrap;}
+.baiyun-tree-entry:hover{background-color: #eee;}
+.baiyun-tree-line .baiyun-tree-entry:hover{background-color: rgba(0,0,0,0);}
+.baiyun-tree-line .baiyun-tree-entry:hover .baiyun-tree-txt{color: #999; text-decoration: underline; transition: 0.3s;}
+.baiyun-tree-main{display: inline-block; vertical-align: middle; cursor: pointer; padding-right: 10px;}
+.baiyun-tree-line .baiyun-tree-set:before{content: ''; position: absolute; top: 0; left: -9px; width: 0; height: 100%; border-left: 1px dotted #c0c4cc;}
+.baiyun-tree-line .baiyun-tree-set.baiyun-tree-setLineShort:before{height: 13px;}
+.baiyun-tree-line .baiyun-tree-set.baiyun-tree-setHide:before{height: 0;}
+.baiyun-tree-iconClick{display: inline-block; vertical-align: middle; position: relative; height: 20px; line-height: 20px; margin: 0 10px; color: #c0c4cc;}
+.baiyun-tree-icon{height: 12px; line-height: 12px; width: 12px; text-align: center; border: 1px solid #c0c4cc;}
+.baiyun-tree-iconClick .baiyun-icon{font-size: 18px;}
+.baiyun-tree-icon .baiyun-icon{font-size: 12px; color: #666;}
+.baiyun-tree-iconArrow{padding: 0 5px;}
+.baiyun-tree-iconArrow:after{content: ''; position: absolute; left: 4px; top: 3px; z-index: 100; width: 0; height: 0; border-width: 5px; border-style: solid; border-color: transparent transparent transparent #c0c4cc; transition: 0.5s;}
+.baiyun-tree-spread>.baiyun-tree-entry>.baiyun-tree-iconClick>.baiyun-tree-iconArrow:after{transform: rotate(90deg) translate(3px, 4px);}
+.baiyun-tree-txt{display: inline-block; vertical-align: middle; color: #555;}
+.baiyun-tree-search{margin-bottom: 15px; color: #666;}
+.baiyun-tree-btnGroup{visibility: hidden; display: inline-block; vertical-align: middle; position: relative;}
+.baiyun-tree-btnGroup .baiyun-icon{display: inline-block; vertical-align: middle; padding: 0 2px; cursor: pointer;}
+.baiyun-tree-btnGroup .baiyun-icon:hover{color: #999; transition: 0.3s;}
+.baiyun-tree-entry:hover .baiyun-tree-btnGroup{visibility: visible;}
+.baiyun-tree-editInput{position: relative; display: inline-block; vertical-align: middle; height: 20px; line-height: 20px; padding: 0 3px; border: none; background-color: rgba(0,0,0,0.05);}
+.baiyun-tree-emptyText{text-align: center; color: #999;}
+
+
+
+
+/** 动画 **/
+.baiyun-anim{-webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+.baiyun-anim.baiyun-icon{display: inline-block;}
+.baiyun-anim-loop{-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+.baiyun-trans,
+.baiyun-trans a{transition: all .3s; -webkit-transition: all .3s;} /* 过度变换 */
+
+@-webkit-keyframes baiyun-rotate{ /* 循环旋转 */
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@keyframes baiyun-rotate{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+.baiyun-anim-rotate{-webkit-animation-name: baiyun-rotate; animation-name: baiyun-rotate; -webkit-animation-duration: 1s; animation-duration: 1s;  -webkit-animation-timing-function: linear; animation-timing-function: linear;}
+
+@-webkit-keyframes baiyun-up{ /* 从最底部往上滑入 */
+  from {-webkit-transform: translate3d(0, 100%, 0); opacity: 0.3;}
+  to {-webkit-transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+@keyframes baiyun-up{
+  from {transform: translate3d(0, 100%, 0);  opacity: 0.3;}
+  to {transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+.baiyun-anim-up{-webkit-animation-name: baiyun-up; animation-name: baiyun-up;}
+
+@-webkit-keyframes baiyun-upbit{ /* 微微往上滑入 */
+  from {-webkit-transform: translate3d(0, 30px, 0); opacity: 0.3;}
+  to {-webkit-transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+@keyframes baiyun-upbit{
+  from {transform: translate3d(0, 30px, 0);  opacity: 0.3;}
+  to {transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+.baiyun-anim-upbit{-webkit-animation-name: baiyun-upbit; animation-name: baiyun-upbit;}
+
+
+@-webkit-keyframes baiyun-scale { /* 放大 */
+  0% {opacity: 0.3; -webkit-transform: scale(.5);}
+  100% {opacity: 1; -webkit-transform: scale(1);}
+}
+@keyframes baiyun-scale {
+  0% {opacity: 0.3; -ms-transform: scale(.5); transform: scale(.5);}
+  100% {opacity: 1; -ms-transform: scale(1); transform: scale(1);}
+}
+.baiyun-anim-scale{-webkit-animation-name: baiyun-scale; animation-name: baiyun-scale}
+
+@-webkit-keyframes baiyun-scale-spring { /* 弹簧式放大 */
+  0% {opacity: 0.5; -webkit-transform: scale(.5);}
+  80% {opacity: 0.8; -webkit-transform: scale(1.1);}
+  100% {opacity: 1; -webkit-transform: scale(1);}
+}
+@keyframes baiyun-scale-spring {
+  0% {opacity: 0.5; transform: scale(.5);}
+  80% {opacity: 0.8; transform: scale(1.1);}
+  100% {opacity: 1; transform: scale(1);}
+}
+.baiyun-anim-scaleSpring{-webkit-animation-name: baiyun-scale-spring; animation-name: baiyun-scale-spring}
+
+@-webkit-keyframes baiyun-fadein { /* 渐现 */
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes baiyun-fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.baiyun-anim-fadein{-webkit-animation-name: baiyun-fadein; animation-name: baiyun-fadein}
+
+@-webkit-keyframes baiyun-fadeout { /* 渐隐 */
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes baiyun-fadeout {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+.baiyun-anim-fadeout{-webkit-animation-name: baiyun-fadeout; animation-name: baiyun-fadeout}
+
+
+
