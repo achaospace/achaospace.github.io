@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "read"
+category: "webfront"
 title:  "test blog"
 tags: [阅读,人生]
 ---

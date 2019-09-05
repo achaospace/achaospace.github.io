@@ -1,4 +1,4 @@
-I"<svg class="cloud" style="width:95%;height:450px">
+I"�<svg class="cloud" style="width:95%;height:450px">
     <g></g>
 </svg>
 <div class="tag_posts">
@@ -13,12 +13,18 @@
         
             {
                 tag: '阅读',
-                freq: 1,
+                freq: 2,
                 posts: [
                     
                         {
-                            title: '人生什么更重要？[测试]',
+                            title: 'test blog',
                             url: '/posts/which-more-important.html',
+                            date: '2010-01-01'
+                        },
+                    
+                        {
+                            title: 'test blog',
+                            url: '/posts/which-more-important-copy.html',
                             date: '2010-01-01'
                         },
                     
@@ -27,12 +33,18 @@
         
             {
                 tag: '人生',
-                freq: 1,
+                freq: 2,
                 posts: [
                     
                         {
-                            title: '人生什么更重要？[测试]',
+                            title: 'test blog',
                             url: '/posts/which-more-important.html',
+                            date: '2010-01-01'
+                        },
+                    
+                        {
+                            title: 'test blog',
+                            url: '/posts/which-more-important-copy.html',
                             date: '2010-01-01'
                         },
                     
