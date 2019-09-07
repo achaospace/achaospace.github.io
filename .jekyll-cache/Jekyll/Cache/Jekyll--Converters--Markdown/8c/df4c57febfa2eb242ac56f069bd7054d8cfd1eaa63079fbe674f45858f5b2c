@@ -1,4 +1,4 @@
-I"�<svg class="cloud" style="width:95%;height:450px">
+I"�<svg class="cloud" style="width:95%;height:450px">
     <g></g>
 </svg>
 <div class="tag_posts">
@@ -34,6 +34,34 @@
                             title: 'life',
                             url: '/posts/which-more-important.html',
                             date: '2010-01-01'
+                        },
+                    
+                ]
+            },
+        
+            {
+                tag: 'Web前端',
+                freq: 1,
+                posts: [
+                    
+                        {
+                            title: 'byui',
+                            url: '/posts/byui.html',
+                            date: '2019-09-05'
+                        },
+                    
+                ]
+            },
+        
+            {
+                tag: '框架',
+                freq: 1,
+                posts: [
+                    
+                        {
+                            title: 'byui',
+                            url: '/posts/byui.html',
+                            date: '2019-09-05'
                         },
                     
                 ]

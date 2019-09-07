@@ -1,9 +1,11 @@
 ---
 layout: post
 category: "webfront"
-title:  "Byui"
-tags: [Web前端],框架]
+title:  "byui"
+tags: [Web前端,框架]
 ---
+
+
 ## Byui
 > byui基于gulp构建的前端框架，是js模块化开发解决方案。目前我们PC端、手机端项目前端都是基于jquery项目构建，项目中前端引用框架、插件过多，并且并不是全部框架功能都有使用，严重影响前端页面加载速度，鉴于以上原因，把常用的功能基于layui重新重构了一下，打算用一个框架。保留了layui样式，删除了暂时用不到的代码，取其精华。希望对以后项目有所帮助。
 
