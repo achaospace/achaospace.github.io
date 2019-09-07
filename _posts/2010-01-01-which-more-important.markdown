@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "read"
-title:  "test blog"
+title:  "life"
 tags: [阅读,人生]
 ---
 ### 哪个更重要？
